@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cm43mcabmssp6"]
+
+[ext_resource type="Texture2D" uid="uid://8i66fg0l1dpe" path="res://icon.svg" id="1_83neu"]
+[ext_resource type="Script" path="res://Scripts/SoundMeter/SoundMeterGUI.gd" id="1_l770m"]
+
+[node name="SoundMeterGUI" type="TextureProgressBar"]
+offset_right = 40.0
+offset_bottom = 40.0
+max_value = 50.0
+nine_patch_stretch = true
+texture_under = ExtResource("1_83neu")
+texture_progress = ExtResource("1_83neu")
+tint_progress = Color(0.129412, 0.129412, 0.129412, 1)
+script = ExtResource("1_l770m")

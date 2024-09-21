@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c68tths7egrue"
+path="res://.godot/imported/Tome.obj-b6a4bea2b25f4b97d5dd9c0b4049c193.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Tome.obj-b6a4bea2b25f4b97d5dd9c0b4049c193.mesh"]
+
+source_file="res://Models/Loot/Tomes/Tome.obj"
+dest_files=["res://.godot/imported/Tome.obj-b6a4bea2b25f4b97d5dd9c0b4049c193.mesh", "res://.godot/imported/Tome.obj-b6a4bea2b25f4b97d5dd9c0b4049c193.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

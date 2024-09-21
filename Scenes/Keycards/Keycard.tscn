@@ -1,0 +1,52 @@
+[gd_scene load_steps=13 format=3 uid="uid://bu0u1spoqdyoq"]
+
+[ext_resource type="Script" path="res://Scenes/Keycards/Keycard.gd" id="1_6xm2q"]
+[ext_resource type="Script" path="res://Scripts/Keycards/Keycard.gd" id="1_83uph"]
+[ext_resource type="Script" path="res://Scripts/Interaction_System/InteractionManager.gd" id="3_1836o"]
+[ext_resource type="ArrayMesh" uid="uid://biuhawoo8sm4x" path="res://Models/Keycards/Red_Keycard/Red_Keycard.obj" id="4_6lyju"]
+[ext_resource type="Script" path="res://Scripts/Interaction_System/Interact_Nodes/Inspect.gd" id="4_euwbb"]
+[ext_resource type="Script" path="res://Scripts/Interaction_System/Interact_Nodes/Collect_Item.gd" id="5_fib6h"]
+[ext_resource type="Texture2D" uid="uid://dprhayqtg728a" path="res://Models/Keycards/Red_Keycard/Red_Keycard Texture.png" id="5_i7gxi"]
+[ext_resource type="Resource" uid="uid://elsegpasb5i0" path="res://Resources/ItemData/Keycards/Red_Keycard.tres" id="6_rcpup"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/SlotData.gd" id="8_nua6r"]
+
+[sub_resource type="Resource" id="Resource_hakoo"]
+script = ExtResource("8_nua6r")
+itemdata = ExtResource("6_rcpup")
+ItemAmt = 5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g7kyk"]
+albedo_texture = ExtResource("5_i7gxi")
+texture_filter = 0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1b7eb"]
+size = Vector3(1, 0.1, 0.7)
+
+[node name="Keycard" type="CharacterBody3D" groups=["interact"]]
+collision_layer = 17
+collision_mask = 16
+script = ExtResource("1_6xm2q")
+pickupslot = SubResource("Resource_hakoo")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+collision_layer = 17
+collision_mask = 16
+mesh = ExtResource("4_6lyju")
+material = SubResource("StandardMaterial3D_g7kyk")
+script = ExtResource("1_83uph")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_1b7eb")
+
+[node name="InteractionManager" type="Node" parent="."]
+script = ExtResource("3_1836o")
+ItemName = "Keycard"
+
+[node name="CollectItem" type="Node" parent="InteractionManager" node_paths=PackedStringArray("collision", "parentitem")]
+script = ExtResource("5_fib6h")
+collision = NodePath("../../CollisionShape3D")
+parentitem = NodePath("../..")
+
+[node name="Inspect" type="Node" parent="InteractionManager" node_paths=PackedStringArray("parentitem")]
+script = ExtResource("4_euwbb")
+parentitem = NodePath("../..")

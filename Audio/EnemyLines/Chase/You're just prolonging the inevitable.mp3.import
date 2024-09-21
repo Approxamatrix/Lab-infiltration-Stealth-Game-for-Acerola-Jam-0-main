@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dd2aq4eh00jkw"
+path="res://.godot/imported/You're just prolonging the inevitable.mp3-09bf25fd106011355e3e34b43b10b581.mp3str"
+
+[deps]
+
+source_file="res://Audio/EnemyLines/Chase/You're just prolonging the inevitable.mp3"
+dest_files=["res://.godot/imported/You're just prolonging the inevitable.mp3-09bf25fd106011355e3e34b43b10b581.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

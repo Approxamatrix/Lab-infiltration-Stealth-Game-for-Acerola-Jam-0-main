@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://bja2elo3dhiix"
+path="res://.godot/imported/Test_Map.map-4dc0468f05107bd2d5ed098fd7f62c73.tres"
+
+[deps]
+
+source_file="res://TrenchBroom Maps/Untitled Heist Game maps/Test_Map.map"
+dest_files=["res://.godot/imported/Test_Map.map-4dc0468f05107bd2d5ed098fd7f62c73.tres"]
+
+[params]
+

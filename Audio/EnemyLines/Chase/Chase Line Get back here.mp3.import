@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c8x7gup3e26rr"
+path="res://.godot/imported/Chase Line Get back here.mp3-9dc61f05b8e4f4a733523fd5f2777a56.mp3str"
+
+[deps]
+
+source_file="res://Audio/EnemyLines/Chase/Chase Line Get back here.mp3"
+dest_files=["res://.godot/imported/Chase Line Get back here.mp3-9dc61f05b8e4f4a733523fd5f2777a56.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

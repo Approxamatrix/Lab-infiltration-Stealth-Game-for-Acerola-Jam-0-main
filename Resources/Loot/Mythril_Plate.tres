@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="LootItemData" load_steps=5 format=4 uid="uid://dtbngevjysng8"]
+
+[ext_resource type="Texture2D" uid="uid://copsnmv8q445g" path="res://Models/Loot/Metal Plates/Mythril_Plate.png" id="1_u2awr"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/LootItemData.gd" id="2_w1fbb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vfrle"]
+resource_name = "m_1ca891fd-398b-da12-e161-6afbeb448ccd"
+albedo_texture = ExtResource("1_u2awr")
+texture_filter = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_bjd7u"]
+_surfaces = [{
+"aabb": AABB(-0.312203, 0.0625, -0.0760716, 0.43981, 0.5625, 0.081534),
+"attribute_data": PackedByteArray("/4//B/9H/wf/jwAA/0cAAP9//xf/R/8X/3//D/9H/w//j/8P/0f/D/+P/wf/R/8H/3//H/9H/x//f/8X/0f/FwAAAAD/RwAAAAD/N/9H/zcAAP9v/0f/bwAA/zf/R/83"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"material": SubResource("StandardMaterial3D_vfrle"),
+"name": "m_1ca891fd-398b-da12-e161-6afbeb448ccd",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("aP4AAPb/T9Ro/v//9v9P1P//AADqO0/U/////+o7T9Ro/v//9v8EwAAA//8MxATA/////+o7BMCWAf//AAAEwAAA//8MxF3WAAAAAAzEXdaWAf//AABd1pYBAAAAAF3WAAAAAAzEvf5o/gAA9v+9/pYBAAAAAL3+//8AAOo7vf6WAf//AAC9/pYBAAAAAL3+/////+o7vf7//wAA6ju9/mj+///2//o/aP4AAPb/+j8AAP//DMT6PwAAAAAMxPo/Car1VQmq9VUJqvVVCar1VaT6rIKk+qyCpPqsgqT6rIK21LbUttS21LbUttS21LbUnX6wQJ1+sECdfrBAnX6wQE6/sEBOv7BATr+wQE6/sEBSfayCUn2sglJ9rIJSfayC")
+}]
+
+[resource]
+script = ExtResource("2_w1fbb")
+LootItemName = "Strange Plate"
+LootModel = SubResource("ArrayMesh_bjd7u")
+LootModelScale = Vector3(1, 1, 1)
+collisionscale = Vector3(0.455, 0.92, 0.065)
+Collisionpos = Vector3(-0.095, 0.345, -0.055)
+LootCost = 100

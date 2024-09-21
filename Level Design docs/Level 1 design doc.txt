@@ -1,0 +1,44 @@
+GOALS
+=====
+
+This area will be the starting area of the game.
+It should show the player what's considered normal in the game's world.
+This level should have a little verticality in its design.
+Try to have that warm autumn feel while also allowing the player to sneak around in the dark.
+There will be an outside area.
+In the building, there will be a top floor, a ground floor and a basement.
+
+ELEMENTS
+=========
+
+Basic Security Guard Enemies
+Player items can be a Baton (for k/o-ing enemies), some noise emitters and some shock device things.
+Some lootable items such as money and a singular painting.
+The Strange Elevator
+
+IDEAS
+======
+One of the entry points could have some basic platforming to introduce the ledge climbing ability.
+
+SEQUENCE
+=========
+The player starts off in an area above their destination. 
+They will see guards in the front, and right side of the building.
+The left and back sides will be unguarded.
+
+The way from the front will be via the front door.
+The way from the left will be a side door.
+
+The way from the back will have a platforming section that lets the player get into the top floor.
+
+They will see that the top floor isn't in the best of conditions : Cabinets tipped over, empty bookcases and an overturned couch in front of a painting.
+
+There is a key under the table on the top floor
+
+Regardless of their entry point, they will find that the building is quite barren.
+
+They will see the basement door at the ground floor.
+
+After entering they will see that it is also barren but there is a strange elevator. 
+
+Upon entering the elevator, only one button will be functional and upon pressing it, the player will wait for a few seconds before being sent to the second level.

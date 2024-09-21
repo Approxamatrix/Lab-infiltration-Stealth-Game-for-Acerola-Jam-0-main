@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="LootItemData" load_steps=5 format=4 uid="uid://8mnv5fjsb4kb"]
+
+[ext_resource type="Texture2D" uid="uid://xa6fid316riq" path="res://Models/Loot/Money/Coins.png" id="1_unlts"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/LootItemData.gd" id="2_o08i4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0cgb3"]
+resource_name = "m_7c1a42b5-2535-841f-ec68-c27554e46275"
+albedo_texture = ExtResource("1_unlts")
+texture_filter = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_y6pcy"]
+_surfaces = [{
+"aabb": AABB(-0.176764, -0.114264, -0.0625, 0.353528, 0.353528, 0.12501),
+"attribute_data": PackedByteArray("/2//T/9P/0//b/8v/0//L/9v/4//j/+P/2//r/+P/68AAP8fAAAAAP8f/x//HwAA/x//b/8f/08AAP9vAAD/T/9v/1//j/9f/2//f/+P/3//b/8f/0//H/9vAAD/TwAA/28AAP+PAAD/b/8f/4//H/8//2//P/9P/2//f/9P/3//b/9f/0//X/8//x//PwAA/2//L/+P/y//b/9P/4//TwAA/4//H/+P/z//j/9v/6//T/+v/2//j/9P/4//P/8//x//PwAA/z8="),
+"format": 34896613399,
+"index_count": 96,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcAGAAZABoAGgAZABsAHAAdAAwADAAdAA0AHgAfACAAIAAfACEACgALACIAIgALACMAJAAlACYAJgAlACcADgAoAAwADAAoACkADAApABwAHAApACoAKwAsAC0ALQAsAC4AIgAvAAoACgAvADAACgAwAAgACAAwADEA"),
+"material": SubResource("StandardMaterial3D_0cgb3"),
+"name": "m_7c1a42b5-2535-841f-ec68-c27554e46275",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 50,
+"vertex_data": PackedByteArray("zis00vn/D8sAAHl++f8Py84rNNIAAA/LAAB5fgAAD8sw1MotAACA8YWBAAAAAIDxMNTKLfn/gPGFgQAA+f+A8c4rNNIAAP//AAB5fgAA////f/9/AAD//6AqkigAAP///3//f/n/42OgKpIo+f/QZM4rNNL5//ZdAAB5fvn/xFKgKpIoAADh4AAAeX4AAOHgoCqSKPn/4eAAAHl++f/h4F7Vbdf5/+nBeX7///n/6cFe1W3XAADpwXl+//8AAOnBXtVt1wAAdsv//4WBAAB2y17Vbdf5/3bL//+Fgfn/dssw1Mot+f/2XYWBAAD5/3xnoCqSKPn/dvOFgQAA+f9286AqkigAAHbzhYEAAAAAdvMw1MotAAD//4WBAAAAAP//zis00gAAjMJ5fv//AACMws4rNNL5/4zCeX7///n/jMJ5fv//+f98Z17Vbdf5/9Bk//+Fgfn/xFIw1Mot+f9x4f//hYH5/3HhMNTKLQAAceH//4WBAABx4f//hYEAAP//XtVt1wAA//95fv//AAD///LcGcby3BnG8twZxvLcGcaljlJHpY5SR6WOUkeljlJHUd1RXbDUsVTb19xXCNcIV/9//3//f/9//3//f/9//38kz7PhJM+z4STPs+Ekz7PhpdhSbKXYUmyl2FJspdhSbCK5kVwiuZFcIrmRXCK5kVz/f/9//3//f2PGNfNjxjXzY8Y182PGNfNR3VFdv+i/aC/qnasv6p2rL+qdqy/qnav/f/9//3//f/9//3+9nd5OvZ3eTr2d3k69nd5OsNSxVAjXCFe/6L9o")
+}]
+
+[resource]
+script = ExtResource("2_o08i4")
+LootItemName = "Coin"
+LootModel = SubResource("ArrayMesh_y6pcy")
+LootModelScale = Vector3(1, 1, 1)
+collisionscale = Vector3(0.35, 0.5, 0.165)
+Collisionpos = Vector3(0, 0.075, 0)
+LootCost = 5

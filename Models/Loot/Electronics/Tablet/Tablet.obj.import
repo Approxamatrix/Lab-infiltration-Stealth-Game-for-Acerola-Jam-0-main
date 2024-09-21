@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dm685o3kxekjj"
+path="res://.godot/imported/Tablet.obj-62e6456f3015c1a91d31b3a0cf3addd9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Tablet.obj-62e6456f3015c1a91d31b3a0cf3addd9.mesh"]
+
+source_file="res://Models/Loot/Electronics/Tablet/Tablet.obj"
+dest_files=["res://.godot/imported/Tablet.obj-62e6456f3015c1a91d31b3a0cf3addd9.mesh", "res://.godot/imported/Tablet.obj-62e6456f3015c1a91d31b3a0cf3addd9.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

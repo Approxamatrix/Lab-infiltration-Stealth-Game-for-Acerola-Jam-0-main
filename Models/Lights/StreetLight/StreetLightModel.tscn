@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://n8j2otpk6rhf"]
+
+[ext_resource type="PackedScene" uid="uid://cm1myygnaaroy" path="res://Models/Lights/StreetLight/StreetLight.gltf" id="1_i1bie"]
+
+[node name="StreetLight" instance=ExtResource("1_i1bie")]
+
+[node name="Bulb" parent="Node/Bulb2" index="0"]
+cast_shadow = 0
+
+[node name="socket" parent="Node/Bulb2" index="1"]
+cast_shadow = 0
+
+[node name="Base" parent="Node/Post" index="0"]
+cast_shadow = 0
+
+[node name="Pole" parent="Node/Post" index="1"]
+cast_shadow = 0
+
+[node name="cuboid" parent="Node/Post" index="2"]
+cast_shadow = 0
+
+[node name="LightBase" parent="Node/Post" index="3"]
+cast_shadow = 0
+
+[node name="Top" parent="Node/Post" index="4"]
+cast_shadow = 0
+
+[node name="cuboid2" parent="Node/Post" index="5"]
+cast_shadow = 0
+
+[node name="cuboid3" parent="Node/Post" index="6"]
+cast_shadow = 0
+
+[node name="cuboid4" parent="Node/Post" index="7"]
+cast_shadow = 0

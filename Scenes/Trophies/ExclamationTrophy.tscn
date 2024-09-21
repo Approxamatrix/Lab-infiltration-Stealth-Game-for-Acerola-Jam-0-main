@@ -1,0 +1,54 @@
+[gd_scene load_steps=10 format=3 uid="uid://6qc6w4m7nrxj"]
+
+[ext_resource type="Script" path="res://Scenes/Trophies/ExclamationTrophy.gd" id="1_1eljw"]
+[ext_resource type="ArrayMesh" uid="uid://ceag207potbt" path="res://Models/Projectile_Launcher/Shock_Launcher/Exclamation_Trophy.obj" id="1_t3hui"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/ItemData.gd" id="2_ful84"]
+[ext_resource type="Script" path="res://Scripts/Interaction_System/InteractionManager.gd" id="2_py2xa"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/SlotData.gd" id="2_y7cau"]
+[ext_resource type="Script" path="res://Scripts/Interaction_System/Interact_Nodes/Collect_Item.gd" id="3_esowh"]
+
+[sub_resource type="Resource" id="Resource_tcr4v"]
+script = ExtResource("2_ful84")
+ItemName = ""
+IsStackable = false
+MaxCapacity = 1
+DamageAmt = 0.0
+ProjectileMode = 0
+ItemType = 0
+
+[sub_resource type="Resource" id="Resource_g2j3w"]
+script = ExtResource("2_y7cau")
+itemdata = SubResource("Resource_tcr4v")
+ItemAmt = 0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7gux5"]
+size = Vector3(0.2, 0.5, 0.2)
+
+[node name="ExclamationTrophy" type="CharacterBody3D" groups=["interact"]]
+collision_layer = 17
+collision_mask = 17
+script = ExtResource("1_1eljw")
+pickupslot = SubResource("Resource_g2j3w")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+mesh = ExtResource("1_t3hui")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="MeshInstance3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.334112, 0)
+light_color = Color(1, 0.0235294, 0.231373, 1)
+light_energy = 0.4
+shadow_enabled = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.625421, 0)
+shape = SubResource("BoxShape3D_7gux5")
+
+[node name="InteractionManager" type="Node" parent="."]
+script = ExtResource("2_py2xa")
+ItemName = "Trophy"
+
+[node name="CollectItem" type="Node" parent="InteractionManager" node_paths=PackedStringArray("parentitem")]
+script = ExtResource("3_esowh")
+parentitem = NodePath("../..")
+InteractionName = "Collect Trophy"

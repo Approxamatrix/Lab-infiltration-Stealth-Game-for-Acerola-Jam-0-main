@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dp3lu2y36gwh7"]
+
+[ext_resource type="Script" path="res://Scenes/Lights/Lantern/LightConfig.gd" id="1_0qpnn"]
+[ext_resource type="PackedScene" uid="uid://db2i8m7htsvqh" path="res://Models/Lights/LightBulb/LightBulbModel.tscn" id="2_esvop"]
+
+[node name="LightBulb" type="Node3D" node_paths=PackedStringArray("omni")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0)
+script = ExtResource("1_0qpnn")
+omni = NodePath("OmniLight3D")
+ColourOmni = Color(1, 1, 1, 1)
+EnergyOmni = 2.0
+IndirectEnergyOmni = 1.0
+VolFogEnergyOmni = 1.0
+RangeOmni = 30.0
+AttenuationOmni = 1.0
+
+[node name="LightBulbModel" parent="." instance=ExtResource("2_esvop")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.358007, 0)
+light_energy = 2.0
+shadow_enabled = true
+omni_range = 10.0

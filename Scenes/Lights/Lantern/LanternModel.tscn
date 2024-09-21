@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccfwy136en5ym"]
+
+[ext_resource type="PackedScene" uid="uid://cqsigwo21kbgf" path="res://Models/Lights/Lantern/Lantern.gltf" id="1_d5tne"]
+
+[node name="LanternModel" instance=ExtResource("1_d5tne")]
+
+[node name="socket" parent="Node" index="1"]
+cast_shadow = 0
+
+[node name="knob" parent="Node" index="2"]
+cast_shadow = 0
+
+[node name="cuboid" parent="Node/body" index="0"]
+cast_shadow = 0
+
+[node name="cuboid2" parent="Node/body" index="1"]
+cast_shadow = 0
+
+[node name="cuboid3" parent="Node/body" index="2"]
+cast_shadow = 0
+
+[node name="cuboid4" parent="Node/body" index="3"]
+cast_shadow = 0
+
+[node name="cuboid5" parent="Node/body" index="4"]
+cast_shadow = 0
+
+[node name="cuboid6" parent="Node/body" index="5"]
+cast_shadow = 0
+
+[node name="cuboid7" parent="Node/body" index="6"]
+cast_shadow = 0
+
+[node name="cuboid8" parent="Node/body" index="7"]
+cast_shadow = 0
+
+[node name="bulb" parent="Node/Light" index="1"]
+cast_shadow = 0

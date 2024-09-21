@@ -1,0 +1,101 @@
+[gd_resource type="Resource" script_class="LootItemData" load_steps=9 format=4 uid="uid://n2m26g6kw42p"]
+
+[ext_resource type="Texture2D" uid="uid://k3iwu0wj3spi" path="res://Models/Loot/Journals/Journal_Texture.png" id="1_26qgi"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/LootItemData.gd" id="2_hytaq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_umoui"]
+resource_name = "m_24004603-59b0-6814-e043-9900a7edb55a"
+albedo_texture = ExtResource("1_26qgi")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xgs0y"]
+resource_name = "m_24004603-59b0-6814-e043-9900a7edb55a"
+albedo_texture = ExtResource("1_26qgi")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6iavt"]
+resource_name = "m_24004603-59b0-6814-e043-9900a7edb55a"
+albedo_texture = ExtResource("1_26qgi")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ljvry"]
+resource_name = "m_24004603-59b0-6814-e043-9900a7edb55a"
+albedo_texture = ExtResource("1_26qgi")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3s5qx"]
+resource_name = "m_24004603-59b0-6814-e043-9900a7edb55a"
+albedo_texture = ExtResource("1_26qgi")
+texture_filter = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6ajx8"]
+_surfaces = [{
+"aabb": AABB(-0.1875, 0, 0.046875, 0.4375, 0.625, 0.015625),
+"attribute_data": PackedByteArray("/xv/fwAA/3//G/9XAAD/V/9r/3//Z/9//2v/V/9n/1f/O/9//x//f/87/1f/H/9X/3P/J/9v/yf/cwAA/28AAP9v/0v/i/9L/2//T/+L/0//b/9X/4v/V/9v/1P/i/9T"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"material": SubResource("StandardMaterial3D_umoui"),
+"name": "m_24004603-59b0-6814-e043-9900a7edb55a",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAAAA/////wAAAAD//wAA//8AAP///////wAA/////wAAAAD/v///AAD///+//////wAA/7//////////v///AAD///9/AAAAAP///3//////////fwAA//////9/AAAAAP///78AAAAAAAD/vwAA//////+/AAD//wAA/7///////////wAA/////////////wAA//8AAP//AAD/////AAAAAAAAAAAAAAAAAAD//wAA//8AAAAAAAD//wAA/3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f////3////9/////f////3////9/////f////3////9//7//f/+//3//v/9//7//f/8//3//P/9//z//f/8/")
+}, {
+"aabb": AABB(-0.1875, 0, -0.03125, 0.4375, 0.625, 0.015625),
+"attribute_data": PackedByteArray("/xv/UwAA/1P/G/8rAAD/K/9j/1P/X/9T/2P/K/9f/yv/O/9T/x//U/87/yv/H/8r/2P/f/9f/3//Y/9X/1//V/9v/yv/i/8r/2//L/+L/y//b/83/4v/N/9v/zP/i/8z"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"material": SubResource("StandardMaterial3D_xgs0y"),
+"name": "m_24004603-59b0-6814-e043-9900a7edb55a",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAAAA/////wAAAAD//wAA//8AAP///////wAA/////wAAAAD/v///AAD///+//////wAA/7//////////v///AAD///9/AAAAAP///3//////////fwAA//////9/AAAAAP///78AAAAAAAD/vwAA//////+/AAD//wAA/7///////////wAA/////////////wAA//8AAP//AAD/////AAAAAAAAAAAAAAAAAAD//wAA//8AAAAAAAD//wAA/3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f////3////9/////f////3////9/////f////3////9//7//f/+//3//v/9//7//f/8//3//P/9//z//f/8/")
+}, {
+"aabb": AABB(-0.171875, 0, -0.015625, 0.421875, 0.625, 0.0625),
+"attribute_data": PackedByteArray("/1v/J/8//yf/WwAA/z8AAP9r/yf/Z/8n/2sAAP9nAAD/W/9T/z//U/9b/yv/P/8r/2v/U/9n/1P/a/8r/2f/K/9v/zv/i/87/2//P/+L/z//b/9H/4v/R/9v/0P/i/9D"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"material": SubResource("StandardMaterial3D_6iavt"),
+"name": "m_24004603-59b0-6814-e043-9900a7edb55a",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAAAA/////wAAAAD//wAA//8AAP///////wAA/////wAAAAD/v///AAD///+//////wAA/7//////////v///AAD///9/AAAAAP///3//////////fwAA//////9/AAAAAP///78AAAAAAAD/vwAA//////+/AAD//wAA/7///////////wAA/////////////wAA//8AAP//AAD/////AAAAAAAAAAAAAAAAAAD//wAA//8AAAAAAAD//wAA/3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f////3////9/////f////3////9/////f////3////9//7//f/+//3//v/9//7//f/8//3//P/9//z//f/8/")
+}, {
+"aabb": AABB(0.25, 0, -0.03125, 0.03125, 0.625, 0.09375),
+"attribute_data": PackedByteArray("/1v/f/9X/3//W/9X/1f/V/9H/3//P/9//0f/V/8//1f/Y/8n/1//J/9jAAD/XwAA/1P/f/9L/3//U/9X/0v/V/9v/1v/c/9b/2//Y/9z/2P/b/9v/3P/b/9v/2f/c/9n"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"material": SubResource("StandardMaterial3D_ljvry"),
+"name": "m_24004603-59b0-6814-e043-9900a7edb55a",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAAAA/////wAAAAD//wAA//8AAP///////wAA/////wAAAAD/v///AAD///+//////wAA/7//////////v///AAD///9/AAAAAP///3//////////fwAA//////9/AAAAAP///78AAAAAAAD/vwAA//////+/AAD//wAA/7///////////wAA/////////////wAA//8AAP//AAD/////AAAAAAAAAAAAAAAAAAD//wAA//8AAAAAAAD//wAA/3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f////3////9/////f////3////9/////f////3////9//7//f/+//3//v/9//7//f/8//3//P/9//z//f/8/")
+}, {
+"aabb": AABB(-0.246202, -0.0298458, 0, 0.523996, 0.688763, 1e-05),
+"attribute_data": PackedByteArray("/xv/JwAA/yf/GwAAAAAAAP9v/5v/b/9z/zv/J/8f/yf/OwAA/x8AAP9z/5v/c/9z/3cAAP+TAAD/d/8D/5P/Aw=="),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAEAAUABQAEAAUABgAHAAgACAAHAAkACgAKAAsACwAKAAsADAANAAwADAANAA0ADgAPAA4ADgAPAA8A"),
+"material": SubResource("StandardMaterial3D_3s5qx"),
+"name": "m_24004603-59b0-6814-e043-9900a7edb55a",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("AAA6GwAA///5ygAAAAD//wU1//8AAP/////E5AAA///5ygAAAAD/v///xOQAAP+/+coAAAAAG4cAADobAAAbh///xOQAABuHBTX//wAAG4cAADobAAD/vwU1//8AAP+////E5AAA/78FNf//AAD/v/nKAAAAAP+/AAA6GwAA/79LirL1S4qy9UuKsvVLirL1ZjqZRWY6mUX/f/9//3//f/9//3//f/9/mMVlupjFZbqy9bN1svWzdUwKS4pMCkuK")
+}]
+
+[resource]
+script = ExtResource("2_hytaq")
+LootItemName = "Journal"
+LootModel = SubResource("ArrayMesh_6ajx8")
+LootModelScale = Vector3(1, 1, 1)
+collisionscale = Vector3(0.485, 1, 0.14)
+Collisionpos = Vector3(0.045, 0.325, 0)
+LootCost = 100

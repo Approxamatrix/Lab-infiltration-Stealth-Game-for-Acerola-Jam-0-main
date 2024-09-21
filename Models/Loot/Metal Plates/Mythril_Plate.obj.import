@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bf3ibxwgp7muu"
+path="res://.godot/imported/Mythril_Plate.obj-51e51716777d73be5c97b970c86e9b3e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Mythril_Plate.obj-51e51716777d73be5c97b970c86e9b3e.mesh"]
+
+source_file="res://Models/Loot/Metal Plates/Mythril_Plate.obj"
+dest_files=["res://.godot/imported/Mythril_Plate.obj-51e51716777d73be5c97b970c86e9b3e.mesh", "res://.godot/imported/Mythril_Plate.obj-51e51716777d73be5c97b970c86e9b3e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

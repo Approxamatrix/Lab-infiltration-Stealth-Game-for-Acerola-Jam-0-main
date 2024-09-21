@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="InventoryData" load_steps=11 format=3 uid="uid://cm2mqfpb31487"]
+
+[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/ItemData.gd" id="1_eekmj"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/SlotData.gd" id="2_rj751"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/InventoryData.gd" id="3_17e08"]
+[ext_resource type="Resource" uid="uid://3nq8w1118btn" path="res://Resources/ItemData/Projectiles/Shocker.tres" id="3_ouar6"]
+[ext_resource type="Resource" uid="uid://c4vjg8j5ew7tm" path="res://Resources/ItemData/Projectiles/Sound_Emitter.tres" id="4_2f841"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ex240"]
+size = Vector3(5, 1, 1)
+
+[sub_resource type="Resource" id="Resource_kreap"]
+script = ExtResource("1_eekmj")
+ItemName = "Baton"
+IsStackable = false
+MaxCapacity = 1
+ItemMesh = SubResource("BoxMesh_ex240")
+DamageAmt = 0.0
+ProjectileMode = 0
+ItemType = 2
+
+[sub_resource type="Resource" id="Resource_areod"]
+script = ExtResource("2_rj751")
+itemdata = SubResource("Resource_kreap")
+ItemAmt = 1
+
+[sub_resource type="Resource" id="Resource_2urnh"]
+script = ExtResource("2_rj751")
+itemdata = ExtResource("3_ouar6")
+ItemAmt = 5
+
+[sub_resource type="Resource" id="Resource_67h8r"]
+script = ExtResource("2_rj751")
+itemdata = ExtResource("4_2f841")
+ItemAmt = 5
+
+[resource]
+script = ExtResource("3_17e08")
+ItemArray = Array[ExtResource("2_rj751")]([SubResource("Resource_areod"), SubResource("Resource_2urnh"), SubResource("Resource_67h8r"), null, null, null, null, null])

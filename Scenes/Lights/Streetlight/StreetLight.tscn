@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnk3qav2fugpp"]
+
+[ext_resource type="Script" path="res://Scenes/Lights/Lantern/LightConfig.gd" id="1_akyj5"]
+[ext_resource type="PackedScene" uid="uid://n8j2otpk6rhf" path="res://Models/Lights/StreetLight/StreetLightModel.tscn" id="2_8x88g"]
+
+[node name="StreetLight" type="Node3D" node_paths=PackedStringArray("omni", "spot")]
+script = ExtResource("1_akyj5")
+omni = NodePath("OmniLight3D")
+EnergyOmni = 1.0
+IndirectEnergyOmni = 1.0
+VolFogEnergyOmni = 1.0
+RangeOmni = 5.0
+AttenuationOmni = 1.0
+spot = NodePath("SpotLight3D")
+ColourSpot = Color(1, 1, 1, 1)
+EnergySpot = 1.0
+IndirectEnergySpot = 1.0
+VolFogEnergySpot = 1.0
+RangeSpot = 8.70629
+AttenuationSpot = 1.0
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3.39083, 0)
+shadow_enabled = true
+spot_range = 8.70629
+spot_angle = 52.4164
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.65812, 0)
+light_color = Color(0, 0, 0, 1)
+shadow_enabled = true
+
+[node name="StreetLight" parent="." instance=ExtResource("2_8x88g")]

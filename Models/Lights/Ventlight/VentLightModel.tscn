@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpy8l33k42udt"]
+
+[ext_resource type="PackedScene" uid="uid://cbg1p68716ssp" path="res://Models/Lights/Ventlight/Ventlight.gltf" id="1_gb0by"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pecso"]
+albedo_color = Color(1, 0, 0, 1)
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+
+[node name="VentLightModel" instance=ExtResource("1_gb0by")]
+
+[node name="cuboid2" parent="Node" index="1"]
+cast_shadow = 0
+surface_material_override/0 = SubResource("StandardMaterial3D_pecso")

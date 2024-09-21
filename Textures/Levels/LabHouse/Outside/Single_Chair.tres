@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://d3eoym3x3b3ky"]
+
+[ext_resource type="Texture2D" uid="uid://xsvyw13cw2n6" path="res://textures/Levels/LabHouse/Outside/Single_Chair.png" id="1_lt13g"]
+
+[resource]
+albedo_texture = ExtResource("1_lt13g")
+metallic_specular = 0.0
+texture_filter = 2

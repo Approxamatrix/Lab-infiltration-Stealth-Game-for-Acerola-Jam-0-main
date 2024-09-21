@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://cf8r40en453a7"]
+
+[ext_resource type="PackedScene" uid="uid://ccfwy136en5ym" path="res://Scenes/Lights/Lantern/LanternModel.tscn" id="1_55qym"]
+[ext_resource type="Script" path="res://Scenes/Lights/Lantern/LightConfig.gd" id="1_ew8xo"]
+
+[node name="Lantern" type="Node3D" node_paths=PackedStringArray("omni")]
+script = ExtResource("1_ew8xo")
+omni = NodePath("OmniLight3D")
+ColourOmni = Color(1, 1, 1, 1)
+EnergyOmni = 5.0
+RangeOmni = 10.0
+
+[node name="LanternModel" parent="." instance=ExtResource("1_55qym")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.372857, 0)
+light_energy = 5.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+shadow_enabled = true
+omni_range = 10.0
+omni_attenuation = 0.0

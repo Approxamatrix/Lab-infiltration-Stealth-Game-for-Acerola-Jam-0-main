@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://d3u5wb70ql41o"
+path="res://.godot/imported/Lab_House_1.9.map-b2a88fcd2f97c4ae5a34cc82399e3ac2.tres"
+
+[deps]
+
+source_file="res://TrenchBroom Maps/autosave/Lab_House_1.9.map"
+dest_files=["res://.godot/imported/Lab_House_1.9.map-b2a88fcd2f97c4ae5a34cc82399e3ac2.tres"]
+
+[params]
+

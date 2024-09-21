@@ -1,0 +1,628 @@
+[gd_scene load_steps=44 format=3 uid="uid://bwwaigcmsa75p"]
+
+[ext_resource type="Script" path="res://Scripts/Entities/Player.gd" id="1_aj8ty"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/StatemachineManager.gd" id="1_tikqe"]
+[ext_resource type="Script" path="res://Scripts/Interaction_System/PlayerInteractions.gd" id="2_w2nnh"]
+[ext_resource type="Script" path="res://Scenes/Player/NoiseNodePlayer.gd" id="3_3nstm"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerIdleState.gd" id="3_28p8k"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerWalkState.gd" id="4_wx521"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerFallState.gd" id="5_j2kcj"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerJumpState.gd" id="6_dfft6"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerLedgeGrabState.gd" id="7_cu3ha"]
+[ext_resource type="Script" path="res://Scripts/FPS_Camera/Cameranode.gd" id="8_hwbbb"]
+[ext_resource type="Texture2D" uid="uid://cbk7aecfh56tb" path="res://Textures/Ui_Elements/LedgeGrab/LedgeClimbIindicator.png" id="9_jcyjj"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/PlayerHand/PlayerHand.gd" id="10_5is24"]
+[ext_resource type="PackedScene" uid="uid://cxx0kgf4d5aan" path="res://Scenes/Lightmeter/Lightmeter.tscn" id="10_n3bau"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerRunState.gd" id="10_uofau"]
+[ext_resource type="PackedScene" uid="uid://cdeow838ax1vn" path="res://Scenes/InventorySystem/PlayerInventory.tscn" id="11_awojb"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerCrouchIdleState.gd" id="11_bxl02"]
+[ext_resource type="Texture2D" uid="uid://b7ei8dwgpf63g" path="res://Textures/Ui_Elements/Crosshairs/Crosshair_Default.png" id="12_c1aw4"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerCrouchWalkState.gd" id="12_hcqta"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerCrouchJumpState.gd" id="13_omw78"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerCrouchFallState.gd" id="14_kvocj"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerDeathState.gd" id="16_n7f2n"]
+[ext_resource type="PackedScene" uid="uid://botklrimogjke" path="res://Scenes/Lightmeter/LightMeterGUI.tscn" id="17_arc83"]
+[ext_resource type="PackedScene" uid="uid://cm43mcabmssp6" path="res://Scenes/SoundMeter/SoundMeterGUI.tscn" id="21_mad1a"]
+[ext_resource type="Texture2D" uid="uid://t0tqpix8j46h" path="res://Textures/Ui_Elements/SoundMeter/SpeakerNormal.png" id="22_70v8s"]
+[ext_resource type="Texture2D" uid="uid://ba8yy43v5srx6" path="res://Textures/Ui_Elements/SoundMeter/SpeakerActive.png" id="23_i6mwt"]
+[ext_resource type="AudioStream" uid="uid://8bavipeucsm" path="res://Audio/Weapons/BatonHit.mp3" id="23_l88wc"]
+[ext_resource type="AudioStream" uid="uid://ck66qkugbdkit" path="res://Audio/Footsteps/Player/PlayerWalkSound.tres" id="26_nh1hx"]
+[ext_resource type="AudioStream" uid="uid://cudy34e1y2gqd" path="res://Audio/Item Collect/itemcollect.mp3" id="28_ip8rt"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_tdv0b"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_82og0"]
+radius = 5.72211
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4dvkm"]
+radius = 0.25
+
+[sub_resource type="BoxMesh" id="BoxMesh_5kdoq"]
+size = Vector3(5, 0.5, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_htb7w"]
+size = Vector3(1, 1.20496, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_h3lud"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mo450"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nuh18"]
+
+[sub_resource type="Animation" id="Animation_0xnuw"]
+resource_name = "Crouch"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerCollider:shape:height")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2.0, 0.5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cameranode/PlayerCamera:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.6, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hrm6t"]
+resource_name = "Death"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cameranode:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, -0.929231)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cameranode:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.7),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -0.176, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_xcess"]
+resource_name = "MeleeAttack"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cameranode/PlayerHand/ItemHeldMesh:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.41634e-07, -1.44513, -1.23569), Vector3(0.314159, -0.00349066, 0.235619), Vector3(-1.41634e-07, -1.44513, -1.23569)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cameranode/PlayerHand/ItemHeldMesh:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.15391, -0.29, -0.478426), Vector3(-0.154, -0.29, -0.113), Vector3(-0.15391, -0.29, -0.478426)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cameranode/PlayerHand/MeleeArea:monitoring")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+
+[sub_resource type="Animation" id="Animation_6x3y8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerCollider:shape:height")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cameranode/PlayerHand/ItemHeldMesh:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.41634e-07, -1.44513, -1.23569)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cameranode/PlayerHand/ItemHeldMesh:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.15391, -0.29, -0.478426)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Cameranode/PlayerHand/MeleeArea:monitoring")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Cameranode/PlayerCamera:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Cameranode:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.504716, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Cameranode:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_r47yw"]
+resource_name = "Uncrouch"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerCollider:shape:height")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.5, 2.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cameranode/PlayerCamera:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -0.6, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w0b1p"]
+_data = {
+"Crouch": SubResource("Animation_0xnuw"),
+"Death": SubResource("Animation_hrm6t"),
+"MeleeAttack": SubResource("Animation_xcess"),
+"RESET": SubResource("Animation_6x3y8"),
+"Uncrouch": SubResource("Animation_r47yw")
+}
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_xv3fr"]
+random_pitch = 2.0
+streams_count = 1
+stream_0/stream = ExtResource("28_ip8rt")
+
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("PlayerCamera", "FrontLedgeCheck", "TopLedgeCheck", "LedgeBlockedCheck", "lightmeter", "PlayerHand", "ItemUseRay", "CameraNode", "NoiseNode", "PlayerCollider", "PlayerAnim", "Statemanager", "Flashlight", "BatonHit", "WalkSound", "WalkTimer", "inspectlabel", "moneyamt", "healthlabel", "itemcollectsound") groups=["Player"]]
+collision_layer = 8
+script = ExtResource("1_aj8ty")
+PlayerCamera = NodePath("Cameranode/PlayerCamera")
+WalkSpd = 5.0
+RunSpd = 8.0
+CrouchSpd = 2.5
+Fallspeed = 0.5
+JumpPower = 11.5
+CrouchJumpPower = 7.0
+FrontLedgeCheck = NodePath("LedgeGrabNodes/FrontLedgeCheck")
+TopLedgeCheck = NodePath("LedgeGrabNodes/TopLedgeCheck")
+LedgeBlockedCheck = NodePath("LedgeGrabNodes/TopLedgeBlockedChecker")
+LedgeBlockedCheckerOffset = -1.986
+maxhealth = 20.0
+lightmeter = NodePath("Lightmeter")
+PlayerHand = NodePath("Cameranode/PlayerHand")
+ItemUseRay = NodePath("Cameranode/PlayerCamera/UseItemRay")
+CameraNode = NodePath("Cameranode")
+NoiseNode = NodePath("PlayerModel/NoiseNodePlayer")
+PlayerCollider = NodePath("PlayerCollider")
+PlayerAnim = NodePath("AnimationPlayer")
+Statemanager = NodePath("StatemachineManager")
+Flashlight = NodePath("Cameranode/PlayerCamera/Flashlight")
+BatonHit = NodePath("BatonHit")
+WalkSound = NodePath("WalkSound")
+WalkTimer = NodePath("WalkTimer")
+Walksoundtime = 0.6
+Runsoundtime = 0.25
+inspectlabel = NodePath("UI/VSplitContainer/PanelContainer/InteractLabel")
+moneyamt = NodePath("UI/VSplitContainer/PanelContainer2/PlayerInventory/Money")
+healthlabel = NodePath("UI/VSplitContainer/PanelContainer2/PlayerInventory/Health")
+itemcollectsound = NodePath("itemcollectsound")
+
+[node name="PlayerInteractions" type="Node" parent="." node_paths=PackedStringArray("InteractRay", "InteractLabel", "InteractListNode", "InspectLabel")]
+script = ExtResource("2_w2nnh")
+InteractRay = NodePath("../Cameranode/PlayerCamera/InteractRay")
+InteractLabel = NodePath("../UI/VSplitContainer/PanelContainer/InteractLabel")
+InteractListNode = NodePath("../UI/HSplitContainer/InteractionList")
+InspectLabel = NodePath("../UI/VSplitContainer/PanelContainer/InteractLabel")
+
+[node name="PlayerModel" type="MeshInstance3D" parent="."]
+layers = 524288
+mesh = SubResource("CapsuleMesh_tdv0b")
+
+[node name="NoiseNodePlayer" type="Area3D" parent="PlayerModel" node_paths=PackedStringArray("plyrnode")]
+script = ExtResource("3_3nstm")
+plyrnode = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerModel/NoiseNodePlayer"]
+shape = SubResource("SphereShape3D_82og0")
+
+[node name="PlayerCollider" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_4dvkm")
+
+[node name="StatemachineManager" type="Node" parent="." node_paths=PackedStringArray("StartState")]
+script = ExtResource("1_tikqe")
+StartState = NodePath("PlayerIdleState")
+
+[node name="PlayerIdleState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("PlayerObj")]
+script = ExtResource("3_28p8k")
+PlayerObj = NodePath("../..")
+
+[node name="PlayerWalkState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("PlayerObj", "Camera")]
+script = ExtResource("4_wx521")
+PlayerObj = NodePath("../..")
+Camera = NodePath("../../Cameranode/PlayerCamera")
+
+[node name="PlayerFallState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("PlayerObj", "LedgeGrabIndicator")]
+script = ExtResource("5_j2kcj")
+PlayerObj = NodePath("../..")
+LedgeGrabIndicator = NodePath("../../UI/VSplitContainer/PanelContainer2/LedgeGrabIndicator")
+
+[node name="PlayerJumpState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("PlayerObj")]
+script = ExtResource("6_dfft6")
+PlayerObj = NodePath("../..")
+
+[node name="PlayerLedgeGrabState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("PlayerObj", "LedgeGrabIndicator")]
+script = ExtResource("7_cu3ha")
+PlayerObj = NodePath("../..")
+LedgeGrabIndicator = NodePath("../../UI/VSplitContainer/PanelContainer2/LedgeGrabIndicator")
+
+[node name="PlayerRunState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("PlayerObj", "Camera")]
+script = ExtResource("10_uofau")
+PlayerObj = NodePath("../..")
+Camera = NodePath("../../Cameranode/PlayerCamera")
+
+[node name="PlayerCrouchIdleState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("PlayerObj")]
+script = ExtResource("11_bxl02")
+PlayerObj = NodePath("../..")
+
+[node name="PlayerCrouchWalkState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("PlayerObj", "Camera")]
+script = ExtResource("12_hcqta")
+PlayerObj = NodePath("../..")
+Camera = NodePath("../../Cameranode/PlayerCamera")
+
+[node name="PlayerCrouchJumpState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("PlayerObj")]
+script = ExtResource("13_omw78")
+PlayerObj = NodePath("../..")
+
+[node name="PlayerCrouchFallState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("PlayerObj")]
+script = ExtResource("14_kvocj")
+PlayerObj = NodePath("../..")
+
+[node name="PlayerDeathState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("PlayerObj", "deathtimer")]
+script = ExtResource("16_n7f2n")
+PlayerObj = NodePath("../..")
+deathtimer = NodePath("../../DeathTimer")
+
+[node name="Cameranode" type="Node3D" parent="." node_paths=PackedStringArray("Cameranode", "FrontLedgeCheck")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.504716, 0)
+script = ExtResource("8_hwbbb")
+Cameranode = NodePath("PlayerCamera")
+FrontLedgeCheck = NodePath("../LedgeGrabNodes/FrontLedgeCheck")
+
+[node name="PlayerCamera" type="Camera3D" parent="Cameranode"]
+cull_mask = 524283
+fov = 90.0
+
+[node name="InteractRay" type="RayCast3D" parent="Cameranode/PlayerCamera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.043725, 0)
+visible = false
+target_position = Vector3(0, 0, -2.5)
+collision_mask = 17
+debug_shape_thickness = 5
+
+[node name="UseItemRay" type="RayCast3D" parent="Cameranode/PlayerCamera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.043725, 0)
+target_position = Vector3(0, 0, -30)
+collision_mask = 17
+debug_shape_custom_color = Color(0.941176, 0, 0.894118, 1)
+debug_shape_thickness = 5
+
+[node name="Flashlight" type="SpotLight3D" parent="Cameranode/PlayerCamera"]
+layers = 8192
+light_energy = 3.0
+light_indirect_energy = 1.5
+light_volumetric_fog_energy = 1.5
+light_cull_mask = 4293926913
+shadow_enabled = true
+spot_range = 16.0
+
+[node name="PlayerHand" type="Node3D" parent="Cameranode" node_paths=PackedStringArray("EquippedSprite", "EquippedMesh")]
+transform = Transform3D(0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, 0.5, 0.245, -0.145, -0.225)
+script = ExtResource("10_5is24")
+EquippedSprite = NodePath("ItemHeldSprite")
+EquippedMesh = NodePath("ItemHeldMesh")
+
+[node name="ItemHeldSprite" type="Sprite3D" parent="Cameranode/PlayerHand"]
+shaded = true
+texture_filter = 0
+
+[node name="ItemHeldMesh" type="MeshInstance3D" parent="Cameranode/PlayerHand" groups=["Enemy"]]
+transform = Transform3D(0.0206095, 0.059182, -0.496057, -0.472188, 0.164435, 7.0817e-08, 0.163138, 0.468464, 0.0626679, -0.15391, -0.29, -0.478426)
+ignore_occlusion_culling = true
+mesh = SubResource("BoxMesh_5kdoq")
+
+[node name="MeleeArea" type="Area3D" parent="Cameranode/PlayerHand"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.538109, 0, 0.310678)
+monitoring = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cameranode/PlayerHand/MeleeArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.943996, -0.230386, -0.545016)
+shape = SubResource("BoxShape3D_htb7w")
+
+[node name="LedgeGrabNodes" type="Node3D" parent="."]
+
+[node name="FrontLedgeCheck" type="RayCast3D" parent="LedgeGrabNodes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0372435, 0)
+target_position = Vector3(0, 0, -1.5)
+debug_shape_custom_color = Color(0.858824, 0, 0.741176, 0.360784)
+debug_shape_thickness = 5
+
+[node name="TopLedgeCheck" type="RayCast3D" parent="LedgeGrabNodes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.52296, 0)
+target_position = Vector3(0, -1.5, 0)
+debug_shape_custom_color = Color(0.65098, 0, 0.933333, 1)
+debug_shape_thickness = 5
+
+[node name="TopLedgeBlockedChecker" type="ShapeCast3D" parent="LedgeGrabNodes"]
+shape = SubResource("SphereShape3D_h3lud")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="LightMeterGUI" parent="UI" instance=ExtResource("17_arc83")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.189815
+anchor_right = 1.0
+anchor_bottom = 0.783951
+offset_left = -94.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="VSplitContainer" type="VSplitContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -396.0
+grow_horizontal = 2
+grow_vertical = 0
+split_offset = 255
+
+[node name="PanelContainer" type="PanelContainer" parent="UI/VSplitContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mo450")
+
+[node name="InteractLabel" type="RichTextLabel" parent="UI/VSplitContainer/PanelContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/normal_font_size = 36
+bbcode_enabled = true
+text = "[center] Interact [/center]"
+
+[node name="PanelContainer2" type="PanelContainer" parent="UI/VSplitContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxEmpty_nuh18")
+
+[node name="LedgeGrabIndicator" type="TextureRect" parent="UI/VSplitContainer/PanelContainer2"]
+visible = false
+z_index = -10
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("9_jcyjj")
+stretch_mode = 5
+
+[node name="PlayerInventory" parent="UI/VSplitContainer/PanelContainer2" node_paths=PackedStringArray("PlayerObj") instance=ExtResource("11_awojb")]
+layout_mode = 2
+PlayerObj = NodePath("../../../..")
+
+[node name="Health" type="RichTextLabel" parent="UI/VSplitContainer/PanelContainer2/PlayerInventory"]
+layout_mode = 2
+offset_top = -46.0
+offset_right = 243.0
+offset_bottom = -3.0
+size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/normal_font_size = 30
+text = "Health :"
+
+[node name="Money" type="RichTextLabel" parent="UI/VSplitContainer/PanelContainer2/PlayerInventory"]
+layout_mode = 2
+offset_left = 424.0
+offset_top = -46.0
+offset_right = 667.0
+offset_bottom = -3.0
+size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/normal_font_size = 30
+text = "Gold :"
+
+[node name="TextureRect" type="TextureRect" parent="UI"]
+self_modulate = Color(1, 1, 1, 0.419608)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_c1aw4")
+stretch_mode = 5
+
+[node name="HSplitContainer" type="HSplitContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 670.0
+offset_top = 202.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InteractionList" type="VBoxContainer" parent="UI/HSplitContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="SoundMeterGUI" parent="UI" instance=ExtResource("21_mad1a")]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -198.0
+offset_top = -151.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_under = ExtResource("22_70v8s")
+texture_progress = ExtResource("23_i6mwt")
+
+[node name="Lightmeter" parent="." instance=ExtResource("10_n3bau")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_w0b1p")
+}
+playback_default_blend_time = 0.3
+
+[node name="BatonHit" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0233133, 0, -1.24965)
+stream = ExtResource("23_l88wc")
+volume_db = 12.0
+pitch_scale = 0.5
+
+[node name="WalkSound" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.17087, 0)
+stream = ExtResource("26_nh1hx")
+
+[node name="WalkTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="itemcollectsound" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_xv3fr")
+
+[node name="DeathTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="body_entered" from="PlayerModel/NoiseNodePlayer" to="PlayerModel/NoiseNodePlayer" method="_on_body_entered"]
+[connection signal="body_exited" from="PlayerModel/NoiseNodePlayer" to="PlayerModel/NoiseNodePlayer" method="_on_body_exited"]
+[connection signal="body_entered" from="Cameranode/PlayerHand/MeleeArea" to="." method="_on_melee_area_body_entered"]
+[connection signal="timeout" from="WalkTimer" to="." method="_on_walk_timer_timeout"]
+[connection signal="timeout" from="DeathTimer" to="StatemachineManager/PlayerDeathState" method="_on_death_timer_timeout"]

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dj1mijynaty88"]
+
+[ext_resource type="Script" path="res://Scripts/PatrolPoint/PatrolPoint.gd" id="1_wu8g6"]
+[ext_resource type="Texture2D" uid="uid://c8x5npy1dwxwd" path="res://Textures/Patrol_Point_Icons/PatrolPointIconNormal.png" id="2_243cf"]
+
+[node name="PatrolPoint" type="Node3D" node_paths=PackedStringArray("icon")]
+script = ExtResource("1_wu8g6")
+icon = NodePath("Sprite3D")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+cast_shadow = 0
+gi_mode = 0
+billboard = 1
+texture_filter = 0
+texture = ExtResource("2_243cf")

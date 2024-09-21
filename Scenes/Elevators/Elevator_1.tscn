@@ -1,0 +1,212 @@
+[gd_scene load_steps=13 format=3 uid="uid://diee3pvkmcbgv"]
+
+[ext_resource type="Script" path="res://Scripts/Elevators/Elevator_1.gd" id="1_cnesr"]
+[ext_resource type="Material" uid="uid://bvniefikw42ti" path="res://Materials/Elevator/ElevatorMetal.tres" id="3_i2afo"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_w3ah3"]
+size = Vector3(1.74, 2, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fbxen"]
+size = Vector3(1, 2, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mevh5"]
+size = Vector3(1, 0.5, 1.4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_aggsi"]
+size = Vector3(1.74, 2, 0.5)
+
+[sub_resource type="Animation" id="Animation_jtn8e"]
+resource_name = "Close"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Front door l:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.105, 1.013, 1.227), Vector3(-0.605, 1.013, 1.227)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Front door R:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.903, 1.013, 1.227), Vector3(0.403, 1.013, 1.227)]
+}
+
+[sub_resource type="Animation" id="Animation_mv7gs"]
+resource_name = "Open"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Front door l:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.605, 1.013, 1.227), Vector3(-1.105, 1.013, 1.227)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Front door R:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.403, 1.013, 1.227), Vector3(0.903, 1.013, 1.227)]
+}
+
+[sub_resource type="Animation" id="Animation_5bs7l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Front door l:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.605, 1.013, 1.227)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Front door R:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.403, 1.013, 1.227)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i57ex"]
+_data = {
+"Close": SubResource("Animation_jtn8e"),
+"Open": SubResource("Animation_mv7gs"),
+"RESET": SubResource("Animation_5bs7l")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xyp66"]
+size = Vector3(3.08508, 2.02625, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_csh5t"]
+size = Vector3(1, 1, 0.6875)
+
+[node name="Elevator" type="Node3D" node_paths=PackedStringArray("OpenTrigger", "TeleportTrigger", "AnimationPlr", "TeleTimer")]
+script = ExtResource("1_cnesr")
+OpenTrigger = NodePath("OpenTrigger")
+TeleportTrigger = NodePath("Teleport Trigger")
+AnimationPlr = NodePath("AnimationPlayer")
+TeleTimer = NodePath("Timer")
+
+[node name="Side L" type="CSGMesh3D" parent="."]
+transform = Transform3D(-1.5299e-07, 0, -1, 0, 1.5, 0, 3.5, 0, -4.37114e-08, -2.43291, 1.01279, -1.57662)
+use_collision = true
+mesh = SubResource("BoxMesh_w3ah3")
+material = ExtResource("3_i2afo")
+
+[node name="Side L2" type="CSGMesh3D" parent="."]
+transform = Transform3D(0.623, 0, 0, 0, 1.5, 0, 0, 0, 1, -1.64823, 1.013, 1.22745)
+use_collision = true
+mesh = SubResource("BoxMesh_w3ah3")
+material = ExtResource("3_i2afo")
+
+[node name="Side L3" type="CSGMesh3D" parent="."]
+transform = Transform3D(0.63, 0, 0, 0, 1.5, 0, 0, 0, 1, 1.4511, 1.013, 1.22745)
+use_collision = true
+mesh = SubResource("BoxMesh_w3ah3")
+material = ExtResource("3_i2afo")
+
+[node name="Back" type="CSGMesh3D" parent="."]
+transform = Transform3D(4.38, 0, 0, 0, 1.5, 0, 0, 0, 1, -0.0953808, 1.01279, -4.34032)
+use_collision = true
+mesh = SubResource("BoxMesh_fbxen")
+material = ExtResource("3_i2afo")
+
+[node name="Floor" type="CSGMesh3D" parent="."]
+transform = Transform3D(5.045, 0, 0, 0, 1, 0, 0, 0, 4.33, 0.0108187, -0.17626, -1.56456)
+use_collision = true
+mesh = SubResource("BoxMesh_mevh5")
+material = ExtResource("3_i2afo")
+
+[node name="Top" type="CSGMesh3D" parent="."]
+transform = Transform3D(4.665, 0, 0, 0, 1.165, 0, 0, 0, 4, -0.069, 2.71467, -1.301)
+use_collision = true
+mesh = SubResource("BoxMesh_mevh5")
+material = ExtResource("3_i2afo")
+
+[node name="Front door R" type="CSGMesh3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 0.403, 1.013, 1.227)
+use_collision = true
+mesh = SubResource("BoxMesh_fbxen")
+material = ExtResource("3_i2afo")
+
+[node name="Front door l" type="CSGMesh3D" parent="."]
+transform = Transform3D(1.1, 0, 0, 0, 1.5, 0, 0, 0, 1, -0.605, 1.013, 1.227)
+use_collision = true
+mesh = SubResource("BoxMesh_fbxen")
+material = ExtResource("3_i2afo")
+
+[node name="Side R" type="CSGMesh3D" parent="."]
+transform = Transform3D(-1.5299e-07, 0, -1.195, 0, 1.5, 0, 3.5, 0, -5.22351e-08, 2.27182, 1.013, -1.58869)
+use_collision = true
+mesh = SubResource("BoxMesh_aggsi")
+material = ExtResource("3_i2afo")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_i57ex")
+}
+playback_default_blend_time = 0.3
+
+[node name="OpenTrigger" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.40595)
+collision_layer = 9
+collision_mask = 9
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="OpenTrigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.155334, 0.513123, 0.597389)
+shape = SubResource("BoxShape3D_xyp66")
+
+[node name="Teleport Trigger" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0146818)
+collision_layer = 9
+collision_mask = 9
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Teleport Trigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0858707, 0.534133, 0.374683)
+shape = SubResource("BoxShape3D_csh5t")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.168744, 1.53296, 3.70641)
+light_color = Color(0.968627, 0, 0.235294, 1)
+light_energy = 4.733
+shadow_enabled = true
+
+[connection signal="body_entered" from="OpenTrigger" to="." method="_on_open_trigger_body_entered"]
+[connection signal="body_exited" from="OpenTrigger" to="." method="_on_open_trigger_body_exited"]
+[connection signal="body_entered" from="Teleport Trigger" to="." method="_on_teleport_trigger_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

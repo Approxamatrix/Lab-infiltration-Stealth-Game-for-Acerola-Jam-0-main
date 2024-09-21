@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cwwad7bdmjm0"]
+
+[ext_resource type="Texture2D" uid="uid://dfxrkcedrs7n7" path="res://textures/Levels/LabHouse/Outside/Window.png" id="1_tyyrp"]
+
+[resource]
+albedo_texture = ExtResource("1_tyyrp")
+metallic_specular = 0.0
+texture_filter = 2

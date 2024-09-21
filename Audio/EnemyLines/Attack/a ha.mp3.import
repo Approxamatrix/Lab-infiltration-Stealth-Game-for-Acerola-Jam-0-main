@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d2wx0653a60c6"
+path="res://.godot/imported/a ha.mp3-85c947fd528d78a312cf54cb2d9efa72.mp3str"
+
+[deps]
+
+source_file="res://Audio/EnemyLines/Attack/a ha.mp3"
+dest_files=["res://.godot/imported/a ha.mp3-85c947fd528d78a312cf54cb2d9efa72.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b1ni3l66avudo"
+path="res://.godot/imported/Microscope.obj-e982d32b9c2643e85d63f53b3c1f5a80.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Microscope.obj-e982d32b9c2643e85d63f53b3c1f5a80.mesh"]
+
+source_file="res://Models/Loot/Lab Equipment/Microscope/Microscope.obj"
+dest_files=["res://.godot/imported/Microscope.obj-e982d32b9c2643e85d63f53b3c1f5a80.mesh", "res://.godot/imported/Microscope.obj-e982d32b9c2643e85d63f53b3c1f5a80.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

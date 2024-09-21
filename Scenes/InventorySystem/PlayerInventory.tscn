@@ -1,0 +1,70 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdeow838ax1vn"]
+
+[ext_resource type="Script" path="res://Scripts/InventorySystem/PlayerInventory/PlayerInventory.gd" id="1_1xeqa"]
+[ext_resource type="Resource" uid="uid://cm2mqfpb31487" path="res://Resources/InventoryData/PlayerInventory.tres" id="2_jxo03"]
+[ext_resource type="PackedScene" uid="uid://faiqif6nfu1s" path="res://Scenes/InventorySystem/ItemSlot.tscn" id="2_uxfk7"]
+
+[node name="PlayerInventory" type="Control" node_paths=PackedStringArray("Hotbar", "SelectedItemLabel", "SelectionIndicator")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1xeqa")
+InvData = ExtResource("2_jxo03")
+Hotbar = NodePath("Hotbar")
+SelectedItemLabel = NodePath("SelectedItem")
+SelectionIndicator = NodePath("SelectionIndicator")
+
+[node name="Hotbar" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 708.0
+offset_bottom = 85.0
+
+[node name="ItemSlot" parent="Hotbar" instance=ExtResource("2_uxfk7")]
+layout_mode = 2
+
+[node name="ItemSlot2" parent="Hotbar" instance=ExtResource("2_uxfk7")]
+layout_mode = 2
+
+[node name="ItemSlot3" parent="Hotbar" instance=ExtResource("2_uxfk7")]
+layout_mode = 2
+
+[node name="ItemSlot4" parent="Hotbar" instance=ExtResource("2_uxfk7")]
+layout_mode = 2
+
+[node name="ItemSlot5" parent="Hotbar" instance=ExtResource("2_uxfk7")]
+layout_mode = 2
+
+[node name="ItemSlot6" parent="Hotbar" instance=ExtResource("2_uxfk7")]
+layout_mode = 2
+
+[node name="ItemSlot7" parent="Hotbar" instance=ExtResource("2_uxfk7")]
+layout_mode = 2
+
+[node name="ItemSlot8" parent="Hotbar" instance=ExtResource("2_uxfk7")]
+layout_mode = 2
+
+[node name="SelectedItem" type="Label" parent="."]
+layout_mode = 0
+offset_left = 256.0
+offset_top = -54.0
+offset_right = 700.0
+offset_bottom = -7.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 30
+text = "
+"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="SelectionIndicator" type="Panel" parent="."]
+visible = false
+custom_minimum_size = Vector2(70, 80)
+layout_mode = 0
+offset_left = 2.5
+offset_top = 2.5
+offset_right = 82.5
+offset_bottom = 82.5

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b4hpqk444c31y"]
+
+[ext_resource type="Texture2D" uid="uid://cw3dfnk336k5p" path="res://textures/Levels/LabHouse/Misc/Bookcase.png" id="1_ekus6"]
+
+[resource]
+albedo_texture = ExtResource("1_ekus6")
+metallic_specular = 0.0
+texture_filter = 2

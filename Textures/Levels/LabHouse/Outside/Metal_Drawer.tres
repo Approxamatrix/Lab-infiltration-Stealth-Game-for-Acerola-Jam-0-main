@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dkiav5uw1w7l8"]
+
+[ext_resource type="Texture2D" uid="uid://6wxvtdx72ya7" path="res://textures/Levels/LabHouse/Outside/Metal_Drawer.png" id="1_ifjrk"]
+
+[resource]
+albedo_texture = ExtResource("1_ifjrk")
+metallic_specular = 0.0
+texture_filter = 2

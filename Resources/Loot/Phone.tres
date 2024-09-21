@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="LootItemData" load_steps=5 format=4 uid="uid://b50vmiejv2mtc"]
+
+[ext_resource type="Texture2D" uid="uid://cd005hg8ixk0b" path="res://Models/Loot/Electronics/Phone/Phone.png" id="1_q6rul"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/LootItemData.gd" id="2_84dia"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7lmsw"]
+resource_name = "m_67ae0ed2-6fd7-7f4a-b1b2-ea3c6f2ffffc"
+albedo_texture = ExtResource("1_q6rul")
+texture_filter = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_sx8te"]
+_surfaces = [{
+"aabb": AABB(-0.25, 0, -0.0625, 0.375, 0.5625, 0.125),
+"attribute_data": PackedByteArray("/y//RwAA/0f/LwAAAAAAAP8P/5cAAP+X/w//TwAA/0//Z/9H/zf/R/9nAAD/NwAA/yf/l/8X/5f/J/9P/xf/T/8v/0//X/9P/y//X/9f/1//L/93/1//d/8v/2f/X/9n"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"material": SubResource("StandardMaterial3D_7lmsw"),
+"name": "m_67ae0ed2-6fd7-7f4a-b1b2-ea3c6f2ffffc",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAAAA/////wAAAAD//wAA//8AAP///////wAA/////wAAAAD/v///AAD///+//////wAA/7//////////v///AAD///9/AAAAAP///3//////////fwAA//////9/AAAAAP///78AAAAAAAD/vwAA//////+/AAD//wAA/7///////////wAA/////////////wAA//8AAP//AAD/////AAAAAAAAAAAAAAAAAAD//wAA//8AAAAAAAD//wAA/3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f////3////9/////f////3////9/////f////3////9//7//f/+//3//v/9//7//f/8//3//P/9//z//f/8/")
+}]
+
+[resource]
+script = ExtResource("2_84dia")
+LootItemName = "Phone"
+LootModel = SubResource("ArrayMesh_sx8te")
+LootModelScale = Vector3(1, 1, 1)
+collisionscale = Vector3(0.395, 0.875, 0.11)
+Collisionpos = Vector3(-0.045, 0.3, -0.015)
+LootCost = 150

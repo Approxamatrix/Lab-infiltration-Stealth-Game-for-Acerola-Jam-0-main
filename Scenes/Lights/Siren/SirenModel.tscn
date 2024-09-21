@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dx3g85m60j0mu"]
+
+[ext_resource type="PackedScene" uid="uid://c5n2g4ffhtc7" path="res://Models/Lights/Siren/Siren.gltf" id="1_4sq7s"]
+[ext_resource type="Texture2D" uid="uid://bntomjh2xb0qg" path="res://Models/Lights/Siren/Siren_0.png" id="2_kacis"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lls30"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("2_kacis")
+emission_enabled = true
+emission = Color(0.823529, 0.231373, 0.239216, 1)
+texture_filter = 0
+texture_repeat = false
+
+[node name="SirenModel" instance=ExtResource("1_4sq7s")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="cuboid2" parent="Node" index="1"]
+cast_shadow = 0
+surface_material_override/0 = SubResource("StandardMaterial3D_lls30")

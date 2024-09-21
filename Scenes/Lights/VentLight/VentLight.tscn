@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckh05rpl77pbs"]
+
+[ext_resource type="Script" path="res://Scenes/Lights/Lantern/LightConfig.gd" id="1_33glb"]
+[ext_resource type="PackedScene" uid="uid://dpy8l33k42udt" path="res://Models/Lights/Ventlight/VentLightModel.tscn" id="2_7dtx0"]
+
+[node name="VentLight" type="Node3D" node_paths=PackedStringArray("omni")]
+script = ExtResource("1_33glb")
+omni = NodePath("OmniLight3D")
+ColourOmni = Color(0.721569, 0.215686, 0.215686, 1)
+EnergyOmni = 0.3
+IndirectEnergyOmni = 1.0
+VolFogEnergyOmni = 1.0
+RangeOmni = 10.0
+
+[node name="VentLightModel" parent="." instance=ExtResource("2_7dtx0")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.586143, 0)
+light_color = Color(0.721569, 0.215686, 0.215686, 1)
+light_energy = 0.3
+omni_range = 10.0
+omni_attenuation = 0.0

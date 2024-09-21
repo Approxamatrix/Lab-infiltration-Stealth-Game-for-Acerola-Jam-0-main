@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://b3mjcle5i7sko"
+path="res://.godot/imported/Strange_Land.2.map-e71d13df24ee21b92461e9fa26f6c814.tres"
+
+[deps]
+
+source_file="res://TrenchBroom Maps/autosave/Strange_Land.2.map"
+dest_files=["res://.godot/imported/Strange_Land.2.map-e71d13df24ee21b92461e9fa26f6c814.tres"]
+
+[params]
+

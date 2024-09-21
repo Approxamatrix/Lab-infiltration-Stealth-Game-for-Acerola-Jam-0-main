@@ -1,0 +1,67 @@
+[gd_resource type="Resource" script_class="LootItemData" load_steps=7 format=4 uid="uid://cpjen323tyxxm"]
+
+[ext_resource type="Texture2D" uid="uid://6cwd315c7sox" path="res://Models/Loot/Money/Money.png" id="1_s4xo5"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/LootItemData.gd" id="2_npff3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y2rcg"]
+resource_name = "m_85c04af5-9dfb-5b18-60d6-d62f4b92b1c6"
+albedo_texture = ExtResource("1_s4xo5")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nlgpg"]
+resource_name = "m_85c04af5-9dfb-5b18-60d6-d62f4b92b1c6"
+albedo_texture = ExtResource("1_s4xo5")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4688m"]
+resource_name = "m_85c04af5-9dfb-5b18-60d6-d62f4b92b1c6"
+albedo_texture = ExtResource("1_s4xo5")
+texture_filter = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_mp4in"]
+_surfaces = [{
+"aabb": AABB(-0.125, 0, -0.10625, 0.3, 0.03125, 0.16875),
+"attribute_data": PackedByteArray("/6//D/9f/w//rwAA/18AAP+P/0//X/9P/4//P/9f/z//r/8v/1//L/+v/x//X/8f/4//b/9f/2//j/9f/1//XwAAAAD/TwAAAAD/L/9P/y8AAP9v/0//bwAA/z//T/8/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"material": SubResource("StandardMaterial3D_y2rcg"),
+"name": "m_85c04af5-9dfb-5b18-60d6-d62f4b92b1c6",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAAAA/////wAAAAD//wAA//8AAP///////wAA/////wAAAAD/v///AAD///+//////wAA/7//////////v///AAD///9/AAAAAP///3//////////fwAA//////9/AAAAAP///78AAAAAAAD/vwAA//////+/AAD//wAA/7///////////wAA/////////////wAA//8AAP//AAD/////AAAAAAAAAAAAAAAAAAD//wAA//8AAAAAAAD//wAA/3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f////3////9/////f////3////9/////f////3////9//7//f/+//3//v/9//7//f/8//3//P/9//z//f/8/")
+}, {
+"aabb": AABB(-0.163337, 0.03125, -0.187411, 0.342537, 0.03125, 0.310305),
+"attribute_data": PackedByteArray("/6//D/9f/w//rwAA/18AAP+P/0//X/9P/4//P/9f/z//r/8v/1//L/+v/x//X/8f/4//b/9f/2//j/9f/1//XwAAAAD/TwAAAAD/L/9P/y8AAP9v/0//bwAA/z//T/8/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"material": SubResource("StandardMaterial3D_nlgpg"),
+"name": "m_85c04af5-9dfb-5b18-60d6-d62f4b92b1c6",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAPWNG+eotwAAAAAb5wAA///1jRvnqLf//wAAG+eotwAAAADi2P//AAAJcuLYqLf//wAA4tj/////CXLi2P//AAAJcuKYVkgAAP//4pj/////CXLimFZI/////+KYVkgAAP//G6cAAAAA9Y0bp1ZI/////xunAAD///WNG6f/////CXKJ7lZI/////4nuqLf//wAAie4AAP//9Y2J7qi3AAAAAHURAAAAAPWNdRH//wAACXJ1EVZIAAD//3UR/3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/3////9/////f////3///22RSLdtkUi3bZFIt22RSLdIN5DuSDeQ7kg3kO5IN5Du")
+}, {
+"aabb": AABB(-0.137385, 0.0625, -0.136589, 0.334892, 0.03125, 0.244904),
+"attribute_data": PackedByteArray("/6//D/9f/w//rwAA/18AAP+P/0//X/9P/4//P/9f/z//r/8v/1//L/+v/x//X/8f/4//b/9f/2//j/9f/1//XwAAAAD/TwAAAAD/L/9P/y8AAP9v/0//bwAA/z//T/8/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"material": SubResource("StandardMaterial3D_4688m"),
+"name": "m_85c04af5-9dfb-5b18-60d6-d62f4b92b1c6",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("jiMAAAAAnvT//wAAb1ae9I4j//8AAJ70/////29WnvT//wAAb1aetHDcAAD//560/////29WnrRw3P////+etHDcAAD//2CLAAAAAI+pYItw3P////9giwAA//+PqWCLAAAAAI+pX8uOIwAAAABfywAA//+PqV/LjiP//wAAX8tw3P/////29wAA//+Pqfb3/////29W9veOI///AAD29///AABvVggIjiMAAAAACAhw3AAA//8ICAAAAACPqQgI/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/f////3////9/////f////3////9/////f////3///zLEZwgyxGcIMsRnCDLEZwiYdzNEmHczRJh3M0SYdzNE")
+}]
+
+[resource]
+script = ExtResource("2_npff3")
+LootItemName = "Cash"
+LootModel = SubResource("ArrayMesh_mp4in")
+LootModelScale = Vector3(1, 1, 1)
+collisionscale = Vector3(0.41, 0.2, 0.35)
+Collisionpos = Vector3(0.01, 0.04, 0.01)
+LootCost = 5

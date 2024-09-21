@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ryd6vd6ongq7"]
+
+[ext_resource type="Texture2D" uid="uid://bs3oxlv0hep4a" path="res://textures/Levels/LabHouse/Outside/Cabin_Roof.png" id="1_28hof"]
+
+[resource]
+albedo_texture = ExtResource("1_28hof")
+metallic_specular = 0.0
+texture_filter = 2

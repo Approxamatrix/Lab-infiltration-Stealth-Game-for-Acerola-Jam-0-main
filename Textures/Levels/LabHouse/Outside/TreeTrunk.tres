@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b7c5simg6nym0"]
+
+[ext_resource type="Texture2D" uid="uid://couptoki0a178" path="res://textures/Levels/LabHouse/Outside/TreeTrunk.png" id="1_w3sm3"]
+
+[resource]
+albedo_texture = ExtResource("1_w3sm3")
+metallic_specular = 0.0
+texture_filter = 2

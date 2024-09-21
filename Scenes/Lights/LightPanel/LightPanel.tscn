@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://ck5jqcwaw1qxa"]
+
+[ext_resource type="Script" path="res://Scenes/Lights/Lantern/LightConfig.gd" id="1_4fnd2"]
+[ext_resource type="PackedScene" uid="uid://b1vy3fkwwqp17" path="res://Models/Lights/LightPanel/LightPanelModel.tscn" id="2_6wy7v"]
+
+[node name="LightPanel" type="Node3D" node_paths=PackedStringArray("spot")]
+script = ExtResource("1_4fnd2")
+spot = NodePath("SpotLight3D")
+ColourSpot = Color(1, 1, 1, 1)
+EnergySpot = 10.0
+IndirectEnergySpot = 1.0
+VolFogEnergySpot = 1.0
+RangeSpot = 10.0
+AttenuationSpot = 1.0
+
+[node name="LightPanelModel" parent="." instance=ExtResource("2_6wy7v")]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.386115, 0)
+light_energy = 10.0
+shadow_enabled = true
+spot_range = 10.0

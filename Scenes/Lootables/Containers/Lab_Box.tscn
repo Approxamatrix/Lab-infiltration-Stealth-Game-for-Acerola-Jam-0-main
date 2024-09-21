@@ -1,0 +1,277 @@
+[gd_scene load_steps=14 format=3 uid="uid://bpfh1qo37gycr"]
+
+[ext_resource type="Script" path="res://Scripts/Interaction_System/InteractionManager.gd" id="1_t42r0"]
+[ext_resource type="Script" path="res://Scripts/Doors/DoorRoot.gd" id="1_tn4ti"]
+[ext_resource type="Script" path="res://Scripts/Interaction_System/Interact_Nodes/Open_Door.gd" id="2_7ljky"]
+[ext_resource type="Script" path="res://Scripts/Doors/Door.gd" id="2_ml0yd"]
+[ext_resource type="AudioStream" uid="uid://cv6limmeop7fx" path="res://Audio/Chest/ChestClose.mp3" id="5_gcqhw"]
+[ext_resource type="AudioStream" uid="uid://dbnshweng7eb2" path="res://Audio/Chest/ChestOpen.wav" id="5_w3jjj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bcefk"]
+albedo_color = Color(0.737255, 0, 0, 1)
+emission_enabled = true
+emission = Color(0.733333, 0, 0, 1)
+emission_energy_multiplier = 2.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uw25v"]
+albedo_color = Color(0.215686, 0, 0.686275, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2akcc"]
+size = Vector3(0.3, 0.3, 0.2)
+
+[sub_resource type="Animation" id="Animation_snhoc"]
+resource_name = "Close"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lab_Box/Box_TopMesh3:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.748573, 0.60542, 0), Vector3(0.25, 0.605, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Lab_Box/Box_TopMesh2:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.754204, 0.610171, 0), Vector3(-0.25, 0.61, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Lab_Box/BoxButton:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.857, 0.857, 0.6), Vector3(1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CloseChest:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_imnb3"]
+resource_name = "Open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lab_Box/Box_TopMesh3:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.25, 0.605, 0), Vector3(0.748573, 0.60542, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Lab_Box/Box_TopMesh2:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.25, 0.61, 0), Vector3(-0.754204, 0.610171, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Lab_Box/BoxButton:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.857, 0.857, 0.6), Vector3(1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("OpenChest:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("OpenChest:stream")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_w3jjj")]
+}
+
+[sub_resource type="Animation" id="Animation_xw7jf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lab_Box/Box_TopMesh3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.748573, 0.60542, 0), Vector3(0.27367, 0.60542, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Lab_Box/Box_TopMesh2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.754204, 0.610171, 0), Vector3(-0.217626, 0.610171, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Lab_Box/BoxButton:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 0.7)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = false
+tracks/3/path = NodePath("OpenChest:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = false
+tracks/4/path = NodePath("OpenChest:stream")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_w3jjj")]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = false
+tracks/5/path = NodePath("CloseChest:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7xoa2"]
+_data = {
+"Close": SubResource("Animation_snhoc"),
+"Open": SubResource("Animation_imnb3"),
+"RESET": SubResource("Animation_xw7jf")
+}
+
+[node name="Lab_Box" type="Node3D" node_paths=PackedStringArray("Door")]
+script = ExtResource("1_tn4ti")
+Door = NodePath("Lab_Box")
+
+[node name="Lab_Box" type="CharacterBody3D" parent="." node_paths=PackedStringArray("animplyr") groups=["interact"]]
+collision_layer = 17
+collision_mask = 17
+script = ExtResource("2_ml0yd")
+animplyr = NodePath("../AnimationPlayer")
+
+[node name="Box_TopMesh2" type="CSGBox3D" parent="Lab_Box"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.754204, 0.610171, 0)
+use_collision = true
+size = Vector3(0.5, 0.2, 1)
+
+[node name="Box_TopMesh3" type="CSGBox3D" parent="Lab_Box"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.748573, 0.60542, 0)
+use_collision = true
+size = Vector3(0.5, 0.2, 1)
+
+[node name="BoxButton" type="CSGBox3D" parent="Lab_Box"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.7, 0, 0.339993, 0.586591)
+material_override = SubResource("StandardMaterial3D_bcefk")
+size = Vector3(0.3, 0.3, 0.2)
+
+[node name="Box_BaseMesh" type="CSGBox3D" parent="Lab_Box"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.183059, 0)
+use_collision = true
+size = Vector3(1, 0.620239, 1)
+material = SubResource("StandardMaterial3D_uw25v")
+
+[node name="BaseHole" type="CSGBox3D" parent="Lab_Box/Box_BaseMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.45058e-09, 0.0669412, 2.98023e-08)
+operation = 2
+size = Vector3(0.8, 0.5, 0.8)
+
+[node name="InteractionManager" type="Node" parent="Lab_Box"]
+script = ExtResource("1_t42r0")
+ItemName = "Chest"
+
+[node name="OpenDoor" type="Node" parent="Lab_Box/InteractionManager" node_paths=PackedStringArray("parentitem")]
+script = ExtResource("2_7ljky")
+parentitem = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lab_Box"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.342285, 0.606832)
+shape = SubResource("BoxShape3D_2akcc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7xoa2")
+}
+autoplay = "RESET"
+playback_default_blend_time = 0.5
+
+[node name="OpenChest" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_w3jjj")
+
+[node name="CloseChest" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_gcqhw")

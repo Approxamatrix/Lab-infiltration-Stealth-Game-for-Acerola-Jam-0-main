@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://botklrimogjke"]
+
+[ext_resource type="Texture2D" uid="uid://8i66fg0l1dpe" path="res://icon.svg" id="1_tm7wi"]
+[ext_resource type="Script" path="res://Scripts/LightMeter/LightMeterGUI.gd" id="3_cwyf7"]
+
+[node name="SoundMeterGUI" type="TextureProgressBar"]
+offset_right = 16.0
+offset_bottom = 55.0
+max_value = 10.0
+value = 1.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("1_tm7wi")
+texture_progress = ExtResource("1_tm7wi")
+tint_under = Color(0.168627, 0.168627, 0.168627, 1)
+tint_progress = Color(0, 1, 0, 1)
+script = ExtResource("3_cwyf7")

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cuat20euf2jh0"]
+
+[ext_resource type="Texture2D" uid="uid://c3lhglpoonsxc" path="res://textures/Levels/StrangeLand/CrateDamaged.png" id="1_fu6pv"]
+
+[resource]
+albedo_texture = ExtResource("1_fu6pv")
+metallic_specular = 0.0
+texture_filter = 2

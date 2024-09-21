@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=6 format=4 uid="uid://elsegpasb5i0"]
+
+[ext_resource type="Texture2D" uid="uid://cw23m48xhytfn" path="res://Textures/Items/Keycards/Keycard_Red_Glossy_Final.png" id="1_gw02d"]
+[ext_resource type="Texture2D" uid="uid://d2rl7xqmwevp7" path="res://Models/Keycards/Red_Keycard/textures/Red_Keycard Texture.png" id="2_4fl32"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/ItemData.gd" id="2_bqfsy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r06sl"]
+resource_name = "Red_Keycard"
+albedo_color = Color(0.8, 0.8, 0.8, 1)
+albedo_texture = ExtResource("2_4fl32")
+metallic = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_elxtf"]
+_surfaces = [{
+"aabb": AABB(-0.372015, -0.054638, -0.618044, 0.74403, 0.109286, 1.2361),
+"attribute_data": PackedByteArray("AAD//wAAqqpUVf//VFWqqgAAqqoAAFRVVFWqqlRVVFVUVaqqqqqqqlRV//+qqv//VFVUVaqqVFVUVaqqqqqqqgAAAABUVQAAAABUVVRVVFVUVQAAqqoAAFRVVFWqqlRV"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"material": SubResource("StandardMaterial3D_r06sl"),
+"name": "Red_Keycard",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAD5//7///8AAAAA/v///wAA+f8AAP//AAAAAAAA//8AAPn/AAD//wAAAAAAAP/////5/wAA/////wAAAAD/////+f8AAFTV//8AAAAAVNX///n//v9U1f//AAD+/1TV///5//7//7///wAA/v//vwAA+f/+//+/AAAAAP7//7///wAAAAD//wAAAAAAAP////8AAP7///8AAAAA/v///wAA+f8AAP+////5/wAA/78AAPn//v//v///+f/+//+//z//f/8//3//P/9//z//f////3////9/////f////3+qqlRVqqpUVaqqVFWqqlRV/3//f/9//3//f/9//3//f/9//z//f/8//3//P/9//z////9/////f////3////9/")
+}]
+
+[resource]
+script = ExtResource("2_bqfsy")
+ItemName = "Red Keycard"
+ItemIcon = ExtResource("1_gw02d")
+IsStackable = false
+MaxCapacity = 1
+ItemMesh = SubResource("ArrayMesh_elxtf")
+DamageAmt = 0.0
+ProjectileMode = 0
+ItemType = 4

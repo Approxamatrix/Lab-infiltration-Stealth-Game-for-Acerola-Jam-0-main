@@ -1,0 +1,81 @@
+GOALS
+=====
+(after exiting the elevator) This level will start out in what seems to be a normal laboratory (that uses the brutalism style thingy) but then things quickly go sideways and it's revealed that you're not where you think you are...
+
+
+
+ELEMENTS
+=========
+
+
+IDEAS
+======
+
+Perhaps the place outside the lab could be a road that takes the player to an abandoned village/small town
+
+Maybe at other the end of the town is an entrance to another facility.
+
+This one will have an elevator out.
+
+Make sure the player can't beeline straight to the facility.
+
+
+Maybe the facility could have some monsters and the player has to avoid them.
+
+
+
+
+
+SEQUENCE
+=========
+
+The player exits the elevator.
+
+They see a road with some street lights dotted along it.
+
+They walk along the road and find an abandoned town ?
+
+They will see enemies roaming in the town and also another facility but their path is blocked so they have to find a way around the blockage.
+
+VILLAGE
+==========
+
+The player can stay on the ground and avoid the enemies by going through and/or around buildings
+
+OR
+
+They can also go on rooftops and traverse along objects that bridge them together.
+
+FACILITY
+===========
+
+Once they go inside the facility, they will see that it's also has monsters.
+
+They will also see that the facility is also quite small.
+
+In the first area of the first floor the player can optionally climb into a vent to avoid the monster for a bit before dropping down.
+
+Otherwise, the player will see the monster and hide under the 2 desks in the room.
+
+Getting to the second desk and out the room won't be so easy though as there will be light sources that will make the player wait until the monster isn't looking their way or hide in a pocket of shadow.
+
+Next in the second room, they will have to climb over overturned bookshelves and cupboards while dealing with light sources and a monster in order to reach the other side.
+
+Next, in the third room, the player will be given some time to breathe and there will be no enemies.
+
+Next, on the second floor, there will be 2 monsters in this area. 
+
+The player will have to navigate under desks as well as hiding in pockets of darkness created by cupboards and bookshelves in order to reach the elevator.
+
+
+The player will see an elevator out but they will also see that every so often, a monster would pass in front of it.
+
+The player can either use one of their noise emitters or make a beeline to the elevator when the coast is clear.
+
+
+
+
+
+
+
+At the end they will find another elevator and escape.

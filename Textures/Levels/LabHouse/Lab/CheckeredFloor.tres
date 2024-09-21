@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://mufjwk6sxhsj"]
+
+[ext_resource type="Texture2D" uid="uid://bwo1mkfo6kjbr" path="res://textures/Levels/LabHouse/Lab/CheckeredFloor.png" id="1_6ahra"]
+
+[resource]
+albedo_texture = ExtResource("1_6ahra")
+metallic_specular = 0.0
+texture_filter = 2

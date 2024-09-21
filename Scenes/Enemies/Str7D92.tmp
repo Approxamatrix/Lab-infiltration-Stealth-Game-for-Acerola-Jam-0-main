@@ -1,0 +1,145 @@
+[gd_scene load_steps=18 format=3 uid="uid://bqi2p7vchwlba"]
+
+[ext_resource type="Script" path="res://Scripts/Entities/Enemy.gd" id="1_m80do"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/StatemachineManager.gd" id="1_ouxto"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyIdleState.gd" id="2_e3hi4"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyAttackState.gd" id="4_nmtxw"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyChaseState.gd" id="5_j7odi"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyPatrolState.gd" id="6_43h2e"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyTensePatrolState.gd" id="7_62sn1"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemySearchState.gd" id="8_68132"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyDeathState.gd" id="9_5dxjb"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyStunState.gd" id="10_12yx4"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyInvestigateState.gd" id="11_fvioh"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_f14en"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yy7ko"]
+emission_enabled = true
+emission = Color(0.694118, 0, 0, 1)
+emission_energy_multiplier = 4.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_n5f1k"]
+size = Vector3(1, 0.31, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mj73k"]
+emission_enabled = true
+emission = Color(0.521569, 0.490196, 0, 1)
+emission_energy_multiplier = 2.2
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sm7c4"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_yt7gr"]
+radius = 8.63609
+
+[node name="StrangeCreature" type="CharacterBody3D" node_paths=PackedStringArray("awarenesstimer", "RememberPlayerPos", "AwarenessTimeout", "Navagent", "StateMachineNode") groups=["Enemy"]]
+collision_layer = 9
+collision_mask = 9
+script = ExtResource("1_m80do")
+EnemyWalkSpeed = 1.5
+EnemyChaseSpeed = 1.7
+EnemyPatrolSpeed = 1.5
+EnemyTenseSpeed = 0.5
+attackdamage = 5.0
+awarenesstimer = NodePath("PlayerAwareness")
+RememberPlayerPos = NodePath("RememberPlayerPos")
+AwarenessTimeout = NodePath("AwarenessTimeout")
+Navagent = NodePath("NavigationAgent3D")
+DefaultHealth = 10.0
+AwarenessDecrease = 0.05
+AwarenessDecreaseNoLight = 0.2
+MaxAwareness = 50.0
+StateMachineNode = NodePath("StatemachineManager")
+MaxSuspicion = 5.0
+Maxsoundawareness = 5.0
+health = 100.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_f14en")
+surface_material_override/0 = SubResource("StandardMaterial3D_yy7ko")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.710132, 0.459857)
+mesh = SubResource("BoxMesh_n5f1k")
+surface_material_override/0 = SubResource("StandardMaterial3D_mj73k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_sm7c4")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+avoidance_enabled = true
+debug_enabled = true
+debug_use_custom = true
+debug_path_custom_color = Color(0.972549, 0, 0.25098, 1)
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 9
+collision_mask = 9
+
+[node name="EnemyPerception" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_yt7gr")
+
+[node name="StatemachineManager" type="Node" parent="." node_paths=PackedStringArray("StartState")]
+script = ExtResource("1_ouxto")
+StartState = NodePath("EnemyIdleState")
+
+[node name="EnemyIdleState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("EnemyObj")]
+script = ExtResource("2_e3hi4")
+EnemyObj = NodePath("../..")
+
+[node name="EnemyAttackState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("EnemyObj")]
+script = ExtResource("4_nmtxw")
+EnemyObj = NodePath("../..")
+
+[node name="EnemyChaseState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("EnemyObj")]
+script = ExtResource("5_j7odi")
+EnemyObj = NodePath("../..")
+
+[node name="EnemyPatrolState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("EnemyObj")]
+script = ExtResource("6_43h2e")
+EnemyObj = NodePath("../..")
+
+[node name="EnemyTensePatrolState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("EnemyObj")]
+script = ExtResource("7_62sn1")
+EnemyObj = NodePath("../..")
+
+[node name="EnemyDeathState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("EnemyObj")]
+script = ExtResource("9_5dxjb")
+EnemyObj = NodePath("../..")
+
+[node name="EnemyStunState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("Enemyobj")]
+script = ExtResource("10_12yx4")
+Enemyobj = NodePath("../..")
+
+[node name="EnemySearchState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("EnemyObj")]
+script = ExtResource("8_68132")
+EnemyObj = NodePath("../..")
+
+[node name="EnemyInvestigateState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("EnemyObj")]
+script = ExtResource("11_fvioh")
+EnemyObj = NodePath("../..")
+
+[node name="PlayerAwareness" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="RememberPlayerPos" type="Timer" parent="."]
+wait_time = 8.0
+one_shot = true
+
+[node name="AwarenessTimeout" type="Timer" parent="."]
+wait_time = 7.0
+one_shot = true
+
+[connection signal="target_reached" from="NavigationAgent3D" to="StatemachineManager/EnemyPatrolState" method="changepoint"]
+[connection signal="target_reached" from="NavigationAgent3D" to="StatemachineManager/EnemyInvestigateState" method="_on_navigation_agent_3d_target_reached"]
+[connection signal="target_reached" from="NavigationAgent3D" to="StatemachineManager/EnemyInvestigateState" method="LoseTrackofPlyr"]
+[connection signal="velocity_computed" from="NavigationAgent3D" to="StatemachineManager/EnemyChaseState" method="_on_navigation_agent_3d_velocity_computed"]
+[connection signal="velocity_computed" from="NavigationAgent3D" to="StatemachineManager/EnemyPatrolState" method="_on_navigation_agent_3d_velocity_computed"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
+[connection signal="timeout" from="PlayerAwareness" to="StatemachineManager/EnemyIdleState" method="_on_awareness_timeout"]
+[connection signal="timeout" from="PlayerAwareness" to="StatemachineManager/EnemyPatrolState" method="_on_awareness_timeout"]
+[connection signal="timeout" from="RememberPlayerPos" to="." method="forgotplayerpos"]
+[connection signal="timeout" from="AwarenessTimeout" to="StatemachineManager/EnemyChaseState" method="RememberPlayerPos"]
+[connection signal="timeout" from="AwarenessTimeout" to="StatemachineManager/EnemyChaseState" method="ForgetPlayerPos"]

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cd7oioh4ludwj"]
+
+[ext_resource type="Texture2D" uid="uid://5ds3qtmcado6" path="res://textures/Levels/LabHouse/Strange_World/Metal_Cabinet_Front.png" id="1_q3dup"]
+
+[resource]
+albedo_texture = ExtResource("1_q3dup")
+metallic_specular = 0.0
+texture_filter = 1

@@ -1,0 +1,17 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=5 format=3 uid="uid://gqacke6ydn2g"]
+
+[ext_resource type="AudioStream" uid="uid://5xhftk75vsvl" path="res://Audio/EnemyLines/Suspicious/Hey, who's there.mp3" id="1_bkebe"]
+[ext_resource type="AudioStream" uid="uid://dul0msy2i2jgd" path="res://Audio/EnemyLines/Suspicious/I know there's someone out there.mp3" id="2_d4kgo"]
+[ext_resource type="AudioStream" uid="uid://d4cugduun381q" path="res://Audio/EnemyLines/Suspicious/show yourself.mp3" id="3_tvqgr"]
+[ext_resource type="AudioStream" uid="uid://b8vqt2x7tocun" path="res://Audio/EnemyLines/Suspicious/what was that.mp3" id="4_lwaj6"]
+
+[resource]
+streams_count = 4
+stream_0/stream = ExtResource("1_bkebe")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_d4kgo")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("3_tvqgr")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("4_lwaj6")
+stream_3/weight = 1.0

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ceag207potbt"
+path="res://.godot/imported/Exclamation_Trophy.obj-8707f851fba85e86aed84f527cd810f4.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Exclamation_Trophy.obj-8707f851fba85e86aed84f527cd810f4.mesh"]
+
+source_file="res://Models/Projectile_Launcher/Shock_Launcher/Exclamation_Trophy.obj"
+dest_files=["res://.godot/imported/Exclamation_Trophy.obj-8707f851fba85e86aed84f527cd810f4.mesh", "res://.godot/imported/Exclamation_Trophy.obj-8707f851fba85e86aed84f527cd810f4.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

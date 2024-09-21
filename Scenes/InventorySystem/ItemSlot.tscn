@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://faiqif6nfu1s"]
+
+[ext_resource type="Script" path="res://Scripts/InventorySystem/ItemSlot.gd" id="1_86pa5"]
+[ext_resource type="Texture2D" uid="uid://8i66fg0l1dpe" path="res://icon.svg" id="2_yjrm1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wad2b"]
+bg_color = Color(0.490196, 0.490196, 0.490196, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_blend = true
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="ItemSlot" type="PanelContainer" node_paths=PackedStringArray("ItemIconNode", "ItemAmountNode") groups=["ItemSlot"]]
+custom_minimum_size = Vector2(85, 80)
+theme_override_styles/panel = SubResource("StyleBoxFlat_wad2b")
+script = ExtResource("1_86pa5")
+ItemIconNode = NodePath("ItemIconNode")
+ItemAmountNode = NodePath("ItemAmountNode")
+
+[node name="ItemIconNode" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_yjrm1")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemAmountNode" type="Label" parent="."]
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 26
+text = "100"
+horizontal_alignment = 2

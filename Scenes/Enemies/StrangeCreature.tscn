@@ -1,0 +1,271 @@
+[gd_scene load_steps=37 format=3 uid="uid://bqi2p7vchwlba"]
+
+[ext_resource type="Script" path="res://Scripts/Entities/Enemy.gd" id="1_m80do"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/StatemachineManager.gd" id="1_ouxto"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyIdleState.gd" id="2_e3hi4"]
+[ext_resource type="AudioStream" uid="uid://duu6qvpnw6v01" path="res://Audio/EnemyLines/Attack/Attack.tres" id="2_hljfg"]
+[ext_resource type="PackedScene" uid="uid://mlpv5ikn7hdx" path="res://Models/Enemies/Humans/Guard_Human.gltf" id="2_ngwhh"]
+[ext_resource type="Animation" uid="uid://c45atag45p251" path="res://Models/Enemies/Humans/anims/Attack.res" id="3_34uas"]
+[ext_resource type="Animation" uid="uid://cjgux3vvhmh5l" path="res://Models/Enemies/Humans/anims/Downed.res" id="4_a6d1i"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyAttackState.gd" id="4_nmtxw"]
+[ext_resource type="Animation" uid="uid://bjq86ds06el3s" path="res://Models/Enemies/Humans/anims/Run.res" id="5_2yrwl"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyChaseState.gd" id="5_j7odi"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyPatrolState.gd" id="6_43h2e"]
+[ext_resource type="Animation" uid="uid://cfr0a4jrvbura" path="res://Models/Enemies/Humans/anims/Shocked.res" id="6_mmad7"]
+[ext_resource type="AudioStream" uid="uid://gqacke6ydn2g" path="res://Audio/EnemyLines/Suspicious/Suspicious.tres" id="6_pgotn"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyTensePatrolState.gd" id="7_62sn1"]
+[ext_resource type="Animation" uid="uid://cdubl1fgf4r4j" path="res://Models/Enemies/Humans/anims/Walk.res" id="7_gd8xd"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemySearchState.gd" id="8_68132"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyDeathState.gd" id="9_5dxjb"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyStunState.gd" id="10_12yx4"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyInvestigateState.gd" id="11_fvioh"]
+[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyWaitState.gd" id="12_kbrye"]
+[ext_resource type="AudioStream" uid="uid://ybgayyux1ssi" path="res://Audio/EnemyLines/Chase/ChaseAudio.tres" id="19_bvqli"]
+[ext_resource type="AudioStream" uid="uid://y3p2xlblpg7o" path="res://Audio/EnemyLines/Hurt/Stun or Hurt.tres" id="19_f8xw7"]
+[ext_resource type="AudioStream" uid="uid://be7huty8n60eq" path="res://Scenes/Enemies/SearchState.tres" id="19_lms4q"]
+[ext_resource type="AudioStream" uid="uid://8bavipeucsm" path="res://Audio/Weapons/BatonHit.mp3" id="24_g0rna"]
+[ext_resource type="AudioStream" uid="uid://cee2bsrdjv878" path="res://Audio/Footsteps/Guard/EnemyWalkSound.tres" id="25_iklk7"]
+
+[sub_resource type="Animation" id="Animation_afxdx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AttackArea/CollisionShape3D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../WalkSound:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_366ei"]
+_data = {
+"RESET": SubResource("Animation_afxdx")
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1a64n"]
+_data = {
+"Attack": ExtResource("3_34uas"),
+"Downed": ExtResource("4_a6d1i"),
+"Run": ExtResource("5_2yrwl"),
+"Shocked": ExtResource("6_mmad7"),
+"Walk": ExtResource("7_gd8xd")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aqe1w"]
+size = Vector3(1, 1.56006, 0.611572)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_f14en"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yy7ko"]
+emission_enabled = true
+emission = Color(0.694118, 0, 0, 1)
+emission_energy_multiplier = 4.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_n5f1k"]
+size = Vector3(1, 0.31, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mj73k"]
+emission_enabled = true
+emission = Color(0.521569, 0.490196, 0, 1)
+emission_energy_multiplier = 2.2
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sm7c4"]
+height = 2.20256
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_yt7gr"]
+radius = 8.63609
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qju37"]
+size = Vector3(1, 2.05713, 1)
+
+[node name="StrangeCreature" type="CharacterBody3D" node_paths=PackedStringArray("awarenesstimer", "RememberPlayerPos", "AwarenessTimeout", "Navagent", "StateMachineNode", "Model", "animplayer", "BatonHit", "collision", "audioplayer") groups=["Enemy"]]
+collision_layer = 9
+collision_mask = 9
+script = ExtResource("1_m80do")
+EnemyWalkSpeed = 1.5
+EnemyChaseSpeed = 5.0
+EnemyPatrolSpeed = 1.5
+EnemyTenseSpeed = 0.8
+attackdamage = 5.0
+awarenesstimer = NodePath("PlayerAwareness")
+RememberPlayerPos = NodePath("RememberPlayerPos")
+AwarenessTimeout = NodePath("AwarenessTimeout")
+Navagent = NodePath("NavigationAgent3D")
+DefaultHealth = 10.0
+LightDetectionThreshold = 6
+AwarenessDecrease = 0.05
+AwarenessDecreaseNoLight = 0.2
+MaxAwareness = 30.0
+StateMachineNode = NodePath("StatemachineManager")
+MaxSuspicion = 5.0
+Maxsoundawareness = 5.0
+Model = NodePath("Model")
+animplayer = NodePath("Model/AnimationPlayer2")
+BatonHit = NodePath("batonhit")
+collision = NodePath("CollisionShape3D")
+audioplayer = NodePath("EnemySpeech")
+attackvoice = ExtResource("2_hljfg")
+chasevoice = ExtResource("19_bvqli")
+hurtvoice = ExtResource("19_f8xw7")
+searchvoice = ExtResource("19_lms4q")
+suspiciousvoice = ExtResource("6_pgotn")
+
+[node name="Model" parent="." instance=ExtResource("2_ngwhh")]
+transform = Transform3D(-0.3, 0, 2.62268e-08, 0, 0.3, 0, -2.62268e-08, 0, -0.3, 0, -0.542339, 0)
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Model"]
+libraries = {
+"": SubResource("AnimationLibrary_366ei"),
+"Guard": SubResource("AnimationLibrary_1a64n")
+}
+speed_scale = 12.0
+
+[node name="AttackArea" type="Area3D" parent="Model"]
+transform = Transform3D(-3.33333, 0, -2.91409e-07, 0, 3.33333, 0, 2.91409e-07, 0, -3.33333, -2.1713e-07, 4.03255, -2.48368)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Model/AttackArea"]
+transform = Transform3D(1, 0, -7.10544e-15, 0, 1, 0, 7.10544e-15, 0, 1, -1.37999e-15, -0.280029, 0.194214)
+shape = SubResource("BoxShape3D_aqe1w")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("CapsuleMesh_f14en")
+surface_material_override/0 = SubResource("StandardMaterial3D_yy7ko")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.710132, 0.459857)
+visible = false
+mesh = SubResource("BoxMesh_n5f1k")
+surface_material_override/0 = SubResource("StandardMaterial3D_mj73k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00340343, 0.984617, -0.0334802)
+shape = SubResource("CapsuleShape3D_sm7c4")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+target_desired_distance = 2.5
+avoidance_enabled = true
+use_3d_avoidance = true
+debug_use_custom = true
+debug_path_custom_color = Color(0.972549, 0, 0.25098, 1)
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 9
+collision_mask = 9
+
+[node name="EnemyPerception" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_yt7gr")
+
+[node name="StatemachineManager" type="Node" parent="." node_paths=PackedStringArray("StartState")]
+script = ExtResource("1_ouxto")
+StartState = NodePath("EnemyPatrolState")
+
+[node name="EnemyIdleState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("EnemyObj")]
+script = ExtResource("2_e3hi4")
+EnemyObj = NodePath("../..")
+
+[node name="EnemyAttackState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("EnemyObj", "attackcooldown")]
+script = ExtResource("4_nmtxw")
+EnemyObj = NodePath("../..")
+attackcooldown = NodePath("../../AttackCooldown")
+
+[node name="EnemyChaseState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("EnemyObj")]
+script = ExtResource("5_j7odi")
+EnemyObj = NodePath("../..")
+
+[node name="EnemyPatrolState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("EnemyObj")]
+script = ExtResource("6_43h2e")
+EnemyObj = NodePath("../..")
+
+[node name="EnemyTensePatrolState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("EnemyObj")]
+script = ExtResource("7_62sn1")
+EnemyObj = NodePath("../..")
+
+[node name="EnemyDeathState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("EnemyObj")]
+script = ExtResource("9_5dxjb")
+EnemyObj = NodePath("../..")
+
+[node name="EnemyStunState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("Enemyobj")]
+script = ExtResource("10_12yx4")
+Enemyobj = NodePath("../..")
+
+[node name="EnemySearchState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("EnemyObj")]
+script = ExtResource("8_68132")
+EnemyObj = NodePath("../..")
+
+[node name="EnemyInvestigateState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("EnemyObj")]
+script = ExtResource("11_fvioh")
+EnemyObj = NodePath("../..")
+
+[node name="EnemyWaitState" type="Node" parent="StatemachineManager" node_paths=PackedStringArray("EnemyObj")]
+script = ExtResource("12_kbrye")
+EnemyObj = NodePath("../..")
+
+[node name="PlayerAwareness" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="RememberPlayerPos" type="Timer" parent="."]
+wait_time = 8.0
+one_shot = true
+
+[node name="AwarenessTimeout" type="Timer" parent="."]
+wait_time = 7.0
+one_shot = true
+
+[node name="EnemySpeech" type="AudioStreamPlayer3D" parent="."]
+volume_db = -12.294
+max_distance = 60.0
+
+[node name="batonhit" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("24_g0rna")
+pitch_scale = 0.81
+
+[node name="WalkSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("25_iklk7")
+volume_db = -9.0
+max_distance = 50.0
+
+[node name="AttackDetection" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.470413)
+collision_layer = 9
+collision_mask = 9
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AttackDetection"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.528564, 0)
+shape = SubResource("BoxShape3D_qju37")
+
+[node name="AttackCooldown" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="body_entered" from="Model/AttackArea" to="StatemachineManager/EnemyAttackState" method="_on_attack_area_body_entered"]
+[connection signal="target_reached" from="NavigationAgent3D" to="StatemachineManager/EnemyChaseState" method="_on_navigation_agent_3d_target_reached"]
+[connection signal="target_reached" from="NavigationAgent3D" to="StatemachineManager/EnemyPatrolState" method="changepoint"]
+[connection signal="target_reached" from="NavigationAgent3D" to="StatemachineManager/EnemySearchState" method="_on_navigation_agent_3d_target_reached"]
+[connection signal="target_reached" from="NavigationAgent3D" to="StatemachineManager/EnemyInvestigateState" method="_on_navigation_agent_3d_target_reached"]
+[connection signal="velocity_computed" from="NavigationAgent3D" to="StatemachineManager/EnemyChaseState" method="_on_navigation_agent_3d_velocity_computed"]
+[connection signal="velocity_computed" from="NavigationAgent3D" to="StatemachineManager/EnemyPatrolState" method="_on_navigation_agent_3d_velocity_computed"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
+[connection signal="timeout" from="PlayerAwareness" to="StatemachineManager/EnemyIdleState" method="_on_awareness_timeout"]
+[connection signal="timeout" from="PlayerAwareness" to="StatemachineManager/EnemyPatrolState" method="_on_awareness_timeout"]
+[connection signal="timeout" from="RememberPlayerPos" to="." method="forgotplayerpos"]
+[connection signal="timeout" from="AwarenessTimeout" to="StatemachineManager/EnemyChaseState" method="ForgetPlayerPos"]
+[connection signal="timeout" from="AwarenessTimeout" to="StatemachineManager/EnemyChaseState" method="RememberPlayerPos"]
+[connection signal="body_entered" from="AttackDetection" to="StatemachineManager/EnemyAttackState" method="_on_attack_detection_body_entered"]

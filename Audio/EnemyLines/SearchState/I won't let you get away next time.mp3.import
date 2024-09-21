@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b50ekr08m8ip2"
+path="res://.godot/imported/I won't let you get away next time.mp3-4b00cf0ea6a169668b62aab7d224d692.mp3str"
+
+[deps]
+
+source_file="res://Audio/EnemyLines/SearchState/I won't let you get away next time.mp3"
+dest_files=["res://.godot/imported/I won't let you get away next time.mp3-4b00cf0ea6a169668b62aab7d224d692.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

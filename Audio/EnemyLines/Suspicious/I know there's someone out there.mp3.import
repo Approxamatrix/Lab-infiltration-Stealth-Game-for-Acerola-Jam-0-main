@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dul0msy2i2jgd"
+path="res://.godot/imported/I know there's someone out there.mp3-9db270ce6e1a629b0dd791995ce55313.mp3str"
+
+[deps]
+
+source_file="res://Audio/EnemyLines/Suspicious/I know there's someone out there.mp3"
+dest_files=["res://.godot/imported/I know there's someone out there.mp3-9db270ce6e1a629b0dd791995ce55313.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

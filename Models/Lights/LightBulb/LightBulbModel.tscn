@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://db2i8m7htsvqh"]
+
+[ext_resource type="PackedScene" uid="uid://l5innq5dsgtw" path="res://Models/Lights/LightBulb/LightBulb.gltf" id="1_wk51q"]
+
+[node name="LightBulbModel" instance=ExtResource("1_wk51q")]
+
+[node name="LightSocket" parent="Node" index="0"]
+cast_shadow = 0

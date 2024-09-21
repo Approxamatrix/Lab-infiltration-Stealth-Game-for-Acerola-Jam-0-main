@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://e5x2lmq1r1sx"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_14wdi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4b1b8"]
+albedo_color = Color(0.341176, 0.572549, 0.741176, 0.67451)
+emission_enabled = true
+emission = Color(0.341176, 0.572549, 0.741176, 0.67451)
+
+[node name="PlayerLastSeen" type="Node3D"]
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+mesh = SubResource("CapsuleMesh_14wdi")
+material = SubResource("StandardMaterial3D_4b1b8")

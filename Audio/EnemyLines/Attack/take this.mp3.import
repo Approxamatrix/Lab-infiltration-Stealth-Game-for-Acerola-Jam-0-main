@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://tkej5okoruei"
+path="res://.godot/imported/take this.mp3-760341406758d0eea11d8089408f6e6c.mp3str"
+
+[deps]
+
+source_file="res://Audio/EnemyLines/Attack/take this.mp3"
+dest_files=["res://.godot/imported/take this.mp3-760341406758d0eea11d8089408f6e6c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

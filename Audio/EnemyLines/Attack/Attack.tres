@@ -1,0 +1,14 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=4 format=3 uid="uid://duu6qvpnw6v01"]
+
+[ext_resource type="AudioStream" uid="uid://d2wx0653a60c6" path="res://Audio/EnemyLines/Attack/a ha.mp3" id="1_gr88x"]
+[ext_resource type="AudioStream" uid="uid://cvf7wmcl1n7qk" path="res://Audio/EnemyLines/Attack/graaah.mp3" id="2_1stho"]
+[ext_resource type="AudioStream" uid="uid://tkej5okoruei" path="res://Audio/EnemyLines/Attack/take this.mp3" id="3_0i7rg"]
+
+[resource]
+streams_count = 3
+stream_0/stream = ExtResource("1_gr88x")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_1stho")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("3_0i7rg")
+stream_2/weight = 1.0

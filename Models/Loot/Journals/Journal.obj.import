@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bwi5vma6awwmf"
+path="res://.godot/imported/Journal.obj-c11801f24158a15502413999c5080eea.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Journal.obj-c11801f24158a15502413999c5080eea.mesh"]
+
+source_file="res://Models/Loot/Journals/Journal.obj"
+dest_files=["res://.godot/imported/Journal.obj-c11801f24158a15502413999c5080eea.mesh", "res://.godot/imported/Journal.obj-c11801f24158a15502413999c5080eea.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=false
+force_disable_mesh_compression=false

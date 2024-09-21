@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="LootItemData" load_steps=6 format=4 uid="uid://co8ypfokxd5rg"]
+
+[ext_resource type="Texture2D" uid="uid://b17d66tehbi6c" path="res://Models/Loot/Electronics/Laptop/Laptop.png" id="1_jx3f4"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/LootItemData.gd" id="2_soufe"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cnv1p"]
+resource_name = "m_1edcc565-ae0d-c9d5-7c3f-438beddc010e"
+albedo_texture = ExtResource("1_jx3f4")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sxhf4"]
+resource_name = "m_1edcc565-ae0d-c9d5-7c3f-438beddc010e"
+albedo_texture = ExtResource("1_jx3f4")
+texture_filter = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_p7koh"]
+_surfaces = [{
+"aabb": AABB(-0.375, 0, -0.4375, 0.75, 0.125, 0.5625),
+"attribute_data": PackedByteArray("/2P/Y/8z/2P/Y/9b/zP/W/9X/2//M/9v/1f/Z/8z/2f/L/9rAAD/a/8v/2MAAP9j/4v/X/9n/1//i/9X/2f/V/8zAAD/YwAA/zP/I/9j/yP/M/9L/2P/S/8z/yf/Y/8n"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"material": SubResource("StandardMaterial3D_cnv1p"),
+"name": "m_1edcc565-ae0d-c9d5-7c3f-438beddc010e",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAAAA/////wAAAAD//wAA//8AAP///////wAA/////wAAAAD/v///AAD///+//////wAA/7//////////v///AAD///9/AAAAAP///3//////////fwAA//////9/AAAAAP///78AAAAAAAD/vwAA//////+/AAD//wAA/7///////////wAA/////////////wAA//8AAP//AAD/////AAAAAAAAAAAAAAAAAAD//wAA//8AAAAAAAD//wAA/3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f////3////9/////f////3////9/////f////3////9//7//f/+//3//v/9//7//f/8//3//P/9//z//f/8/")
+}, {
+"aabb": AABB(-0.375, 0.08125, 0.125, 0.75, 0.60625, 0.125),
+"attribute_data": PackedByteArray("/y//JwAA/yf/LwAAAAAAAP9v/yf/Z/8n/28AAP9nAAD/L/9TAAD/U/8v/ysAAP8r/2//U/9n/1P/b/8r/2f/K/8z/0//Y/9P/zP/V/9j/1cAAP9f/y//XwAA/1f/L/9X"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"material": SubResource("StandardMaterial3D_sxhf4"),
+"name": "m_1edcc565-ae0d-c9d5-7c3f-438beddc010e",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAAAA/////wAAAAD//wAA//8AAP///////wAA/////wAAAAD/v///AAD///+//////wAA/7//////////v///AAD///9/AAAAAP///3//////////fwAA//////9/AAAAAP///78AAAAAAAD/vwAA//////+/AAD//wAA/7///////////wAA/////////////wAA//8AAP//AAD/////AAAAAAAAAAAAAAAAAAD//wAA//8AAAAAAAD//wAA/3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f////3////9/////f////3////9/////f////3////9//7//f/+//3//v/9//7//f/8//3//P/9//z//f/8/")
+}]
+
+[resource]
+script = ExtResource("2_soufe")
+LootItemName = "Laptop"
+LootModel = SubResource("ArrayMesh_p7koh")
+LootModelScale = Vector3(1, 1, 1)
+collisionscale = Vector3(1, 1, 0.62)
+Collisionpos = Vector3(0, 0.375, -0.085)
+LootCost = 0

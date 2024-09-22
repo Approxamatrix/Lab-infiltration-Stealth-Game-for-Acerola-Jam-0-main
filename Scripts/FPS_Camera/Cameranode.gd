@@ -2,6 +2,7 @@ extends Node3D
 
 @export var Cameranode : Camera3D
 @export var FrontLedgeCheck : RayCast3D
+@export var PauseMenu : Panel
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	pass
@@ -22,9 +23,16 @@ func _process(delta):
 	
 	if Input.is_action_just_pressed("Pause"):
 		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+			PauseMenu.visible = true
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		else:
+			PauseMenu.visible = false
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 			
 	
 	pass
+
+
+func _on_button_pressed() -> void:
+	LevelChanger.change_level("res://Scenes/Title Screen/TitleScreen.tscn")
+	pass # Replace with function body.

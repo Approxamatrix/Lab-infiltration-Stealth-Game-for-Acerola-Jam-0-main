@@ -1353,7 +1353,7 @@ transform = Transform3D(1, 0, 0, 0, 0.0591844, 0.998247, 0, -0.998247, 0.0591844
 lootdata = ExtResource("29_jpqek")
 
 [node name="Lab_Box2" parent="." instance=ExtResource("25_k37dw")]
-transform = Transform3D(-0.536269, 0, -0.844047, 0, 1, 0, 0.844047, 0, -0.536269, -12.4376, 1.35107, -24.0641)
+transform = Transform3D(-0.536269, 0, -0.844047, 0, 1, 0, 0.844047, 0, -0.536269, -12.4376, 1.09053, -24.0641)
 
 [node name="BaseLootObject11" parent="." instance=ExtResource("9_wq6j3")]
 transform = Transform3D(1, 0, 0, 0, 0.0115014, -0.999934, 0, 0.999934, 0.0115014, -12.4164, 1.35107, -24.3779)

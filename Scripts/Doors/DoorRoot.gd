@@ -8,8 +8,8 @@ func _ready():
 	if door != null:
 		door.IsLocked = Locked
 		door.whichone = which
-	if closed:
-		closed = false
+	#if closed:
+		#closed = false
 	pass # Replace with function body.
 
 

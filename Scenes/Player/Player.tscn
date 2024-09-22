@@ -399,11 +399,12 @@ script = ExtResource("16_n7f2n")
 PlayerObj = NodePath("../..")
 deathtimer = NodePath("../../DeathTimer")
 
-[node name="Cameranode" type="Node3D" parent="." node_paths=PackedStringArray("Cameranode", "FrontLedgeCheck")]
+[node name="Cameranode" type="Node3D" parent="." node_paths=PackedStringArray("Cameranode", "FrontLedgeCheck", "PauseMenu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.504716, 0)
 script = ExtResource("8_hwbbb")
 Cameranode = NodePath("PlayerCamera")
 FrontLedgeCheck = NodePath("../LedgeGrabNodes/FrontLedgeCheck")
+PauseMenu = NodePath("../UI/Pause Menu")
 
 [node name="UncrouchChecker" type="ShapeCast3D" parent="Cameranode"]
 shape = SubResource("SphereShape3D_65edj")
@@ -484,6 +485,37 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
+
+[node name="Pause Menu" type="Panel" parent="UI"]
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -235.5
+offset_top = -203.0
+offset_right = 235.5
+offset_bottom = 203.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Pause Menu"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+offset_top = 91.0
+offset_right = -62.0
+offset_bottom = -241.0
+
+[node name="Button" type="Button" parent="UI/Pause Menu/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Back to Main Menu"
 
 [node name="LightMeterGUI" parent="UI" instance=ExtResource("17_arc83")]
 texture_filter = 1
@@ -655,5 +687,6 @@ one_shot = true
 [connection signal="body_entered" from="PlayerModel/NoiseNodePlayer" to="PlayerModel/NoiseNodePlayer" method="_on_body_entered"]
 [connection signal="body_exited" from="PlayerModel/NoiseNodePlayer" to="PlayerModel/NoiseNodePlayer" method="_on_body_exited"]
 [connection signal="body_entered" from="Cameranode/PlayerHand/MeleeArea" to="." method="_on_melee_area_body_entered"]
+[connection signal="pressed" from="UI/Pause Menu/VBoxContainer/Button" to="Cameranode" method="_on_button_pressed"]
 [connection signal="timeout" from="WalkTimer" to="." method="_on_walk_timer_timeout"]
 [connection signal="timeout" from="DeathTimer" to="StatemachineManager/PlayerDeathState" method="_on_death_timer_timeout"]

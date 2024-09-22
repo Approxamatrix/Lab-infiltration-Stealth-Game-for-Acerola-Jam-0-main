@@ -1,41 +1,41 @@
-[gd_scene load_steps=298 format=4 uid="uid://dde7lwyxqf7vk"]
+[gd_scene load_steps=299 format=4 uid="uid://dde7lwyxqf7vk"]
 
 [ext_resource type="PackedScene" uid="uid://bwwaigcmsa75p" path="res://Scenes/Player/Player.tscn" id="1_wcbqr"]
 [ext_resource type="Script" path="res://addons/func_godot/src/map/func_godot_map.gd" id="1_yw8d5"]
 [ext_resource type="Resource" uid="uid://bkhxcqsquw1yg" path="res://addons/func_godot/func_godot_default_map_settings.tres" id="2_gxcqy"]
-[ext_resource type="Material" uid="uid://b4hxfmnpipl" path="res://textures/Levels/LabHouse/Outside/Grass_autumn.tres" id="3_ttw50"]
-[ext_resource type="Material" uid="uid://csrya7aju8lx6" path="res://textures/Levels/LabHouse/Outside/Dirt.tres" id="4_ywhpg"]
+[ext_resource type="Material" uid="uid://b4hxfmnpipl" path="res://Textures/Levels/LabHouse/Outside/Grass_autumn.tres" id="3_ttw50"]
+[ext_resource type="Material" uid="uid://csrya7aju8lx6" path="res://Textures/Levels/LabHouse/Outside/Dirt.tres" id="4_ywhpg"]
 [ext_resource type="Texture2D" uid="uid://cyg2snr1w5xw5" path="res://addons/func_godot/textures/default_texture.png" id="5_1sr5w"]
 [ext_resource type="PackedScene" uid="uid://cphlpgrps6fyw" path="res://Scenes/Doors/Door.tscn" id="6_gpwi7"]
-[ext_resource type="Material" uid="uid://dejk8ubar8yy0" path="res://textures/Levels/LabHouse/Outside/CrateFixed.tres" id="6_qjk6p"]
+[ext_resource type="Material" uid="uid://dejk8ubar8yy0" path="res://Textures/Levels/LabHouse/Outside/CrateFixed.tres" id="6_qjk6p"]
 [ext_resource type="PackedScene" uid="uid://bu0u1spoqdyoq" path="res://Scenes/Keycards/Keycard.tscn" id="7_k7y7r"]
-[ext_resource type="Material" uid="uid://d0y1ig1brn25q" path="res://textures/Levels/LabHouse/Outside/Cabin_Wall.tres" id="7_xiv1m"]
+[ext_resource type="Material" uid="uid://d0y1ig1brn25q" path="res://Textures/Levels/LabHouse/Outside/Cabin_Wall.tres" id="7_xiv1m"]
 [ext_resource type="PackedScene" uid="uid://cqmsvo68i3jnh" path="res://Scenes/Doors/Vent.tscn" id="8_4ywbv"]
-[ext_resource type="Material" uid="uid://biuxg54su76nl" path="res://textures/Levels/LabHouse/Outside/TreeLeaves.tres" id="8_fhic6"]
+[ext_resource type="Material" uid="uid://biuxg54su76nl" path="res://Textures/Levels/LabHouse/Outside/TreeLeaves.tres" id="8_fhic6"]
 [ext_resource type="Resource" uid="uid://elsegpasb5i0" path="res://Resources/ItemData/Keycards/Red_Keycard.tres" id="9_2fljo"]
-[ext_resource type="Material" uid="uid://ryd6vd6ongq7" path="res://textures/Levels/LabHouse/Outside/Cabin_Roof.tres" id="9_s68gc"]
+[ext_resource type="Material" uid="uid://ryd6vd6ongq7" path="res://Textures/Levels/LabHouse/Outside/Cabin_Roof.tres" id="9_s68gc"]
 [ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/SlotData.gd" id="10_j3fb5"]
-[ext_resource type="Material" uid="uid://bnr3chisdqwgn" path="res://textures/Levels/LabHouse/Outside/Cabin_Floor.tres" id="10_xghvl"]
+[ext_resource type="Material" uid="uid://bnr3chisdqwgn" path="res://Textures/Levels/LabHouse/Outside/Cabin_Floor.tres" id="10_xghvl"]
 [ext_resource type="PackedScene" uid="uid://bqi2p7vchwlba" path="res://Scenes/Enemies/StrangeCreature.tscn" id="11_bilss"]
-[ext_resource type="Material" uid="uid://b7c5simg6nym0" path="res://textures/Levels/LabHouse/Outside/TreeTrunk.tres" id="11_ko703"]
+[ext_resource type="Material" uid="uid://b7c5simg6nym0" path="res://Textures/Levels/LabHouse/Outside/TreeTrunk.tres" id="11_ko703"]
 [ext_resource type="PackedScene" uid="uid://dj1mijynaty88" path="res://Scenes/PatrolPoint/PatrolPoint.tscn" id="12_cv41i"]
-[ext_resource type="Material" uid="uid://du6wvlreqnkqo" path="res://textures/Levels/LabHouse/Outside/Paintings/PaintingSide.tres" id="12_y1gyu"]
-[ext_resource type="Material" uid="uid://bl8lpq5s4l6mv" path="res://textures/Levels/LabHouse/Outside/Paintings/Painting0.tres" id="13_rf0rk"]
-[ext_resource type="Material" uid="uid://d3eoym3x3b3ky" path="res://textures/Levels/LabHouse/Outside/Single_Chair.tres" id="14_4trs6"]
+[ext_resource type="Material" uid="uid://du6wvlreqnkqo" path="res://Textures/Levels/LabHouse/Outside/Paintings/PaintingSide.tres" id="12_y1gyu"]
+[ext_resource type="Material" uid="uid://bl8lpq5s4l6mv" path="res://Textures/Levels/LabHouse/Outside/Paintings/Painting0.tres" id="13_rf0rk"]
+[ext_resource type="Material" uid="uid://d3eoym3x3b3ky" path="res://Textures/Levels/LabHouse/Outside/Single_Chair.tres" id="14_4trs6"]
 [ext_resource type="PackedScene" uid="uid://bpfh1qo37gycr" path="res://Scenes/Lootables/Containers/Lab_Box.tscn" id="15_f2uxt"]
-[ext_resource type="Material" uid="uid://bh1y4n1y15gci" path="res://textures/Levels/LabHouse/Outside/WindowSide.tres" id="15_fdm1r"]
-[ext_resource type="Material" uid="uid://dkiav5uw1w7l8" path="res://textures/Levels/LabHouse/Outside/Metal_Drawer.tres" id="16_bprxk"]
-[ext_resource type="Material" uid="uid://bhq0jweut3h2d" path="res://textures/Levels/LabHouse/Outside/Metal_Drawer_Front.tres" id="17_cd1mi"]
-[ext_resource type="Material" uid="uid://p6ytot22w8d7" path="res://textures/Levels/LabHouse/Outside/Long_Chair.tres" id="18_kj6a0"]
-[ext_resource type="Material" uid="uid://chdpuh42goxrs" path="res://textures/Levels/LabHouse/Outside/Stone_Path.tres" id="19_o1pmf"]
-[ext_resource type="Material" uid="uid://mufjwk6sxhsj" path="res://textures/Levels/LabHouse/Lab/CheckeredFloor.tres" id="20_boie7"]
-[ext_resource type="Material" uid="uid://id3d3qlmohtc" path="res://textures/Levels/LabHouse/Lab/Lab_Wall.tres" id="21_fkrd1"]
-[ext_resource type="Material" uid="uid://d0crglnac20np" path="res://textures/Levels/LabHouse/Outside/Fence.tres" id="22_ib60l"]
-[ext_resource type="Material" uid="uid://bci0allaltuss" path="res://textures/Levels/PlaceholderFloor.tres" id="23_fywcs"]
+[ext_resource type="Material" uid="uid://bh1y4n1y15gci" path="res://Textures/Levels/LabHouse/Outside/WindowSide.tres" id="15_fdm1r"]
+[ext_resource type="Material" uid="uid://dkiav5uw1w7l8" path="res://Textures/Levels/LabHouse/Outside/Metal_Drawer.tres" id="16_bprxk"]
+[ext_resource type="Material" uid="uid://bhq0jweut3h2d" path="res://Textures/Levels/LabHouse/Outside/Metal_Drawer_Front.tres" id="17_cd1mi"]
+[ext_resource type="Material" uid="uid://p6ytot22w8d7" path="res://Textures/Levels/LabHouse/Outside/Long_Chair.tres" id="18_kj6a0"]
+[ext_resource type="Material" uid="uid://chdpuh42goxrs" path="res://Textures/Levels/LabHouse/Outside/Stone_Path.tres" id="19_o1pmf"]
+[ext_resource type="Material" uid="uid://mufjwk6sxhsj" path="res://Textures/Levels/LabHouse/Lab/CheckeredFloor.tres" id="20_boie7"]
+[ext_resource type="Material" uid="uid://id3d3qlmohtc" path="res://Textures/Levels/LabHouse/Lab/Lab_Wall.tres" id="21_fkrd1"]
+[ext_resource type="Material" uid="uid://d0crglnac20np" path="res://Textures/Levels/LabHouse/Outside/Fence.tres" id="22_ib60l"]
+[ext_resource type="Material" uid="uid://bci0allaltuss" path="res://Textures/Levels/PlaceholderFloor.tres" id="23_fywcs"]
 [ext_resource type="PackedScene" uid="uid://6qc6w4m7nrxj" path="res://Scenes/Trophies/ExclamationTrophy.tscn" id="23_xbga6"]
-[ext_resource type="Material" uid="uid://q52mo5eciswd" path="res://textures/Levels/LabHouse/Lab/Lab_Ceilling.tres" id="24_lxgoj"]
-[ext_resource type="Material" uid="uid://bgaov1dyna6e0" path="res://textures/Levels/LabHouse/Lab/VentWall.tres" id="25_awbfl"]
-[ext_resource type="Material" uid="uid://cvdtow3p6qea8" path="res://textures/Levels/LabHouse/Strange_World/Marble_Countertop.tres" id="26_7x5cd"]
+[ext_resource type="Material" uid="uid://q52mo5eciswd" path="res://Textures/Levels/LabHouse/Lab/Lab_Ceilling.tres" id="24_lxgoj"]
+[ext_resource type="Material" uid="uid://bgaov1dyna6e0" path="res://Textures/Levels/LabHouse/Lab/VentWall.tres" id="25_awbfl"]
+[ext_resource type="Material" uid="uid://cvdtow3p6qea8" path="res://Textures/Levels/LabHouse/Strange_World/Marble_Countertop.tres" id="26_7x5cd"]
 [ext_resource type="Resource" uid="uid://8mnv5fjsb4kb" path="res://Resources/Loot/Coin.tres" id="36_8nohw"]
 [ext_resource type="Resource" uid="uid://dax62qxgmde1j" path="res://Resources/Loot/Tome (Green).tres" id="37_aoxqd"]
 [ext_resource type="Resource" uid="uid://d0c56f0fvnpnq" path="res://Resources/Loot/Tome.tres" id="37_awrep"]
@@ -1112,6 +1112,11 @@ points = PackedVector3Array(-122.571, 28, 5.44895, -122.571, 3, 5.44895, -119.97
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_q6xmn"]
 points = PackedVector3Array(65.5, -1.0625, -1, 51.6875, -8.875, -1, 65.5, -8.875, -1, 65.5, -1.0625, 2, 51.6875, -8.875, 2, 65.5, -8.875, 2)
 
+[sub_resource type="Resource" id="Resource_x4ptl"]
+script = ExtResource("10_j3fb5")
+itemdata = ExtResource("9_2fljo")
+ItemAmt = 1
+
 [sub_resource type="Resource" id="Resource_7ccwj"]
 script = ExtResource("10_j3fb5")
 itemdata = ExtResource("9_2fljo")
@@ -1929,11 +1934,18 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.0400
 [node name="Door5" parent="Interactables" instance=ExtResource("6_gpwi7")]
 transform = Transform3D(1.18, 0, 0, 0, 1.1, 0, 0, 0, 1, 36.9152, -14.9789, 22.1969)
 
+[node name="Inspect" parent="Interactables/Door5/Door/InteractionManager" index="1"]
+InspectText = ""
+
 [node name="Door6" parent="Interactables" instance=ExtResource("6_gpwi7")]
 transform = Transform3D(1.18, 0, 0, 0, 1.1, 0, 0, 0, 1, 15.6249, -14.9231, 22.2777)
 
+[node name="Inspect" parent="Interactables/Door6/Door/InteractionManager" index="1"]
+InspectText = ""
+
 [node name="Keycard2" parent="Interactables" instance=ExtResource("7_k7y7r")]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 22.4853, -16.0625, 32.3579)
+pickupslot = SubResource("Resource_x4ptl")
 
 [node name="VentRoot" parent="Interactables" instance=ExtResource("8_4ywbv")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 25.8045, -10.5282, 31.0234)
@@ -1960,7 +1972,7 @@ transform = Transform3D(2.85659e-08, 0.285053, 0.958512, -8.49523e-09, 0.958512,
 lootdata = ExtResource("38_2ycwt")
 
 [node name="BaseLootObject5" parent="Interactables" instance=ExtResource("37_w2jko")]
-transform = Transform3D(1, 0, 0, 0, 0.105778, -0.99439, 0, 0.99439, 0.105778, 23.902, -14.5625, 31.835)
+transform = Transform3D(1, 0, 0, 0, 0.105778, -0.99439, 0, 0.99439, 0.105778, 23.902, -15.0445, 31.835)
 lootdata = ExtResource("36_8nohw")
 
 [node name="BaseLootObject6" parent="Interactables" instance=ExtResource("37_w2jko")]
@@ -1978,18 +1990,25 @@ lootdata = ExtResource("37_awrep")
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 31.9775, -14.75, 27.0473)
 lootdata = ExtResource("42_rkb5u")
 
-[node name="DoorRoot2" parent="Interactables" instance=ExtResource("6_gpwi7")]
+[node name="Node3D2" type="Node3D" parent="Interactables"]
 transform = Transform3D(-0.0395912, 0, 0.999216, 0, 1, 0, -0.999216, 0, -0.0395912, -4.75651, -15.083, 16.5207)
-Locked = true
 
-[node name="Keycard3" parent="Interactables" instance=ExtResource("7_k7y7r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.79513, -16.0625, 17.4384)
+[node name="DoorRoot2" parent="Interactables/Node3D2" instance=ExtResource("6_gpwi7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+Locked = true
+closed = true
 
 [node name="Door" parent="Interactables" instance=ExtResource("6_gpwi7")]
 transform = Transform3D(-5.15794e-08, 0, 1, 0, 1.1, 0, -1.18, 0, -4.37114e-08, 61.2894, -7.74973, 19.0178)
+Locked = true
+closed = true
+which = true
 
 [node name="Door3" parent="Interactables" instance=ExtResource("6_gpwi7")]
 transform = Transform3D(0.0242601, 0, 0.999789, 0, 1.1, 0, -1.17975, 0, 0.0205587, 45.3729, -7.69745, 10.5252)
+
+[node name="Inspect" parent="Interactables/Door3/Door/InteractionManager" index="1"]
+InspectText = ""
 
 [node name="Vent2" parent="Interactables" instance=ExtResource("8_4ywbv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.269, 2.30374, 9.99766)
@@ -2003,6 +2022,9 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 75.369
 
 [node name="Door" parent="Interactables/Node3D" instance=ExtResource("6_gpwi7")]
 transform = Transform3D(-5.15794e-08, 0, 1, 0, 1.1, 0, -1.18, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Inspect" parent="Interactables/Node3D/Door/Door/InteractionManager" index="1"]
+InspectText = ""
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.6654, 0, 38.2156)
@@ -2162,12 +2184,7 @@ RangeSpot = 20.0
 [node name="DoorRoot" parent="." instance=ExtResource("6_gpwi7")]
 transform = Transform3D(1.18, 0, 0, 0, 1.1, 0, 0, 0, 1, 27.0605, -14.8673, 22.0485)
 Locked = true
-
-[node name="Keycard" parent="." instance=ExtResource("7_k7y7r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.8477, -16.0625, 20.4036)
-
-[node name="Keycard2" parent="." instance=ExtResource("7_k7y7r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1263, -16.0625, 19.9325)
+closed = true
 
 [node name="BaseLootObject" parent="." instance=ExtResource("37_w2jko")]
 transform = Transform3D(0.896633, 0, -0.442774, 0, 1, 0, 0.442774, 0, 0.896633, 59.4742, -14.375, 10.1725)
@@ -2177,9 +2194,14 @@ lootdata = ExtResource("39_nnt1w")
 transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 60.5472, -14.375, 10.2136)
 lootdata = ExtResource("39_nnt1w")
 
-[node name="Player" parent="." instance=ExtResource("1_wcbqr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5813, -13.9286, 7.41067)
-
 [node name="Elevator" parent="." instance=ExtResource("48_lvk73")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10.3097, -16.1336, 15.7324)
 LevelString = "res://Scenes/Levels/Strange_Land.tscn"
+
+[node name="Player" parent="." instance=ExtResource("1_wcbqr")]
+transform = Transform3D(0.0503489, 0, -0.998732, 0, 1, 0, 0.998732, 0, 0.0503489, -14.7638, 5.54969, 17.3498)
+
+[editable path="Interactables/Door5"]
+[editable path="Interactables/Door6"]
+[editable path="Interactables/Door3"]
+[editable path="Interactables/Node3D/Door"]

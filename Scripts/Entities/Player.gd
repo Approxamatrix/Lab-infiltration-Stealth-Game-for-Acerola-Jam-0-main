@@ -40,6 +40,11 @@ var Flashlightstate : bool
 var CurrentPatrolPoint
 var NextPatrolPoint
 @export var itemcollectsound : AudioStreamPlayer
+@export var objectivecontainer : VSplitContainer
+
+@export var PrimaryObjectiveList : Array[Objective]
+@export var SecondaryObjectiveList : Array[Objective]
+var CurrentObjective : Objective
 
 func _ready():
 	GameJamAutoload.UpdatePlayerHand.connect(UpdateHand)

@@ -1,17 +1,24 @@
-[gd_resource type="Resource" script_class="InventoryData" load_steps=11 format=3 uid="uid://cm2mqfpb31487"]
+[gd_resource type="Resource" script_class="InventoryData" load_steps=13 format=3 uid="uid://cm2mqfpb31487"]
 
 [ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/ItemData.gd" id="1_eekmj"]
 [ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/SlotData.gd" id="2_rj751"]
+[ext_resource type="Texture2D" uid="uid://bn8smbhdywebu" path="res://Textures/Items/Baton/BatonInvIcon.png" id="2_trh05"]
 [ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/InventoryData.gd" id="3_17e08"]
 [ext_resource type="Resource" uid="uid://3nq8w1118btn" path="res://Resources/ItemData/Projectiles/Shocker.tres" id="3_ouar6"]
 [ext_resource type="Resource" uid="uid://c4vjg8j5ew7tm" path="res://Resources/ItemData/Projectiles/Sound_Emitter.tres" id="4_2f841"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_63h13"]
+albedo_color = Color(0.172833, 0.172833, 0.172833, 1)
+metallic_specular = 0.34
+
 [sub_resource type="BoxMesh" id="BoxMesh_ex240"]
-size = Vector3(5, 1, 1)
+material = SubResource("StandardMaterial3D_63h13")
+size = Vector3(3, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_kreap"]
 script = ExtResource("1_eekmj")
 ItemName = "Baton"
+ItemIcon = ExtResource("2_trh05")
 IsStackable = false
 MaxCapacity = 1
 ItemMesh = SubResource("BoxMesh_ex240")

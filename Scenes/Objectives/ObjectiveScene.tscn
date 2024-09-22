@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://cup1388db1wp1"]
+
+[ext_resource type="Script" path="res://Scripts/Objectives/objective_item_base.gd" id="1_guqmn"]
+
+[node name="ObjectiveBase" type="Control" node_paths=PackedStringArray("label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_guqmn")
+label = NodePath("RichTextLabel")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021
+anchor_right = 0.675
+anchor_bottom = 0.09
+offset_left = -0.192001
+offset_right = 0.399963
+offset_bottom = -0.320004
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/normal_font_size = 20
+text = "hunt down the uhh idk i forgor"

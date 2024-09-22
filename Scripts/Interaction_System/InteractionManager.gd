@@ -24,6 +24,3 @@ func initializeinteractlist():
 			pass
 	pass
 	
-
-
-

@@ -1,7 +1,8 @@
-[gd_scene load_steps=44 format=3 uid="uid://bwwaigcmsa75p"]
+[gd_scene load_steps=49 format=3 uid="uid://bwwaigcmsa75p"]
 
 [ext_resource type="Script" path="res://Scripts/Entities/Player.gd" id="1_aj8ty"]
 [ext_resource type="Script" path="res://Scripts/Statemachine Stuff/StatemachineManager.gd" id="1_tikqe"]
+[ext_resource type="Script" path="res://Scripts/Objective Scripts/ObjectiveBaseRes.gd" id="2_vu2wp"]
 [ext_resource type="Script" path="res://Scripts/Interaction_System/PlayerInteractions.gd" id="2_w2nnh"]
 [ext_resource type="Script" path="res://Scenes/Player/NoiseNodePlayer.gd" id="3_3nstm"]
 [ext_resource type="Script" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerIdleState.gd" id="3_28p8k"]
@@ -22,12 +23,24 @@
 [ext_resource type="Script" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerCrouchFallState.gd" id="14_kvocj"]
 [ext_resource type="Script" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerDeathState.gd" id="16_n7f2n"]
 [ext_resource type="PackedScene" uid="uid://botklrimogjke" path="res://Scenes/Lightmeter/LightMeterGUI.tscn" id="17_arc83"]
+[ext_resource type="Texture2D" uid="uid://cyslp8og80gd3" path="res://Textures/Ui_Elements/LightMeter/LightMeterEmpty.png" id="20_ofpmy"]
+[ext_resource type="Texture2D" uid="uid://c1x5aw2hv0ak0" path="res://Textures/Ui_Elements/LightMeter/LightMeterFull.png" id="21_f8ic8"]
 [ext_resource type="PackedScene" uid="uid://cm43mcabmssp6" path="res://Scenes/SoundMeter/SoundMeterGUI.tscn" id="21_mad1a"]
 [ext_resource type="Texture2D" uid="uid://t0tqpix8j46h" path="res://Textures/Ui_Elements/SoundMeter/SpeakerNormal.png" id="22_70v8s"]
 [ext_resource type="Texture2D" uid="uid://ba8yy43v5srx6" path="res://Textures/Ui_Elements/SoundMeter/SpeakerActive.png" id="23_i6mwt"]
 [ext_resource type="AudioStream" uid="uid://8bavipeucsm" path="res://Audio/Weapons/BatonHit.mp3" id="23_l88wc"]
 [ext_resource type="AudioStream" uid="uid://ck66qkugbdkit" path="res://Audio/Footsteps/Player/PlayerWalkSound.tres" id="26_nh1hx"]
 [ext_resource type="AudioStream" uid="uid://cudy34e1y2gqd" path="res://Audio/Item Collect/itemcollect.mp3" id="28_ip8rt"]
+
+[sub_resource type="Resource" id="Resource_n4gih"]
+script = ExtResource("2_vu2wp")
+objtext = "Idklmao"
+objid = "11"
+
+[sub_resource type="Resource" id="Resource_dp0kc"]
+script = ExtResource("2_vu2wp")
+objtext = "eee"
+objid = "14"
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_tdv0b"]
 
@@ -306,6 +319,7 @@ inspectlabel = NodePath("UI/VSplitContainer/PanelContainer/InteractLabel")
 moneyamt = NodePath("UI/VSplitContainer/PanelContainer2/PlayerInventory/Money")
 healthlabel = NodePath("UI/VSplitContainer/PanelContainer2/PlayerInventory/Health")
 itemcollectsound = NodePath("itemcollectsound")
+PrimaryObjectiveList = Array[ExtResource("2_vu2wp")]([SubResource("Resource_n4gih"), SubResource("Resource_dp0kc")])
 
 [node name="PlayerInteractions" type="Node" parent="." node_paths=PackedStringArray("InteractRay", "InteractLabel", "InteractListNode", "InspectLabel")]
 script = ExtResource("2_w2nnh")
@@ -465,6 +479,7 @@ grow_vertical = 2
 mouse_filter = 1
 
 [node name="LightMeterGUI" parent="UI" instance=ExtResource("17_arc83")]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.0
@@ -477,6 +492,10 @@ offset_bottom = 0.0
 grow_horizontal = 0
 grow_vertical = 2
 size_flags_horizontal = 4
+texture_under = ExtResource("20_ofpmy")
+texture_progress = ExtResource("21_f8ic8")
+tint_under = Color(1, 1, 1, 1)
+tint_progress = Color(1, 1, 1, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="VSplitContainer" type="VSplitContainer" parent="UI"]
@@ -523,8 +542,10 @@ PlayerObj = NodePath("../../../..")
 
 [node name="Health" type="RichTextLabel" parent="UI/VSplitContainer/PanelContainer2/PlayerInventory"]
 layout_mode = 2
-offset_top = -46.0
-offset_right = 243.0
+anchor_top = -0.357
+anchor_right = 0.211
+offset_top = 0.0530014
+offset_right = -0.0720062
 offset_bottom = -3.0
 size_flags_vertical = 0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -534,9 +555,12 @@ text = "Health :"
 
 [node name="Money" type="RichTextLabel" parent="UI/VSplitContainer/PanelContainer2/PlayerInventory"]
 layout_mode = 2
-offset_left = 424.0
-offset_top = -46.0
-offset_right = 667.0
+anchor_left = 0.225
+anchor_top = -0.357
+anchor_right = 0.436
+offset_left = -0.200012
+offset_top = 0.0530014
+offset_right = -0.272034
 offset_bottom = -3.0
 size_flags_vertical = 0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)

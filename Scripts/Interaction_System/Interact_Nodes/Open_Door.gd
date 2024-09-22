@@ -15,19 +15,24 @@ func _ready():
 	InteractionName = GetActionKey.get_key("Interact") + "Open"
 	GameJamAutoload.PrimaryInteraction.connect(interact)
 
-
+## for some reason, setting locked to true with closed and which to false works fine for doors that need the 2nd keycard
+## but, setting locked to true and having which to true for the 1st keycard doesn't work properly and instead, the door's just unlocked for some reason
 func interact(item):
 	if parentitem == item:
 		if parentitem.IsLocked == true and parentitem.whichone == true: ##checks if door is locked
 			if GameJamAutoload.keycardcollected == true:  ##checks if player has keycard
+				print("door unlocked with keycard1")
 				body.locksound.play()
 				#print("door unlocked !") 
 				parentitem.IsLocked  = false ##since the player has the keycard, the door will now be set to be unlocked
 				inspectitem.InspectText = " "
 				open() ## opens door
-			else:
-				#print("The door is locked !") ##says that the door is locked
+			if GameJamAutoload.keycardcollected == false:
+				
+				inspectitem.InspectText = "The door is locked"
 				pass
+			
+		
 		if parentitem.IsLocked == true and parentitem.whichone == false:
 			if GameJamAutoload.secondkeycardcollected == true:
 				body.locksound.play()
@@ -35,7 +40,7 @@ func interact(item):
 				#print("door unlocked !")
 				parentitem.IsLocked = false
 				inspectitem.InspectText = " "
-		else:
+		if parentitem.IsLocked == false:
 			if closed == true:
 				open()
 			elif closed == false:

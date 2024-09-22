@@ -41,6 +41,7 @@ var CurrentPatrolPoint
 var NextPatrolPoint
 @export var itemcollectsound : AudioStreamPlayer
 @export var objectivecontainer : VSplitContainer
+@export var UncrouchChecker : ShapeCast3D
 
 @export var PrimaryObjectiveList : Array[Objective]
 @export var SecondaryObjectiveList : Array[Objective]

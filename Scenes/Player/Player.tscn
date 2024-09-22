@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://bwwaigcmsa75p"]
+[gd_scene load_steps=50 format=3 uid="uid://bwwaigcmsa75p"]
 
 [ext_resource type="Script" path="res://Scripts/Entities/Player.gd" id="1_aj8ty"]
 [ext_resource type="Script" path="res://Scripts/Statemachine Stuff/StatemachineManager.gd" id="1_tikqe"]
@@ -49,6 +49,8 @@ radius = 5.72211
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4dvkm"]
 radius = 0.25
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_65edj"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_5kdoq"]
 size = Vector3(5, 0.5, 0.5)
@@ -286,7 +288,7 @@ random_pitch = 2.0
 streams_count = 1
 stream_0/stream = ExtResource("28_ip8rt")
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("PlayerCamera", "FrontLedgeCheck", "TopLedgeCheck", "LedgeBlockedCheck", "lightmeter", "PlayerHand", "ItemUseRay", "CameraNode", "NoiseNode", "PlayerCollider", "PlayerAnim", "Statemanager", "Flashlight", "BatonHit", "WalkSound", "WalkTimer", "inspectlabel", "moneyamt", "healthlabel", "itemcollectsound") groups=["Player"]]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("PlayerCamera", "FrontLedgeCheck", "TopLedgeCheck", "LedgeBlockedCheck", "lightmeter", "PlayerHand", "ItemUseRay", "CameraNode", "NoiseNode", "PlayerCollider", "PlayerAnim", "Statemanager", "Flashlight", "BatonHit", "WalkSound", "WalkTimer", "inspectlabel", "moneyamt", "healthlabel", "itemcollectsound", "UncrouchChecker") groups=["Player"]]
 collision_layer = 8
 script = ExtResource("1_aj8ty")
 PlayerCamera = NodePath("Cameranode/PlayerCamera")
@@ -319,6 +321,7 @@ inspectlabel = NodePath("UI/VSplitContainer/PanelContainer/InteractLabel")
 moneyamt = NodePath("UI/VSplitContainer/PanelContainer2/PlayerInventory/Money")
 healthlabel = NodePath("UI/VSplitContainer/PanelContainer2/PlayerInventory/Health")
 itemcollectsound = NodePath("itemcollectsound")
+UncrouchChecker = NodePath("Cameranode/UncrouchChecker")
 PrimaryObjectiveList = Array[ExtResource("2_vu2wp")]([SubResource("Resource_n4gih"), SubResource("Resource_dp0kc")])
 
 [node name="PlayerInteractions" type="Node" parent="." node_paths=PackedStringArray("InteractRay", "InteractLabel", "InteractListNode", "InspectLabel")]
@@ -401,6 +404,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.504716, 0)
 script = ExtResource("8_hwbbb")
 Cameranode = NodePath("PlayerCamera")
 FrontLedgeCheck = NodePath("../LedgeGrabNodes/FrontLedgeCheck")
+
+[node name="UncrouchChecker" type="ShapeCast3D" parent="Cameranode"]
+shape = SubResource("SphereShape3D_65edj")
+target_position = Vector3(0, 1, 0)
 
 [node name="PlayerCamera" type="Camera3D" parent="Cameranode"]
 cull_mask = 524283

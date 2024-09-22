@@ -32,7 +32,8 @@ func input():
 		StateChangeSignal.emit("PlayerCrouchJumpState")
 		
 	if Input.is_action_just_pressed("Crouch"):
-		StateChangeSignal.emit("PlayerWalkState")
+		if !PlayerObj.UncrouchChecker.is_colliding():
+			StateChangeSignal.emit("PlayerWalkState")
 	
 	
 	pass

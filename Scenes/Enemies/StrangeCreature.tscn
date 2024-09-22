@@ -266,6 +266,6 @@ one_shot = true
 [connection signal="timeout" from="PlayerAwareness" to="StatemachineManager/EnemyIdleState" method="_on_awareness_timeout"]
 [connection signal="timeout" from="PlayerAwareness" to="StatemachineManager/EnemyPatrolState" method="_on_awareness_timeout"]
 [connection signal="timeout" from="RememberPlayerPos" to="." method="forgotplayerpos"]
-[connection signal="timeout" from="AwarenessTimeout" to="StatemachineManager/EnemyChaseState" method="ForgetPlayerPos"]
 [connection signal="timeout" from="AwarenessTimeout" to="StatemachineManager/EnemyChaseState" method="RememberPlayerPos"]
+[connection signal="timeout" from="AwarenessTimeout" to="StatemachineManager/EnemyChaseState" method="ForgetPlayerPos"]
 [connection signal="body_entered" from="AttackDetection" to="StatemachineManager/EnemyAttackState" method="_on_attack_detection_body_entered"]

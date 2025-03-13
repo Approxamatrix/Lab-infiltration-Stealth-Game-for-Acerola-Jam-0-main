@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3lhglpoonsxc"
 path.s3tc="res://.godot/imported/CrateDamaged.png-75e4f33f68e2edc8178904d6e9fe6f20.s3tc.ctex"
+path.etc2="res://.godot/imported/CrateDamaged.png-75e4f33f68e2edc8178904d6e9fe6f20.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Levels/StrangeLand/CrateDamaged.png"
-dest_files=["res://.godot/imported/CrateDamaged.png-75e4f33f68e2edc8178904d6e9fe6f20.s3tc.ctex"]
+dest_files=["res://.godot/imported/CrateDamaged.png-75e4f33f68e2edc8178904d6e9fe6f20.s3tc.ctex", "res://.godot/imported/CrateDamaged.png-75e4f33f68e2edc8178904d6e9fe6f20.etc2.ctex"]
 
 [params]
 

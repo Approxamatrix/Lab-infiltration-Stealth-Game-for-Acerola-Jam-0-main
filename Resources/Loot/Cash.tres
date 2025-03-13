@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="LootItemData" load_steps=7 format=4 uid="uid://cpjen323tyxxm"]
 
 [ext_resource type="Texture2D" uid="uid://6cwd315c7sox" path="res://Models/Loot/Money/Money.png" id="1_s4xo5"]
-[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/LootItemData.gd" id="2_npff3"]
+[ext_resource type="Script" uid="uid://dob327nblqr7j" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/LootItemData.gd" id="2_npff3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y2rcg"]
 resource_name = "m_85c04af5-9dfb-5b18-60d6-d62f4b92b1c6"

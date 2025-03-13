@@ -2,21 +2,22 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8lvkq5y1jphs"
-path="res://.godot/imported/Journal_0.png-b06ef6b041af2ebde495bd6d780bd674.ctex"
+uid="uid://b6sdfgspc3g1h"
+path.s3tc="res://.godot/imported/Journal_0.png-b06ef6b041af2ebde495bd6d780bd674.s3tc.ctex"
+path.etc2="res://.godot/imported/Journal_0.png-b06ef6b041af2ebde495bd6d780bd674.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 
 source_file="res://Models/Loot/Journals/Journal_0.png"
-dest_files=["res://.godot/imported/Journal_0.png-b06ef6b041af2ebde495bd6d780bd674.ctex"]
+dest_files=["res://.godot/imported/Journal_0.png-b06ef6b041af2ebde495bd6d780bd674.s3tc.ctex", "res://.godot/imported/Journal_0.png-b06ef6b041af2ebde495bd6d780bd674.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

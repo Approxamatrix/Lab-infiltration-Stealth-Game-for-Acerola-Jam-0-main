@@ -1,10 +1,10 @@
 [gd_scene load_steps=14 format=3 uid="uid://cqmsvo68i3jnh"]
 
-[ext_resource type="Script" path="res://Scripts/Doors/DoorRoot.gd" id="1_2pki4"]
-[ext_resource type="Script" path="res://Scripts/Interaction_System/InteractionManager.gd" id="2_fufqt"]
-[ext_resource type="Script" path="res://Scripts/Interaction_System/Interact_Nodes/Open_Door.gd" id="3_e6rgo"]
-[ext_resource type="Script" path="res://Scripts/Interaction_System/Interact_Nodes/Inspect.gd" id="4_mmxef"]
-[ext_resource type="Script" path="res://Scripts/Doors/Vent.gd" id="5_jkntg"]
+[ext_resource type="Script" uid="uid://nd684easywi3" path="res://Scripts/Doors/DoorRoot.gd" id="1_2pki4"]
+[ext_resource type="Script" uid="uid://43u84jrnc5ww" path="res://Scripts/Interaction_System/InteractionManager.gd" id="2_fufqt"]
+[ext_resource type="Script" uid="uid://kdo6tvivn6n" path="res://Scripts/Interaction_System/Interact_Nodes/Open_Door.gd" id="3_e6rgo"]
+[ext_resource type="Script" uid="uid://dlsve7yrekowb" path="res://Scripts/Interaction_System/Interact_Nodes/Inspect.gd" id="4_mmxef"]
+[ext_resource type="Script" uid="uid://v0w6v7unimna" path="res://Scripts/Doors/Vent.gd" id="5_jkntg"]
 
 [sub_resource type="Animation" id="Animation_nnkcv"]
 resource_name = "Close"
@@ -55,9 +55,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_42k0g"]
 _data = {
-"Close": SubResource("Animation_nnkcv"),
-"Open": SubResource("Animation_odfkj"),
-"RESET": SubResource("Animation_vbkqw")
+&"Close": SubResource("Animation_nnkcv"),
+&"Open": SubResource("Animation_odfkj"),
+&"RESET": SubResource("Animation_vbkqw")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dmtrd"]

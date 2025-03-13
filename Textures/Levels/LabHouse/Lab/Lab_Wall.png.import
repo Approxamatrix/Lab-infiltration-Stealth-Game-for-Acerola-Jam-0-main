@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://clxlpv0pk5woy"
 path.s3tc="res://.godot/imported/Lab_Wall.png-1d25bb9cd7624fdf8227ef64358f1eb3.s3tc.ctex"
+path.etc2="res://.godot/imported/Lab_Wall.png-1d25bb9cd7624fdf8227ef64358f1eb3.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Levels/LabHouse/Lab/Lab_Wall.png"
-dest_files=["res://.godot/imported/Lab_Wall.png-1d25bb9cd7624fdf8227ef64358f1eb3.s3tc.ctex"]
+dest_files=["res://.godot/imported/Lab_Wall.png-1d25bb9cd7624fdf8227ef64358f1eb3.s3tc.ctex", "res://.godot/imported/Lab_Wall.png-1d25bb9cd7624fdf8227ef64358f1eb3.etc2.ctex"]
 
 [params]
 

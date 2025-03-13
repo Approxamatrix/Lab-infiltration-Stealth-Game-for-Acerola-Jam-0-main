@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="InventoryData" load_steps=13 format=3 uid="uid://cm2mqfpb31487"]
 
-[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/ItemData.gd" id="1_eekmj"]
-[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/SlotData.gd" id="2_rj751"]
+[ext_resource type="Script" uid="uid://b17u5n1tag822" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/ItemData.gd" id="1_eekmj"]
+[ext_resource type="Script" uid="uid://baqm85kmriqr3" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/SlotData.gd" id="2_rj751"]
 [ext_resource type="Texture2D" uid="uid://bn8smbhdywebu" path="res://Textures/Items/Baton/BatonInvIcon.png" id="2_trh05"]
-[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/InventoryData.gd" id="3_17e08"]
+[ext_resource type="Script" uid="uid://btxrxntqxds7" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/InventoryData.gd" id="3_17e08"]
 [ext_resource type="Resource" uid="uid://3nq8w1118btn" path="res://Resources/ItemData/Projectiles/Shocker.tres" id="3_ouar6"]
 [ext_resource type="Resource" uid="uid://c4vjg8j5ew7tm" path="res://Resources/ItemData/Projectiles/Sound_Emitter.tres" id="4_2f841"]
 

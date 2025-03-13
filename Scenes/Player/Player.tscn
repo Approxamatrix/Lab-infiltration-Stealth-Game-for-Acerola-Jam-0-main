@@ -1,27 +1,27 @@
 [gd_scene load_steps=50 format=3 uid="uid://bwwaigcmsa75p"]
 
-[ext_resource type="Script" path="res://Scripts/Entities/Player.gd" id="1_aj8ty"]
-[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/StatemachineManager.gd" id="1_tikqe"]
-[ext_resource type="Script" path="res://Scripts/Objective Scripts/ObjectiveBaseRes.gd" id="2_vu2wp"]
-[ext_resource type="Script" path="res://Scripts/Interaction_System/PlayerInteractions.gd" id="2_w2nnh"]
-[ext_resource type="Script" path="res://Scenes/Player/NoiseNodePlayer.gd" id="3_3nstm"]
-[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerIdleState.gd" id="3_28p8k"]
-[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerWalkState.gd" id="4_wx521"]
-[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerFallState.gd" id="5_j2kcj"]
-[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerJumpState.gd" id="6_dfft6"]
-[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerLedgeGrabState.gd" id="7_cu3ha"]
-[ext_resource type="Script" path="res://Scripts/FPS_Camera/Cameranode.gd" id="8_hwbbb"]
+[ext_resource type="Script" uid="uid://dtls6u83aoyq2" path="res://Scripts/Entities/Player.gd" id="1_aj8ty"]
+[ext_resource type="Script" uid="uid://c335rw4krufam" path="res://Scripts/Statemachine Stuff/StatemachineManager.gd" id="1_tikqe"]
+[ext_resource type="Script" uid="uid://c6mjjypjq5327" path="res://Scripts/Objective Scripts/ObjectiveBaseRes.gd" id="2_vu2wp"]
+[ext_resource type="Script" uid="uid://kby5x0r34s3n" path="res://Scripts/Interaction_System/PlayerInteractions.gd" id="2_w2nnh"]
+[ext_resource type="Script" uid="uid://cgtoq432h5181" path="res://Scenes/Player/NoiseNodePlayer.gd" id="3_3nstm"]
+[ext_resource type="Script" uid="uid://udcanlo76bap" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerIdleState.gd" id="3_28p8k"]
+[ext_resource type="Script" uid="uid://bjjxchiefe1e0" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerWalkState.gd" id="4_wx521"]
+[ext_resource type="Script" uid="uid://bembhe7tenbka" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerFallState.gd" id="5_j2kcj"]
+[ext_resource type="Script" uid="uid://ds5hm3jgdn2p4" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerJumpState.gd" id="6_dfft6"]
+[ext_resource type="Script" uid="uid://cvyuv116feuo0" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerLedgeGrabState.gd" id="7_cu3ha"]
+[ext_resource type="Script" uid="uid://cgm4opce3jjjh" path="res://Scripts/FPS_Camera/Cameranode.gd" id="8_hwbbb"]
 [ext_resource type="Texture2D" uid="uid://cbk7aecfh56tb" path="res://Textures/Ui_Elements/LedgeGrab/LedgeClimbIindicator.png" id="9_jcyjj"]
-[ext_resource type="Script" path="res://Scripts/InventorySystem/PlayerHand/PlayerHand.gd" id="10_5is24"]
+[ext_resource type="Script" uid="uid://k7248nauek87" path="res://Scripts/InventorySystem/PlayerHand/PlayerHand.gd" id="10_5is24"]
 [ext_resource type="PackedScene" uid="uid://cxx0kgf4d5aan" path="res://Scenes/Lightmeter/Lightmeter.tscn" id="10_n3bau"]
-[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerRunState.gd" id="10_uofau"]
+[ext_resource type="Script" uid="uid://cjpmxf8wspuxw" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerRunState.gd" id="10_uofau"]
 [ext_resource type="PackedScene" uid="uid://cdeow838ax1vn" path="res://Scenes/InventorySystem/PlayerInventory.tscn" id="11_awojb"]
-[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerCrouchIdleState.gd" id="11_bxl02"]
+[ext_resource type="Script" uid="uid://cun2sxn36h50y" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerCrouchIdleState.gd" id="11_bxl02"]
 [ext_resource type="Texture2D" uid="uid://b7ei8dwgpf63g" path="res://Textures/Ui_Elements/Crosshairs/Crosshair_Default.png" id="12_c1aw4"]
-[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerCrouchWalkState.gd" id="12_hcqta"]
-[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerCrouchJumpState.gd" id="13_omw78"]
-[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerCrouchFallState.gd" id="14_kvocj"]
-[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerDeathState.gd" id="16_n7f2n"]
+[ext_resource type="Script" uid="uid://c7fg58inv1qlk" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerCrouchWalkState.gd" id="12_hcqta"]
+[ext_resource type="Script" uid="uid://4vf5xrjlopvn" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerCrouchJumpState.gd" id="13_omw78"]
+[ext_resource type="Script" uid="uid://bplxxw3kse5fv" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerCrouchFallState.gd" id="14_kvocj"]
+[ext_resource type="Script" uid="uid://cv4xa1mqocnh" path="res://Scripts/Statemachine Stuff/PlayerStates/PlayerDeathState.gd" id="16_n7f2n"]
 [ext_resource type="PackedScene" uid="uid://botklrimogjke" path="res://Scenes/Lightmeter/LightMeterGUI.tscn" id="17_arc83"]
 [ext_resource type="Texture2D" uid="uid://cyslp8og80gd3" path="res://Textures/Ui_Elements/LightMeter/LightMeterEmpty.png" id="20_ofpmy"]
 [ext_resource type="Texture2D" uid="uid://c1x5aw2hv0ak0" path="res://Textures/Ui_Elements/LightMeter/LightMeterFull.png" id="21_f8ic8"]
@@ -276,11 +276,11 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_w0b1p"]
 _data = {
-"Crouch": SubResource("Animation_0xnuw"),
-"Death": SubResource("Animation_hrm6t"),
-"MeleeAttack": SubResource("Animation_xcess"),
-"RESET": SubResource("Animation_6x3y8"),
-"Uncrouch": SubResource("Animation_r47yw")
+&"Crouch": SubResource("Animation_0xnuw"),
+&"Death": SubResource("Animation_hrm6t"),
+&"MeleeAttack": SubResource("Animation_xcess"),
+&"RESET": SubResource("Animation_6x3y8"),
+&"Uncrouch": SubResource("Animation_r47yw")
 }
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_xv3fr"]
@@ -412,7 +412,6 @@ target_position = Vector3(0, 1, 0)
 
 [node name="PlayerCamera" type="Camera3D" parent="Cameranode"]
 cull_mask = 524283
-fov = 90.0
 
 [node name="InteractRay" type="RayCast3D" parent="Cameranode/PlayerCamera"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.043725, 0)
@@ -660,7 +659,7 @@ texture_progress = ExtResource("23_i6mwt")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_w0b1p")
+&"": SubResource("AnimationLibrary_w0b1p")
 }
 playback_default_blend_time = 0.3
 

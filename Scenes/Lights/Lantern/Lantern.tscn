@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cf8r40en453a7"]
 
 [ext_resource type="PackedScene" uid="uid://ccfwy136en5ym" path="res://Scenes/Lights/Lantern/LanternModel.tscn" id="1_55qym"]
-[ext_resource type="Script" path="res://Scenes/Lights/Lantern/LightConfig.gd" id="1_ew8xo"]
+[ext_resource type="Script" uid="uid://cc3h45spu1m36" path="res://Scenes/Lights/Lantern/LightConfig.gd" id="1_ew8xo"]
 
 [node name="Lantern" type="Node3D" node_paths=PackedStringArray("omni")]
 script = ExtResource("1_ew8xo")
@@ -19,5 +19,7 @@ light_energy = 5.0
 light_indirect_energy = 0.0
 light_volumetric_fog_energy = 0.0
 shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 80.0
 omni_range = 10.0
 omni_attenuation = 0.0

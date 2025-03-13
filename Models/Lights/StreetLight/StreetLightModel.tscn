@@ -1,11 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://n8j2otpk6rhf"]
+[gd_scene load_steps=3 format=3 uid="uid://n8j2otpk6rhf"]
 
 [ext_resource type="PackedScene" uid="uid://cm1myygnaaroy" path="res://Models/Lights/StreetLight/StreetLight.gltf" id="1_i1bie"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d3s23"]
+emission_enabled = true
+emission = Color(0.55432, 0.452751, 1.92523e-07, 1)
 
 [node name="StreetLight" instance=ExtResource("1_i1bie")]
 
 [node name="Bulb" parent="Node/Bulb2" index="0"]
 cast_shadow = 0
+surface_material_override/0 = SubResource("StandardMaterial3D_d3s23")
 
 [node name="socket" parent="Node/Bulb2" index="1"]
 cast_shadow = 0

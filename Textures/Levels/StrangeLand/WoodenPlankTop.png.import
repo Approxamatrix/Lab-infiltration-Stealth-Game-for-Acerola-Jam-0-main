@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dsmxg5t7wy2py"
 path.s3tc="res://.godot/imported/WoodenPlankTop.png-619d13117719976a064d62ec714b6ac3.s3tc.ctex"
+path.etc2="res://.godot/imported/WoodenPlankTop.png-619d13117719976a064d62ec714b6ac3.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Levels/StrangeLand/WoodenPlankTop.png"
-dest_files=["res://.godot/imported/WoodenPlankTop.png-619d13117719976a064d62ec714b6ac3.s3tc.ctex"]
+dest_files=["res://.godot/imported/WoodenPlankTop.png-619d13117719976a064d62ec714b6ac3.s3tc.ctex", "res://.godot/imported/WoodenPlankTop.png-619d13117719976a064d62ec714b6ac3.etc2.ctex"]
 
 [params]
 

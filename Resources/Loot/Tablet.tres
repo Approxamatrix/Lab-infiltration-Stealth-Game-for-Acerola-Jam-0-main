@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="LootItemData" load_steps=5 format=3 uid="uid://br4hg7qel6062"]
+[gd_resource type="Resource" script_class="LootItemData" load_steps=5 format=4 uid="uid://br4hg7qel6062"]
 
 [ext_resource type="Texture2D" uid="uid://dduditlibd757" path="res://Models/Loot/Electronics/Tablet/Tablet.png" id="1_tcf16"]
-[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/LootItemData.gd" id="2_g8mv5"]
+[ext_resource type="Script" uid="uid://dob327nblqr7j" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/LootItemData.gd" id="2_g8mv5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eejgj"]
 resource_name = "m_f7d1d4cb-9179-b13b-9828-bbe0149a858a"
@@ -11,16 +11,16 @@ texture_filter = 0
 [sub_resource type="ArrayMesh" id="ArrayMesh_dsbw6"]
 _surfaces = [{
 "aabb": AABB(-0.4375, 0, -0.0625, 0.875, 1, 0.125),
-"attribute_data": PackedByteArray(255, 55, 255, 63, 0, 0, 255, 63, 255, 55, 0, 0, 0, 0, 0, 0, 255, 7, 255, 131, 0, 0, 255, 131, 255, 7, 255, 67, 0, 0, 255, 67, 255, 115, 255, 63, 255, 59, 255, 63, 255, 115, 0, 0, 255, 59, 0, 0, 255, 19, 255, 131, 255, 11, 255, 131, 255, 19, 255, 67, 255, 11, 255, 67, 255, 23, 255, 67, 255, 79, 255, 67, 255, 23, 255, 75, 255, 79, 255, 75, 255, 23, 255, 87, 255, 79, 255, 87, 255, 23, 255, 79, 255, 79, 255, 79),
+"attribute_data": PackedByteArray("/zf/PwAA/z//NwAAAAAAAP8H/4MAAP+D/wf/QwAA/0P/c/8//zv/P/9zAAD/OwAA/xP/g/8L/4P/E/9D/wv/Q/8X/0P/T/9D/xf/S/9P/0v/F/9X/0//V/8X/0//T/9P"),
 "format": 34896613399,
 "index_count": 36,
-"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0, 4, 0, 5, 0, 6, 0, 6, 0, 5, 0, 7, 0, 8, 0, 9, 0, 10, 0, 10, 0, 9, 0, 11, 0, 12, 0, 13, 0, 14, 0, 14, 0, 13, 0, 15, 0, 16, 0, 17, 0, 18, 0, 18, 0, 17, 0, 19, 0, 20, 0, 21, 0, 22, 0, 22, 0, 21, 0, 23, 0),
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
 "material": SubResource("StandardMaterial3D_eejgj"),
 "name": "m_f7d1d4cb-9179-b13b-9828-bbe0149a858a",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 24,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 255, 255, 255, 255, 0, 0, 255, 191, 255, 255, 255, 255, 255, 255, 255, 191, 255, 255, 0, 0, 255, 255, 255, 127, 0, 0, 0, 0, 255, 255, 255, 127, 255, 255, 255, 255, 255, 255, 255, 127, 0, 0, 255, 255, 255, 255, 255, 127, 0, 0, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 255, 255, 255, 255, 255, 191, 0, 0, 255, 255, 0, 0, 255, 191, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 191, 255, 127, 255, 191, 255, 127, 255, 191, 255, 127, 255, 191, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63)
+"vertex_data": PackedByteArray("AAAAAAAA/////wAAAAD//wAA//8AAP///////wAA/////wAAAAD/v///AAD///+//////wAA/7//////////v///AAD///9/AAAAAP///3//////////fwAA//////9/AAAAAP///78AAAAAAAD/vwAA//////+/AAD//wAA/7///////////wAA/////////////wAA//8AAP//AAD/////AAAAAAAAAAAAAAAAAAD//wAA//8AAAAAAAD//wAA/3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f////3////9/////f////3////9/////f////3////9//7//f/+//3//v/9//7//f/8//3//P/9//z//f/8/")
 }]
 
 [resource]

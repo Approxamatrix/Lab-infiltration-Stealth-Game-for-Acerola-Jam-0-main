@@ -1,8 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://db2i8m7htsvqh"]
+[gd_scene load_steps=3 format=3 uid="uid://db2i8m7htsvqh"]
 
 [ext_resource type="PackedScene" uid="uid://l5innq5dsgtw" path="res://Models/Lights/LightBulb/LightBulb.gltf" id="1_wk51q"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_big4a"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.2
 
 [node name="LightBulbModel" instance=ExtResource("1_wk51q")]
 
 [node name="LightSocket" parent="Node" index="0"]
 cast_shadow = 0
+
+[node name="Bulb" parent="Node" index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_big4a")

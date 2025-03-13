@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://0chy2ytk6w7m"
 path.s3tc="res://.godot/imported/TreeLeaves.png-119001f8995964f52b1328cdf15578bc.s3tc.ctex"
+path.etc2="res://.godot/imported/TreeLeaves.png-119001f8995964f52b1328cdf15578bc.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Levels/LabHouse/Outside/TreeLeaves.png"
-dest_files=["res://.godot/imported/TreeLeaves.png-119001f8995964f52b1328cdf15578bc.s3tc.ctex"]
+dest_files=["res://.godot/imported/TreeLeaves.png-119001f8995964f52b1328cdf15578bc.s3tc.ctex", "res://.godot/imported/TreeLeaves.png-119001f8995964f52b1328cdf15578bc.etc2.ctex"]
 
 [params]
 

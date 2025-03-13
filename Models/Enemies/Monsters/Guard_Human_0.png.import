@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvynngoqscksi"
 path.s3tc="res://.godot/imported/Guard_Human_0.png-e1f28bc27f5e8e73a8914ccd581faa40.s3tc.ctex"
+path.etc2="res://.godot/imported/Guard_Human_0.png-e1f28bc27f5e8e73a8914ccd581faa40.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://Models/Enemies/Monsters/Guard_Human_0.png"
-dest_files=["res://.godot/imported/Guard_Human_0.png-e1f28bc27f5e8e73a8914ccd581faa40.s3tc.ctex"]
+dest_files=["res://.godot/imported/Guard_Human_0.png-e1f28bc27f5e8e73a8914ccd581faa40.s3tc.ctex", "res://.godot/imported/Guard_Human_0.png-e1f28bc27f5e8e73a8914ccd581faa40.etc2.ctex"]
 
 [params]
 

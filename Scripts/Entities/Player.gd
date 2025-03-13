@@ -68,8 +68,8 @@ func _ready():
 	
 
 func inspecttext(text : String):
-	inspectlabel.show()
-	inspectlabel.text = "[center]" + text +"[/center]"
+	#inspectlabel.show()
+	#inspectlabel.text = "[center]" + text +"[/center]"
 	
 	pass
 func _physics_process(delta):

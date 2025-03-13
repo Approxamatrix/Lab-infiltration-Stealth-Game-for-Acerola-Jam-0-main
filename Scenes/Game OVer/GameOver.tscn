@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dm2hege75mreh"]
 
-[ext_resource type="Script" path="res://Scripts/GameOver/GameOver.gd" id="1_kbr2d"]
+[ext_resource type="Script" uid="uid://cypmasag1cxln" path="res://Scripts/GameOver/GameOver.gd" id="1_kbr2d"]
 [ext_resource type="PackedScene" uid="uid://0u3iueweae03" path="res://Scenes/Title Screen/TitleScreen.tscn" id="2_vl3dh"]
 
 [node name="GameOver" type="Control" node_paths=PackedStringArray("moneyamt")]

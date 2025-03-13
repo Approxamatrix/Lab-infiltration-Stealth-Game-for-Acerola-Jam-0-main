@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8x5npy1dwxwd"
 path.s3tc="res://.godot/imported/PatrolPointIconNormal.png-73f18a865ac1c4f4a80d45c6f1a59033.s3tc.ctex"
+path.etc2="res://.godot/imported/PatrolPointIconNormal.png-73f18a865ac1c4f4a80d45c6f1a59033.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Patrol_Point_Icons/PatrolPointIconNormal.png"
-dest_files=["res://.godot/imported/PatrolPointIconNormal.png-73f18a865ac1c4f4a80d45c6f1a59033.s3tc.ctex"]
+dest_files=["res://.godot/imported/PatrolPointIconNormal.png-73f18a865ac1c4f4a80d45c6f1a59033.s3tc.ctex", "res://.godot/imported/PatrolPointIconNormal.png-73f18a865ac1c4f4a80d45c6f1a59033.etc2.ctex"]
 
 [params]
 

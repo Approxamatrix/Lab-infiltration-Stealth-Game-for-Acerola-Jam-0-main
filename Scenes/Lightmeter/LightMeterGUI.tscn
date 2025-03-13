@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://botklrimogjke"]
 
 [ext_resource type="Texture2D" uid="uid://8i66fg0l1dpe" path="res://icon.svg" id="1_tm7wi"]
-[ext_resource type="Script" path="res://Scripts/LightMeter/LightMeterGUI.gd" id="3_cwyf7"]
+[ext_resource type="Script" uid="uid://dvm37filedn6a" path="res://Scripts/LightMeter/LightMeterGUI.gd" id="3_cwyf7"]
 
 [node name="SoundMeterGUI" type="TextureProgressBar"]
 offset_right = 16.0

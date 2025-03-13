@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dwtqyr446ky0u"]
 
 [ext_resource type="ArrayMesh" uid="uid://biuhawoo8sm4x" path="res://Models/Keycards/Red_Keycard/Red_Keycard.obj" id="1_0u24i"]
-[ext_resource type="Script" path="res://Scripts/Projectiles/ProjectileScene.gd" id="1_ruu1n"]
+[ext_resource type="Script" uid="uid://drrf08uvqg2pi" path="res://Scripts/Projectiles/ProjectileScene.gd" id="1_ruu1n"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_byle5"]
 

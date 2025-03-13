@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c08cs1ya4jm"
 path.s3tc="res://.godot/imported/WoodenBoxCase.png-05d5984e35db6502c4238af4ad5cbe67.s3tc.ctex"
+path.etc2="res://.godot/imported/WoodenBoxCase.png-05d5984e35db6502c4238af4ad5cbe67.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Levels/Untitled Heist Game Textures/WoodenBoxCase.png"
-dest_files=["res://.godot/imported/WoodenBoxCase.png-05d5984e35db6502c4238af4ad5cbe67.s3tc.ctex"]
+dest_files=["res://.godot/imported/WoodenBoxCase.png-05d5984e35db6502c4238af4ad5cbe67.s3tc.ctex", "res://.godot/imported/WoodenBoxCase.png-05d5984e35db6502c4238af4ad5cbe67.etc2.ctex"]
 
 [params]
 

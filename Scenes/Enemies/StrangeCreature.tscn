@@ -1,25 +1,25 @@
 [gd_scene load_steps=37 format=3 uid="uid://bqi2p7vchwlba"]
 
-[ext_resource type="Script" path="res://Scripts/Entities/Enemy.gd" id="1_m80do"]
-[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/StatemachineManager.gd" id="1_ouxto"]
-[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyIdleState.gd" id="2_e3hi4"]
+[ext_resource type="Script" uid="uid://dkckkofrrkw8a" path="res://Scripts/Entities/Enemy.gd" id="1_m80do"]
+[ext_resource type="Script" uid="uid://c335rw4krufam" path="res://Scripts/Statemachine Stuff/StatemachineManager.gd" id="1_ouxto"]
+[ext_resource type="Script" uid="uid://bhw21d30tu0wj" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyIdleState.gd" id="2_e3hi4"]
 [ext_resource type="AudioStream" uid="uid://duu6qvpnw6v01" path="res://Audio/EnemyLines/Attack/Attack.tres" id="2_hljfg"]
 [ext_resource type="PackedScene" uid="uid://mlpv5ikn7hdx" path="res://Models/Enemies/Humans/Guard_Human.gltf" id="2_ngwhh"]
 [ext_resource type="Animation" uid="uid://c45atag45p251" path="res://Models/Enemies/Humans/anims/Attack.res" id="3_34uas"]
 [ext_resource type="Animation" uid="uid://cjgux3vvhmh5l" path="res://Models/Enemies/Humans/anims/Downed.res" id="4_a6d1i"]
-[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyAttackState.gd" id="4_nmtxw"]
+[ext_resource type="Script" uid="uid://bdhefdkp0aprf" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyAttackState.gd" id="4_nmtxw"]
 [ext_resource type="Animation" uid="uid://bjq86ds06el3s" path="res://Models/Enemies/Humans/anims/Run.res" id="5_2yrwl"]
-[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyChaseState.gd" id="5_j7odi"]
-[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyPatrolState.gd" id="6_43h2e"]
+[ext_resource type="Script" uid="uid://c0cbgt2ljb3ow" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyChaseState.gd" id="5_j7odi"]
+[ext_resource type="Script" uid="uid://ijtgjft84c80" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyPatrolState.gd" id="6_43h2e"]
 [ext_resource type="Animation" uid="uid://cfr0a4jrvbura" path="res://Models/Enemies/Humans/anims/Shocked.res" id="6_mmad7"]
 [ext_resource type="AudioStream" uid="uid://gqacke6ydn2g" path="res://Audio/EnemyLines/Suspicious/Suspicious.tres" id="6_pgotn"]
-[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyTensePatrolState.gd" id="7_62sn1"]
+[ext_resource type="Script" uid="uid://bvkp705wu18ts" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyTensePatrolState.gd" id="7_62sn1"]
 [ext_resource type="Animation" uid="uid://cdubl1fgf4r4j" path="res://Models/Enemies/Humans/anims/Walk.res" id="7_gd8xd"]
-[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemySearchState.gd" id="8_68132"]
-[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyDeathState.gd" id="9_5dxjb"]
-[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyStunState.gd" id="10_12yx4"]
-[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyInvestigateState.gd" id="11_fvioh"]
-[ext_resource type="Script" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyWaitState.gd" id="12_kbrye"]
+[ext_resource type="Script" uid="uid://b0phhhl6y4frf" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemySearchState.gd" id="8_68132"]
+[ext_resource type="Script" uid="uid://dgwxfpounlrnj" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyDeathState.gd" id="9_5dxjb"]
+[ext_resource type="Script" uid="uid://dglyfwqiaeedl" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyStunState.gd" id="10_12yx4"]
+[ext_resource type="Script" uid="uid://dcrpf76hochmt" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyInvestigateState.gd" id="11_fvioh"]
+[ext_resource type="Script" uid="uid://c80uoe0rov2tb" path="res://Scripts/Statemachine Stuff/EnemyStates/EnemyWaitState.gd" id="12_kbrye"]
 [ext_resource type="AudioStream" uid="uid://ybgayyux1ssi" path="res://Audio/EnemyLines/Chase/ChaseAudio.tres" id="19_bvqli"]
 [ext_resource type="AudioStream" uid="uid://y3p2xlblpg7o" path="res://Audio/EnemyLines/Hurt/Stun or Hurt.tres" id="19_f8xw7"]
 [ext_resource type="AudioStream" uid="uid://be7huty8n60eq" path="res://Scenes/Enemies/SearchState.tres" id="19_lms4q"]
@@ -55,16 +55,16 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_366ei"]
 _data = {
-"RESET": SubResource("Animation_afxdx")
+&"RESET": SubResource("Animation_afxdx")
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1a64n"]
 _data = {
-"Attack": ExtResource("3_34uas"),
-"Downed": ExtResource("4_a6d1i"),
-"Run": ExtResource("5_2yrwl"),
-"Shocked": ExtResource("6_mmad7"),
-"Walk": ExtResource("7_gd8xd")
+&"Attack": ExtResource("3_34uas"),
+&"Downed": ExtResource("4_a6d1i"),
+&"Run": ExtResource("5_2yrwl"),
+&"Shocked": ExtResource("6_mmad7"),
+&"Walk": ExtResource("7_gd8xd")
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_aqe1w"]
@@ -108,10 +108,10 @@ RememberPlayerPos = NodePath("RememberPlayerPos")
 AwarenessTimeout = NodePath("AwarenessTimeout")
 Navagent = NodePath("NavigationAgent3D")
 DefaultHealth = 10.0
-LightDetectionThreshold = 6
+LightDetectionThreshold = 5
 AwarenessDecrease = 0.05
 AwarenessDecreaseNoLight = 0.2
-MaxAwareness = 30.0
+MaxAwareness = 15.0
 StateMachineNode = NodePath("StatemachineManager")
 MaxSuspicion = 5.0
 Maxsoundawareness = 5.0

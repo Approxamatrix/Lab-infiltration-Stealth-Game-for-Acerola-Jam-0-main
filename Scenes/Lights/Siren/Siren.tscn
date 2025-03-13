@@ -36,8 +36,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fjpn3"]
 _data = {
-"Alarm": SubResource("Animation_5uetw"),
-"RESET": SubResource("Animation_64ob4")
+&"Alarm": SubResource("Animation_5uetw"),
+&"RESET": SubResource("Animation_64ob4")
 }
 
 [node name="Siren" type="Node3D"]

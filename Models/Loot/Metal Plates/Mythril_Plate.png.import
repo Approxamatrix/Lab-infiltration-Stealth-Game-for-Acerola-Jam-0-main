@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://copsnmv8q445g"
 path.s3tc="res://.godot/imported/Mythril_Plate.png-d510ead9eb60e21d818aca1615c43406.s3tc.ctex"
+path.etc2="res://.godot/imported/Mythril_Plate.png-d510ead9eb60e21d818aca1615c43406.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Loot/Metal Plates/Mythril_Plate.png"
-dest_files=["res://.godot/imported/Mythril_Plate.png-d510ead9eb60e21d818aca1615c43406.s3tc.ctex"]
+dest_files=["res://.godot/imported/Mythril_Plate.png-d510ead9eb60e21d818aca1615c43406.s3tc.ctex", "res://.godot/imported/Mythril_Plate.png-d510ead9eb60e21d818aca1615c43406.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxa23a8va1y3r"
 path.s3tc="res://.godot/imported/ConcreteWall.png-df1fc3f199f1353be7a8fa8f08c99325.s3tc.ctex"
+path.etc2="res://.godot/imported/ConcreteWall.png-df1fc3f199f1353be7a8fa8f08c99325.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Levels/Untitled Heist Game Textures/ConcreteWall.png"
-dest_files=["res://.godot/imported/ConcreteWall.png-df1fc3f199f1353be7a8fa8f08c99325.s3tc.ctex"]
+dest_files=["res://.godot/imported/ConcreteWall.png-df1fc3f199f1353be7a8fa8f08c99325.s3tc.ctex", "res://.godot/imported/ConcreteWall.png-df1fc3f199f1353be7a8fa8f08c99325.etc2.ctex"]
 
 [params]
 

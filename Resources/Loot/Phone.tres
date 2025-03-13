@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="LootItemData" load_steps=5 format=4 uid="uid://b50vmiejv2mtc"]
 
 [ext_resource type="Texture2D" uid="uid://cd005hg8ixk0b" path="res://Models/Loot/Electronics/Phone/Phone.png" id="1_q6rul"]
-[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/LootItemData.gd" id="2_84dia"]
+[ext_resource type="Script" uid="uid://dob327nblqr7j" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/LootItemData.gd" id="2_84dia"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7lmsw"]
 resource_name = "m_67ae0ed2-6fd7-7f4a-b1b2-ea3c6f2ffffc"

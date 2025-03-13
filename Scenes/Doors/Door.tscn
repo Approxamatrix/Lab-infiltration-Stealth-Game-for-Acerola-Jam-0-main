@@ -1,13 +1,13 @@
 [gd_scene load_steps=20 format=3 uid="uid://cphlpgrps6fyw"]
 
-[ext_resource type="Script" path="res://Scripts/Doors/Door.gd" id="1_aqv3b"]
-[ext_resource type="Script" path="res://Scripts/Doors/DoorRoot.gd" id="1_k8ijk"]
-[ext_resource type="Script" path="res://Scripts/Interaction_System/InteractionManager.gd" id="2_m317g"]
-[ext_resource type="Script" path="res://Scripts/Interaction_System/Interact_Nodes/Open_Door.gd" id="3_jy4qh"]
+[ext_resource type="Script" uid="uid://sg2vm8i51rmh" path="res://Scripts/Doors/Door.gd" id="1_aqv3b"]
+[ext_resource type="Script" uid="uid://nd684easywi3" path="res://Scripts/Doors/DoorRoot.gd" id="1_k8ijk"]
+[ext_resource type="Script" uid="uid://43u84jrnc5ww" path="res://Scripts/Interaction_System/InteractionManager.gd" id="2_m317g"]
+[ext_resource type="Script" uid="uid://kdo6tvivn6n" path="res://Scripts/Interaction_System/Interact_Nodes/Open_Door.gd" id="3_jy4qh"]
 [ext_resource type="AudioStream" uid="uid://35t623jxpc7h" path="res://Audio/Door/door close.mp3" id="3_vjd2v"]
 [ext_resource type="AudioStream" uid="uid://bcevqyjpnvjfe" path="res://Audio/Door/door open.mp3" id="4_ad8mr"]
 [ext_resource type="AudioStream" uid="uid://cg4texym546ql" path="res://Audio/Door/DoorShut.mp3" id="4_r658l"]
-[ext_resource type="Script" path="res://Scripts/Interaction_System/Interact_Nodes/Inspect.gd" id="4_vboht"]
+[ext_resource type="Script" uid="uid://dlsve7yrekowb" path="res://Scripts/Interaction_System/Interact_Nodes/Inspect.gd" id="4_vboht"]
 [ext_resource type="AudioStream" uid="uid://dlq11pdvcrj3t" path="res://Audio/Lock/Lock sounds.mp3" id="6_mbow0"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_o86fd"]
@@ -140,9 +140,9 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2p3gt"]
 _data = {
-"Close": SubResource("Animation_op3u7"),
-"Open": SubResource("Animation_3ts5h"),
-"RESET": SubResource("Animation_ivn5i")
+&"Close": SubResource("Animation_op3u7"),
+&"Open": SubResource("Animation_3ts5h"),
+&"RESET": SubResource("Animation_ivn5i")
 }
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_dyq4s"]

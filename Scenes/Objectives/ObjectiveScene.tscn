@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cup1388db1wp1"]
 
-[ext_resource type="Script" path="res://Scripts/Objectives/objective_item_base.gd" id="1_guqmn"]
+[ext_resource type="Script" uid="uid://bau8sn23xvy0j" path="res://Scripts/Objectives/objective_item_base.gd" id="1_guqmn"]
 
 [node name="ObjectiveBase" type="Control" node_paths=PackedStringArray("label")]
 layout_mode = 3

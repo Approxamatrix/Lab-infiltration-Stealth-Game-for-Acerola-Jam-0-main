@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cw3dfnk336k5p"
 path.s3tc="res://.godot/imported/Bookcase.png-e574aaa6799f8b92cfcaa702019a096f.s3tc.ctex"
+path.etc2="res://.godot/imported/Bookcase.png-e574aaa6799f8b92cfcaa702019a096f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Levels/LabHouse/Misc/Bookcase.png"
-dest_files=["res://.godot/imported/Bookcase.png-e574aaa6799f8b92cfcaa702019a096f.s3tc.ctex"]
+dest_files=["res://.godot/imported/Bookcase.png-e574aaa6799f8b92cfcaa702019a096f.s3tc.ctex", "res://.godot/imported/Bookcase.png-e574aaa6799f8b92cfcaa702019a096f.etc2.ctex"]
 
 [params]
 

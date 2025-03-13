@@ -5,7 +5,7 @@ class_name Inspect
 var inspectkey
 func _ready():
 	
-	InteractionName = GetActionKey.get_key("Inspect") + "Inspect"
+	InteractionName = " "#GetActionKey.get_key("Inspect") + "Inspect"
 	GameJamAutoload.SecondaryInteraction1.connect(interact)
 
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cm43mcabmssp6"]
 
 [ext_resource type="Texture2D" uid="uid://8i66fg0l1dpe" path="res://icon.svg" id="1_83neu"]
-[ext_resource type="Script" path="res://Scripts/SoundMeter/SoundMeterGUI.gd" id="1_l770m"]
+[ext_resource type="Script" uid="uid://xfd6mkcwdcfi" path="res://Scripts/SoundMeter/SoundMeterGUI.gd" id="1_l770m"]
 
 [node name="SoundMeterGUI" type="TextureProgressBar"]
 offset_right = 40.0

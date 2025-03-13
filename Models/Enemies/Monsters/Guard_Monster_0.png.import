@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bg5tnhwjy58nw"
 path.s3tc="res://.godot/imported/Guard_Monster_0.png-f546a8b7cf427d725642f37b9d5df263.s3tc.ctex"
+path.etc2="res://.godot/imported/Guard_Monster_0.png-f546a8b7cf427d725642f37b9d5df263.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://Models/Enemies/Monsters/Guard_Monster_0.png"
-dest_files=["res://.godot/imported/Guard_Monster_0.png-f546a8b7cf427d725642f37b9d5df263.s3tc.ctex"]
+dest_files=["res://.godot/imported/Guard_Monster_0.png-f546a8b7cf427d725642f37b9d5df263.s3tc.ctex", "res://.godot/imported/Guard_Monster_0.png-f546a8b7cf427d725642f37b9d5df263.etc2.ctex"]
 
 [params]
 

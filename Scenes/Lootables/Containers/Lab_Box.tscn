@@ -1,9 +1,9 @@
 [gd_scene load_steps=14 format=3 uid="uid://bpfh1qo37gycr"]
 
-[ext_resource type="Script" path="res://Scripts/Interaction_System/InteractionManager.gd" id="1_t42r0"]
-[ext_resource type="Script" path="res://Scripts/Doors/DoorRoot.gd" id="1_tn4ti"]
-[ext_resource type="Script" path="res://Scripts/Interaction_System/Interact_Nodes/Open_Door.gd" id="2_7ljky"]
-[ext_resource type="Script" path="res://Scripts/Doors/Door.gd" id="2_ml0yd"]
+[ext_resource type="Script" uid="uid://43u84jrnc5ww" path="res://Scripts/Interaction_System/InteractionManager.gd" id="1_t42r0"]
+[ext_resource type="Script" uid="uid://nd684easywi3" path="res://Scripts/Doors/DoorRoot.gd" id="1_tn4ti"]
+[ext_resource type="Script" uid="uid://kdo6tvivn6n" path="res://Scripts/Interaction_System/Interact_Nodes/Open_Door.gd" id="2_7ljky"]
+[ext_resource type="Script" uid="uid://sg2vm8i51rmh" path="res://Scripts/Doors/Door.gd" id="2_ml0yd"]
 [ext_resource type="AudioStream" uid="uid://cv6limmeop7fx" path="res://Audio/Chest/ChestClose.mp3" id="5_gcqhw"]
 [ext_resource type="AudioStream" uid="uid://dbnshweng7eb2" path="res://Audio/Chest/ChestOpen.wav" id="5_w3jjj"]
 
@@ -210,9 +210,9 @@ tracks/5/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7xoa2"]
 _data = {
-"Close": SubResource("Animation_snhoc"),
-"Open": SubResource("Animation_imnb3"),
-"RESET": SubResource("Animation_xw7jf")
+&"Close": SubResource("Animation_snhoc"),
+&"Open": SubResource("Animation_imnb3"),
+&"RESET": SubResource("Animation_xw7jf")
 }
 
 [node name="Lab_Box" type="Node3D" node_paths=PackedStringArray("Door")]

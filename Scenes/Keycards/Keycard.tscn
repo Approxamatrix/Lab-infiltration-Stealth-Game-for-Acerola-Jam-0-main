@@ -1,14 +1,14 @@
 [gd_scene load_steps=13 format=3 uid="uid://bu0u1spoqdyoq"]
 
-[ext_resource type="Script" path="res://Scenes/Keycards/Keycard.gd" id="1_6xm2q"]
-[ext_resource type="Script" path="res://Scripts/Keycards/Keycard.gd" id="1_83uph"]
-[ext_resource type="Script" path="res://Scripts/Interaction_System/InteractionManager.gd" id="3_1836o"]
+[ext_resource type="Script" uid="uid://coigsss5sske1" path="res://Scenes/Keycards/Keycard.gd" id="1_6xm2q"]
+[ext_resource type="Script" uid="uid://ce534ta87p0p8" path="res://Scripts/Keycards/Keycard.gd" id="1_83uph"]
+[ext_resource type="Script" uid="uid://43u84jrnc5ww" path="res://Scripts/Interaction_System/InteractionManager.gd" id="3_1836o"]
 [ext_resource type="ArrayMesh" uid="uid://biuhawoo8sm4x" path="res://Models/Keycards/Red_Keycard/Red_Keycard.obj" id="4_6lyju"]
-[ext_resource type="Script" path="res://Scripts/Interaction_System/Interact_Nodes/Inspect.gd" id="4_euwbb"]
-[ext_resource type="Script" path="res://Scripts/Interaction_System/Interact_Nodes/Collect_Item.gd" id="5_fib6h"]
+[ext_resource type="Script" uid="uid://dlsve7yrekowb" path="res://Scripts/Interaction_System/Interact_Nodes/Inspect.gd" id="4_euwbb"]
+[ext_resource type="Script" uid="uid://kww67vyrlknr" path="res://Scripts/Interaction_System/Interact_Nodes/Collect_Item.gd" id="5_fib6h"]
 [ext_resource type="Texture2D" uid="uid://dprhayqtg728a" path="res://Models/Keycards/Red_Keycard/Red_Keycard Texture.png" id="5_i7gxi"]
 [ext_resource type="Resource" uid="uid://elsegpasb5i0" path="res://Resources/ItemData/Keycards/Red_Keycard.tres" id="6_rcpup"]
-[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/SlotData.gd" id="8_nua6r"]
+[ext_resource type="Script" uid="uid://baqm85kmriqr3" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/SlotData.gd" id="8_nua6r"]
 
 [sub_resource type="Resource" id="Resource_hakoo"]
 script = ExtResource("8_nua6r")

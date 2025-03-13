@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="LootItemData" load_steps=11 format=4 uid="uid://d0c56f0fvnpnq"]
 
 [ext_resource type="Texture2D" uid="uid://p8c26e6xbs1h" path="res://Models/Loot/Tomes/Tome.png" id="1_pi66r"]
-[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/LootItemData.gd" id="2_prvpq"]
+[ext_resource type="Script" uid="uid://dob327nblqr7j" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/LootItemData.gd" id="2_prvpq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_15blx"]
 resource_name = "m_20492db5-f281-a071-efc9-7b3cb053bbd4"

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://blphf7mcpq1vu"
 path.s3tc="res://.godot/imported/Fence.png-3b0714fdfbb39db385a91a7cf5bdf27f.s3tc.ctex"
+path.etc2="res://.godot/imported/Fence.png-3b0714fdfbb39db385a91a7cf5bdf27f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Levels/LabHouse/Outside/Fence.png"
-dest_files=["res://.godot/imported/Fence.png-3b0714fdfbb39db385a91a7cf5bdf27f.s3tc.ctex"]
+dest_files=["res://.godot/imported/Fence.png-3b0714fdfbb39db385a91a7cf5bdf27f.s3tc.ctex", "res://.godot/imported/Fence.png-3b0714fdfbb39db385a91a7cf5bdf27f.etc2.ctex"]
 
 [params]
 

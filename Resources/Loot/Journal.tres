@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="LootItemData" load_steps=9 format=4 uid="uid://n2m26g6kw42p"]
 
 [ext_resource type="Texture2D" uid="uid://k3iwu0wj3spi" path="res://Models/Loot/Journals/Journal_Texture.png" id="1_26qgi"]
-[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/LootItemData.gd" id="2_hytaq"]
+[ext_resource type="Script" uid="uid://dob327nblqr7j" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/LootItemData.gd" id="2_hytaq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_umoui"]
 resource_name = "m_24004603-59b0-6814-e043-9900a7edb55a"

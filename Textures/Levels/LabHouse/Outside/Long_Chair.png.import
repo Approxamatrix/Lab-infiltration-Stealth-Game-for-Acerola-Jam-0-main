@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1id7e51e6hw3"
 path.s3tc="res://.godot/imported/Long_Chair.png-08b0a566f13645ef50dcedd1772f8359.s3tc.ctex"
+path.etc2="res://.godot/imported/Long_Chair.png-08b0a566f13645ef50dcedd1772f8359.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Levels/LabHouse/Outside/Long_Chair.png"
-dest_files=["res://.godot/imported/Long_Chair.png-08b0a566f13645ef50dcedd1772f8359.s3tc.ctex"]
+dest_files=["res://.godot/imported/Long_Chair.png-08b0a566f13645ef50dcedd1772f8359.s3tc.ctex", "res://.godot/imported/Long_Chair.png-08b0a566f13645ef50dcedd1772f8359.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ch1b4bondol0c"
 path.s3tc="res://.godot/imported/PillarFace.png-e08231e3f31f5bf55066ad43b9a0115c.s3tc.ctex"
+path.etc2="res://.godot/imported/PillarFace.png-e08231e3f31f5bf55066ad43b9a0115c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Levels/Untitled Heist Game Textures/PillarFace.png"
-dest_files=["res://.godot/imported/PillarFace.png-e08231e3f31f5bf55066ad43b9a0115c.s3tc.ctex"]
+dest_files=["res://.godot/imported/PillarFace.png-e08231e3f31f5bf55066ad43b9a0115c.s3tc.ctex", "res://.godot/imported/PillarFace.png-e08231e3f31f5bf55066ad43b9a0115c.etc2.ctex"]
 
 [params]
 

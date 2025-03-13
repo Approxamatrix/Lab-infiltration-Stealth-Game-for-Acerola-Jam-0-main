@@ -3,7 +3,7 @@
 [ext_resource type="ArrayMesh" uid="uid://bpp7d2qwu2a4u" path="res://Models/Projectiles/MultiPurpose Disc/MultiPurpose Disc.obj" id="1_btpsm"]
 [ext_resource type="Texture2D" uid="uid://bcojx3onhh34c" path="res://Textures/Items/Projectile Launcher/Shock/Shock_InvIcon.png" id="1_ev85q"]
 [ext_resource type="ArrayMesh" uid="uid://wx3g8x4jh2ud" path="res://Models/Projectile_Launcher/Shock_Launcher/Shock_Launcher.obj" id="1_fhdv0"]
-[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/ItemData.gd" id="1_holl3"]
+[ext_resource type="Script" uid="uid://b17u5n1tag822" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/ItemData.gd" id="1_holl3"]
 
 [resource]
 script = ExtResource("1_holl3")

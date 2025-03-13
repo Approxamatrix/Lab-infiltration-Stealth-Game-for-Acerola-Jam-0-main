@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddrm6hb5khk4p"
 path.s3tc="res://.godot/imported/CrateDamaged.png-b47aafc6625ee08062ba15c1ae7ba262.s3tc.ctex"
+path.etc2="res://.godot/imported/CrateDamaged.png-b47aafc6625ee08062ba15c1ae7ba262.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Levels/Untitled Heist Game Textures/CrateDamaged.png"
-dest_files=["res://.godot/imported/CrateDamaged.png-b47aafc6625ee08062ba15c1ae7ba262.s3tc.ctex"]
+dest_files=["res://.godot/imported/CrateDamaged.png-b47aafc6625ee08062ba15c1ae7ba262.s3tc.ctex", "res://.godot/imported/CrateDamaged.png-b47aafc6625ee08062ba15c1ae7ba262.etc2.ctex"]
 
 [params]
 

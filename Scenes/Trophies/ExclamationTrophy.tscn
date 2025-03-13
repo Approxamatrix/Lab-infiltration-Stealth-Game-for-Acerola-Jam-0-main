@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://6qc6w4m7nrxj"]
 
-[ext_resource type="Script" path="res://Scenes/Trophies/ExclamationTrophy.gd" id="1_1eljw"]
+[ext_resource type="Script" uid="uid://bgbpnoh7ud3o3" path="res://Scenes/Trophies/ExclamationTrophy.gd" id="1_1eljw"]
 [ext_resource type="ArrayMesh" uid="uid://ceag207potbt" path="res://Models/Projectile_Launcher/Shock_Launcher/Exclamation_Trophy.obj" id="1_t3hui"]
-[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/ItemData.gd" id="2_ful84"]
-[ext_resource type="Script" path="res://Scripts/Interaction_System/InteractionManager.gd" id="2_py2xa"]
-[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/SlotData.gd" id="2_y7cau"]
-[ext_resource type="Script" path="res://Scripts/Interaction_System/Interact_Nodes/Collect_Item.gd" id="3_esowh"]
+[ext_resource type="Script" uid="uid://b17u5n1tag822" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/ItemData.gd" id="2_ful84"]
+[ext_resource type="Script" uid="uid://43u84jrnc5ww" path="res://Scripts/Interaction_System/InteractionManager.gd" id="2_py2xa"]
+[ext_resource type="Script" uid="uid://baqm85kmriqr3" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/SlotData.gd" id="2_y7cau"]
+[ext_resource type="Script" uid="uid://kww67vyrlknr" path="res://Scripts/Interaction_System/Interact_Nodes/Collect_Item.gd" id="3_esowh"]
 
 [sub_resource type="Resource" id="Resource_tcr4v"]
 script = ExtResource("2_ful84")

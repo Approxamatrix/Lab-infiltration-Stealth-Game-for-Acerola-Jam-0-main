@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bxk75le8a1ke8"
 path.s3tc="res://.godot/imported/WoodenFlooring.png-0502ced2a84606fbe7739dbb23697418.s3tc.ctex"
+path.etc2="res://.godot/imported/WoodenFlooring.png-0502ced2a84606fbe7739dbb23697418.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Levels/Untitled Heist Game Textures/WoodenFlooring.png"
-dest_files=["res://.godot/imported/WoodenFlooring.png-0502ced2a84606fbe7739dbb23697418.s3tc.ctex"]
+dest_files=["res://.godot/imported/WoodenFlooring.png-0502ced2a84606fbe7739dbb23697418.s3tc.ctex", "res://.godot/imported/WoodenFlooring.png-0502ced2a84606fbe7739dbb23697418.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjb8qtp517vxq"
 path.s3tc="res://.godot/imported/Metal_Cabinet_Side.png-d55629cf057d1cba5b7f5e589e0a8f15.s3tc.ctex"
+path.etc2="res://.godot/imported/Metal_Cabinet_Side.png-d55629cf057d1cba5b7f5e589e0a8f15.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Levels/LabHouse/Strange_World/Metal_Cabinet_Side.png"
-dest_files=["res://.godot/imported/Metal_Cabinet_Side.png-d55629cf057d1cba5b7f5e589e0a8f15.s3tc.ctex"]
+dest_files=["res://.godot/imported/Metal_Cabinet_Side.png-d55629cf057d1cba5b7f5e589e0a8f15.s3tc.ctex", "res://.godot/imported/Metal_Cabinet_Side.png-d55629cf057d1cba5b7f5e589e0a8f15.etc2.ctex"]
 
 [params]
 

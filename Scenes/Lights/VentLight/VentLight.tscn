@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ckh05rpl77pbs"]
 
-[ext_resource type="Script" path="res://Scenes/Lights/Lantern/LightConfig.gd" id="1_33glb"]
+[ext_resource type="Script" uid="uid://cc3h45spu1m36" path="res://Scenes/Lights/Lantern/LightConfig.gd" id="1_33glb"]
 [ext_resource type="PackedScene" uid="uid://dpy8l33k42udt" path="res://Models/Lights/Ventlight/VentLightModel.tscn" id="2_7dtx0"]
 
 [node name="VentLight" type="Node3D" node_paths=PackedStringArray("omni")]

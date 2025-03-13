@@ -69,10 +69,10 @@ func _on_area_3d_body_entered(body):
 		
 		pass
 		
-	if body is ProjectileMulti or body is NoiseNodePlyr:
-		if soundawareness > 0.4:
-			
-			playerseen = body
+	#if body is ProjectileMulti or body is NoiseNodePlyr:
+		#if soundawareness > 0.4:
+			#
+			#playerseen = body
 	else:
 		playerseen = null
 		pass
@@ -136,7 +136,7 @@ func sight():
 				print("i see you")
 				print(awarenesstimer.time_left)
 				if playerseen != null:
-					EnemyAwarenessMeter += (AwarenessDecrease * ( global_position.distance_to(playerseen.global_position) * 5 / playerseen.lightmeterval * 2.5)) * 2
+					EnemyAwarenessMeter += (AwarenessDecrease * ( global_position.distance_to(playerseen.global_position) * 5 / playerseen.lightmeterval * 5)) /2
 					print(EnemyAwarenessMeter)
 					
 					if EnemyAwarenessMeter >= MaxAwareness:

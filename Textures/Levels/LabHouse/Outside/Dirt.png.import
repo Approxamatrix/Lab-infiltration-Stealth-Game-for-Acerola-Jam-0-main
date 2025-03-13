@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cr2s861bk65gr"
 path.s3tc="res://.godot/imported/Dirt.png-20432dc570ea0ee0ccc4a0db95a89531.s3tc.ctex"
+path.etc2="res://.godot/imported/Dirt.png-20432dc570ea0ee0ccc4a0db95a89531.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Levels/LabHouse/Outside/Dirt.png"
-dest_files=["res://.godot/imported/Dirt.png-20432dc570ea0ee0ccc4a0db95a89531.s3tc.ctex"]
+dest_files=["res://.godot/imported/Dirt.png-20432dc570ea0ee0ccc4a0db95a89531.s3tc.ctex", "res://.godot/imported/Dirt.png-20432dc570ea0ee0ccc4a0db95a89531.etc2.ctex"]
 
 [params]
 

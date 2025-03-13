@@ -16,7 +16,10 @@ dest_files=["res://.godot/imported/Red_Keycard.obj-b34949f81d9d1f47bb760b3a7d410
 [params]
 
 generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
 scale_mesh=Vector3(1, 1, 1)
 offset_mesh=Vector3(0, 0, 0)
-optimize_mesh=false
 force_disable_mesh_compression=false

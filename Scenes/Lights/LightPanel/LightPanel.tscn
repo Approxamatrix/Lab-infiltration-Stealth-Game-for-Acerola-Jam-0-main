@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ck5jqcwaw1qxa"]
 
-[ext_resource type="Script" path="res://Scenes/Lights/Lantern/LightConfig.gd" id="1_4fnd2"]
+[ext_resource type="Script" uid="uid://cc3h45spu1m36" path="res://Scenes/Lights/Lantern/LightConfig.gd" id="1_4fnd2"]
 [ext_resource type="PackedScene" uid="uid://b1vy3fkwwqp17" path="res://Models/Lights/LightPanel/LightPanelModel.tscn" id="2_6wy7v"]
 
 [node name="LightPanel" type="Node3D" node_paths=PackedStringArray("spot")]

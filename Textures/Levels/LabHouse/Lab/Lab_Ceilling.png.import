@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dss013cjme375"
 path.s3tc="res://.godot/imported/Lab_Ceilling.png-4587e5c193ec2a15ad27e45e6dd44621.s3tc.ctex"
+path.etc2="res://.godot/imported/Lab_Ceilling.png-4587e5c193ec2a15ad27e45e6dd44621.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Levels/LabHouse/Lab/Lab_Ceilling.png"
-dest_files=["res://.godot/imported/Lab_Ceilling.png-4587e5c193ec2a15ad27e45e6dd44621.s3tc.ctex"]
+dest_files=["res://.godot/imported/Lab_Ceilling.png-4587e5c193ec2a15ad27e45e6dd44621.s3tc.ctex", "res://.godot/imported/Lab_Ceilling.png-4587e5c193ec2a15ad27e45e6dd44621.etc2.ctex"]
 
 [params]
 

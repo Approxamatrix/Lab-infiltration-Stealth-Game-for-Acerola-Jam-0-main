@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="Acerola Jam 0 game"
-run/main_scene="res://Scenes/Levels/Level1.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+run/main_scene="res://Scenes/Title Screen/TitleScreen.tscn"
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -169,6 +169,7 @@ Collect={
 
 [rendering]
 
+textures/vram_compression/import_etc2_astc=true
 lights_and_shadows/directional_shadow/size=1024
 global_illumination/gi/use_half_resolution=true
 textures/default_filters/use_nearest_mipmap_filter=true
@@ -178,5 +179,6 @@ scaling_3d/scale=0.5
 environment/subsurface_scattering/subsurface_scattering_quality=0
 global_illumination/sdfgi/probe_ray_count=0
 global_illumination/sdfgi/frames_to_converge=1
+limits/opengl/max_lights_per_object=32
 anti_aliasing/quality/use_debanding=true
 occlusion_culling/use_occlusion_culling=true

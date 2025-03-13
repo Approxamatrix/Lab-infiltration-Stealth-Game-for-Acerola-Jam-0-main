@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cw23m48xhytfn" path="res://Textures/Items/Keycards/Keycard_Red_Glossy_Final.png" id="1_gw02d"]
 [ext_resource type="Texture2D" uid="uid://d2rl7xqmwevp7" path="res://Models/Keycards/Red_Keycard/textures/Red_Keycard Texture.png" id="2_4fl32"]
-[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/ItemData.gd" id="2_bqfsy"]
+[ext_resource type="Script" uid="uid://b17u5n1tag822" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/ItemData.gd" id="2_bqfsy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r06sl"]
 resource_name = "Red_Keycard"

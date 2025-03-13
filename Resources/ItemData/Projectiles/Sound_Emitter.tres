@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=5 format=3 uid="uid://c4vjg8j5ew7tm"]
 
 [ext_resource type="ArrayMesh" uid="uid://cqmbrtx1cm8ji" path="res://Models/Projectile_Launcher/Noise_Launcher/Noise_Launcher.obj" id="1_3t1fr"]
-[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/ItemData.gd" id="1_7yh58"]
+[ext_resource type="Script" uid="uid://b17u5n1tag822" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/ItemData.gd" id="1_7yh58"]
 [ext_resource type="Texture2D" uid="uid://dg0sqn1jin25c" path="res://Textures/Items/Projectile Launcher/Noisemaker/NoisemakerInvIcon.png" id="1_lqx5f"]
 [ext_resource type="ArrayMesh" uid="uid://bpp7d2qwu2a4u" path="res://Models/Projectiles/MultiPurpose Disc/MultiPurpose Disc.obj" id="1_suinb"]
 

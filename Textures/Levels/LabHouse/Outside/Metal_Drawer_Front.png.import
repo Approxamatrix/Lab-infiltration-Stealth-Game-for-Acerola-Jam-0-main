@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b64j7g281d8my"
 path.s3tc="res://.godot/imported/Metal_Drawer_Front.png-a1b360d2370536fe5ca292b40a383e0c.s3tc.ctex"
+path.etc2="res://.godot/imported/Metal_Drawer_Front.png-a1b360d2370536fe5ca292b40a383e0c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Levels/LabHouse/Outside/Metal_Drawer_Front.png"
-dest_files=["res://.godot/imported/Metal_Drawer_Front.png-a1b360d2370536fe5ca292b40a383e0c.s3tc.ctex"]
+dest_files=["res://.godot/imported/Metal_Drawer_Front.png-a1b360d2370536fe5ca292b40a383e0c.s3tc.ctex", "res://.godot/imported/Metal_Drawer_Front.png-a1b360d2370536fe5ca292b40a383e0c.etc2.ctex"]
 
 [params]
 

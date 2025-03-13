@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cnk3qav2fugpp"]
 
-[ext_resource type="Script" path="res://Scenes/Lights/Lantern/LightConfig.gd" id="1_akyj5"]
+[ext_resource type="Script" uid="uid://cc3h45spu1m36" path="res://Scenes/Lights/Lantern/LightConfig.gd" id="1_akyj5"]
 [ext_resource type="PackedScene" uid="uid://n8j2otpk6rhf" path="res://Models/Lights/StreetLight/StreetLightModel.tscn" id="2_8x88g"]
 
 [node name="StreetLight" type="Node3D" node_paths=PackedStringArray("omni", "spot")]

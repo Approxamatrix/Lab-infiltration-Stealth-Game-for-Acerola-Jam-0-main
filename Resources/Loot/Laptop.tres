@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="LootItemData" load_steps=6 format=4 uid="uid://co8ypfokxd5rg"]
 
 [ext_resource type="Texture2D" uid="uid://b17d66tehbi6c" path="res://Models/Loot/Electronics/Laptop/Laptop.png" id="1_jx3f4"]
-[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/LootItemData.gd" id="2_soufe"]
+[ext_resource type="Script" uid="uid://dob327nblqr7j" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/LootItemData.gd" id="2_soufe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cnv1p"]
 resource_name = "m_1edcc565-ae0d-c9d5-7c3f-438beddc010e"

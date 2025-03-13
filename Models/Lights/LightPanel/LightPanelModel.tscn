@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b1vy3fkwwqp17"]
 
 [ext_resource type="PackedScene" uid="uid://coj6mve01wnua" path="res://Models/Lights/LightPanel/LightPanel.gltf" id="1_lkve6"]
-[ext_resource type="Texture2D" uid="uid://cr612754kicyu" path="res://Models/Lights/LightPanel/LightPanel_0.png" id="2_iyvao"]
+[ext_resource type="Texture2D" uid="uid://cppjcl1ewqn2a" path="res://Models/Lights/LightPanel/LightPanel_0.png" id="2_iyvao"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ssxfo"]
 resource_name = "material_0"

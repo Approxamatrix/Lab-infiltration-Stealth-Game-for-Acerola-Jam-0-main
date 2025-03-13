@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xa6fid316riq"
+uid="uid://d5wm3kngt8um"
 path.s3tc="res://.godot/imported/Coins.png-d7366c7349d35f8d172dad47b5d3cc1f.s3tc.ctex"
+path.etc2="res://.godot/imported/Coins.png-d7366c7349d35f8d172dad47b5d3cc1f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Loot/Money/Coins.png"
-dest_files=["res://.godot/imported/Coins.png-d7366c7349d35f8d172dad47b5d3cc1f.s3tc.ctex"]
+dest_files=["res://.godot/imported/Coins.png-d7366c7349d35f8d172dad47b5d3cc1f.s3tc.ctex", "res://.godot/imported/Coins.png-d7366c7349d35f8d172dad47b5d3cc1f.etc2.ctex"]
 
 [params]
 

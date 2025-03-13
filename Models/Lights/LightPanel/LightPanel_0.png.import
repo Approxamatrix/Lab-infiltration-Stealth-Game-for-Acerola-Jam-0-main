@@ -2,18 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr612754kicyu"
+uid="uid://cppjcl1ewqn2a"
 path.s3tc="res://.godot/imported/LightPanel_0.png-70732ebdc4dad9c3d16da38e8047f1d9.s3tc.ctex"
+path.etc2="res://.godot/imported/LightPanel_0.png-70732ebdc4dad9c3d16da38e8047f1d9.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 
 source_file="res://Models/Lights/LightPanel/LightPanel_0.png"
-dest_files=["res://.godot/imported/LightPanel_0.png-70732ebdc4dad9c3d16da38e8047f1d9.s3tc.ctex"]
+dest_files=["res://.godot/imported/LightPanel_0.png-70732ebdc4dad9c3d16da38e8047f1d9.s3tc.ctex", "res://.godot/imported/LightPanel_0.png-70732ebdc4dad9c3d16da38e8047f1d9.etc2.ctex"]
 
 [params]
 

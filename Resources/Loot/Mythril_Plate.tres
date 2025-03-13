@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="LootItemData" load_steps=5 format=4 uid="uid://dtbngevjysng8"]
 
 [ext_resource type="Texture2D" uid="uid://copsnmv8q445g" path="res://Models/Loot/Metal Plates/Mythril_Plate.png" id="1_u2awr"]
-[ext_resource type="Script" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/LootItemData.gd" id="2_w1fbb"]
+[ext_resource type="Script" uid="uid://dob327nblqr7j" path="res://Scripts/InventorySystem/Inventory_Resources/Resource_Scripts/LootItemData.gd" id="2_w1fbb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vfrle"]
 resource_name = "m_1ca891fd-398b-da12-e161-6afbeb448ccd"

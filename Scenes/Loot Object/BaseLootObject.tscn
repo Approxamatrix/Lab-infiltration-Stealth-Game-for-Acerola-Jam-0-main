@@ -1,10 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://332c4er0q1rw"]
+[gd_scene load_steps=9 format=4 uid="uid://332c4er0q1rw"]
 
-[ext_resource type="Script" path="res://Scripts/Loot Object/BaseLootScript.gd" id="1_0xfh5"]
+[ext_resource type="Script" uid="uid://cproimim2v205" path="res://Scripts/Loot Object/BaseLootScript.gd" id="1_0xfh5"]
 [ext_resource type="Resource" uid="uid://dtbngevjysng8" path="res://Resources/Loot/Mythril_Plate.tres" id="2_7u2wx"]
 [ext_resource type="Texture2D" uid="uid://copsnmv8q445g" path="res://Models/Loot/Metal Plates/Mythril_Plate.png" id="3_1ypew"]
-[ext_resource type="Script" path="res://Scripts/Interaction_System/InteractionManager.gd" id="4_yheiy"]
-[ext_resource type="Script" path="res://Scripts/Interaction_System/Interact_Nodes/Steal.gd" id="5_0ugxd"]
+[ext_resource type="Script" uid="uid://43u84jrnc5ww" path="res://Scripts/Interaction_System/InteractionManager.gd" id="4_yheiy"]
+[ext_resource type="Script" uid="uid://bs8jajbmitov1" path="res://Scripts/Interaction_System/Interact_Nodes/Steal.gd" id="5_0ugxd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vfrle"]
 resource_name = "m_1ca891fd-398b-da12-e161-6afbeb448ccd"
@@ -14,16 +14,16 @@ texture_filter = 0
 [sub_resource type="ArrayMesh" id="ArrayMesh_bjd7u"]
 _surfaces = [{
 "aabb": AABB(-0.312203, 0.0625, -0.0760716, 0.43981, 0.5625, 0.081534),
-"attribute_data": PackedByteArray(255, 143, 255, 7, 255, 71, 255, 7, 255, 143, 0, 0, 255, 71, 0, 0, 255, 127, 255, 23, 255, 71, 255, 23, 255, 127, 255, 15, 255, 71, 255, 15, 255, 143, 255, 15, 255, 71, 255, 15, 255, 143, 255, 7, 255, 71, 255, 7, 255, 127, 255, 31, 255, 71, 255, 31, 255, 127, 255, 23, 255, 71, 255, 23, 0, 0, 0, 0, 255, 71, 0, 0, 0, 0, 255, 55, 255, 71, 255, 55, 0, 0, 255, 111, 255, 71, 255, 111, 0, 0, 255, 55, 255, 71, 255, 55),
+"attribute_data": PackedByteArray("/4//B/9H/wf/jwAA/0cAAP9//xf/R/8X/3//D/9H/w//j/8P/0f/D/+P/wf/R/8H/3//H/9H/x//f/8X/0f/FwAAAAD/RwAAAAD/N/9H/zcAAP9v/0f/bwAA/zf/R/83"),
 "format": 34896613399,
 "index_count": 36,
-"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0, 4, 0, 5, 0, 6, 0, 6, 0, 5, 0, 7, 0, 8, 0, 9, 0, 10, 0, 10, 0, 9, 0, 11, 0, 12, 0, 13, 0, 14, 0, 14, 0, 13, 0, 15, 0, 16, 0, 17, 0, 18, 0, 18, 0, 17, 0, 19, 0, 20, 0, 21, 0, 22, 0, 22, 0, 21, 0, 23, 0),
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
 "material": SubResource("StandardMaterial3D_vfrle"),
 "name": "m_1ca891fd-398b-da12-e161-6afbeb448ccd",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 24,
-"vertex_data": PackedByteArray(104, 254, 0, 0, 246, 255, 79, 212, 104, 254, 255, 255, 246, 255, 79, 212, 255, 255, 0, 0, 234, 59, 79, 212, 255, 255, 255, 255, 234, 59, 79, 212, 104, 254, 255, 255, 246, 255, 4, 192, 0, 0, 255, 255, 12, 196, 4, 192, 255, 255, 255, 255, 234, 59, 4, 192, 150, 1, 255, 255, 0, 0, 4, 192, 0, 0, 255, 255, 12, 196, 93, 214, 0, 0, 0, 0, 12, 196, 93, 214, 150, 1, 255, 255, 0, 0, 93, 214, 150, 1, 0, 0, 0, 0, 93, 214, 0, 0, 0, 0, 12, 196, 189, 254, 104, 254, 0, 0, 246, 255, 189, 254, 150, 1, 0, 0, 0, 0, 189, 254, 255, 255, 0, 0, 234, 59, 189, 254, 150, 1, 255, 255, 0, 0, 189, 254, 150, 1, 0, 0, 0, 0, 189, 254, 255, 255, 255, 255, 234, 59, 189, 254, 255, 255, 0, 0, 234, 59, 189, 254, 104, 254, 255, 255, 246, 255, 250, 63, 104, 254, 0, 0, 246, 255, 250, 63, 0, 0, 255, 255, 12, 196, 250, 63, 0, 0, 0, 0, 12, 196, 250, 63, 9, 170, 245, 85, 9, 170, 245, 85, 9, 170, 245, 85, 9, 170, 245, 85, 164, 250, 172, 130, 164, 250, 172, 130, 164, 250, 172, 130, 164, 250, 172, 130, 182, 212, 182, 212, 182, 212, 182, 212, 182, 212, 182, 212, 182, 212, 182, 212, 157, 126, 176, 64, 157, 126, 176, 64, 157, 126, 176, 64, 157, 126, 176, 64, 78, 191, 176, 64, 78, 191, 176, 64, 78, 191, 176, 64, 78, 191, 176, 64, 82, 125, 172, 130, 82, 125, 172, 130, 82, 125, 172, 130, 82, 125, 172, 130)
+"vertex_data": PackedByteArray("aP4AAPb/T9Ro/v//9v9P1P//AADqO0/U/////+o7T9Ro/v//9v8EwAAA//8MxATA/////+o7BMCWAf//AAAEwAAA//8MxF3WAAAAAAzEXdaWAf//AABd1pYBAAAAAF3WAAAAAAzEvf5o/gAA9v+9/pYBAAAAAL3+//8AAOo7vf6WAf//AAC9/pYBAAAAAL3+/////+o7vf7//wAA6ju9/mj+///2//o/aP4AAPb/+j8AAP//DMT6PwAAAAAMxPo/Car1VQmq9VUJqvVVCar1VaT6rIKk+qyCpPqsgqT6rIK21LbUttS21LbUttS21LbUnX6wQJ1+sECdfrBAnX6wQE6/sEBOv7BATr+wQE6/sEBSfayCUn2sglJ9rIJSfayC")
 }]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pnfb5"]
